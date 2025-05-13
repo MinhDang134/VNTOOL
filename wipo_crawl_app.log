@@ -1,0 +1,90 @@
+2025-05-13 14:12:48,317 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 14:12:48,317 - root - INFO - wipo.crawl_wipo_by_name:119 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 14:12:48,345 - root - INFO - wipo.crawl_wipo_by_name:135 - WIPO Crawler: Simulating user search for: RONALDO
+2025-05-13 14:12:49,666 - root - INFO - wipo.crawl_wipo_by_name:152 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 14:13:08,105 - root - INFO - wipo.crawl_wipo_by_name:166 - WIPO Crawler: User has indicated search is complete. Proceeding to fetch HTML.
+2025-05-13 14:13:08,105 - root - INFO - wipo.crawl_wipo_by_name:172 - WIPO Crawler: Waiting up to 60s for search results (selector: 'li.result-viewed')...
+2025-05-13 14:14:08,363 - root - ERROR - wipo.crawl_wipo_by_name:187 - WIPO Crawler: Timeout waiting for search results for 'RONALDO'. The page might not have loaded correctly or no results found with the selector.
+Traceback (most recent call last):
+  File "/home/minhdangpy134/DuAnWipoVNmark/crawlers/wipo.py", line 174, in crawl_wipo_by_name
+    WebDriverWait(driver, wait_time_for_results).until(
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2025-05-13 14:14:08,441 - root - INFO - wipo.crawl_wipo_by_name:202 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 14:14:08,441 - root - WARNING - wipo.crawl_wipo_by_name:207 - WIPO Crawler: No HTML content was retrieved for 'RONALDO'. Aborting further processing for this name.
+2025-05-13 14:14:08,441 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 14:14:08,441 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 14:23:55,428 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 14:23:55,428 - root - INFO - wipo.crawl_wipo_by_name:126 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 14:23:55,449 - root - INFO - wipo.crawl_wipo_by_name:142 - WIPO Crawler: Simulating user search for: RONALDO
+2025-05-13 14:23:56,681 - root - INFO - wipo.crawl_wipo_by_name:159 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 14:24:15,946 - root - INFO - wipo.crawl_wipo_by_name:173 - WIPO Crawler: User has indicated search is complete. Proceeding to fetch HTML.
+2025-05-13 14:24:30,946 - root - INFO - wipo.crawl_wipo_by_name:179 - WIPO Crawler: Waiting up to 120s for search results (selector: 'li.result-viewed')...
+2025-05-13 14:26:31,302 - root - ERROR - wipo.crawl_wipo_by_name:194 - WIPO Crawler: Timeout waiting for search results for 'RONALDO'. The page might not have loaded correctly or no results found with the selector.
+Traceback (most recent call last):
+  File "/home/minhdangpy134/DuAnWipoVNmark/crawlers/wipo.py", line 181, in crawl_wipo_by_name
+    WebDriverWait(driver, wait_time_for_results).until(
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2025-05-13 14:26:31,376 - root - INFO - wipo.crawl_wipo_by_name:209 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 14:26:31,376 - root - WARNING - wipo.crawl_wipo_by_name:214 - WIPO Crawler: No HTML content was retrieved for 'RONALDO'. Aborting further processing for this name.
+2025-05-13 14:26:31,376 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 14:26:31,377 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 14:34:43,898 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 14:34:43,898 - root - INFO - wipo.crawl_wipo_by_name:126 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 14:34:43,920 - root - INFO - wipo.crawl_wipo_by_name:142 - WIPO Crawler: Simulating user search for: RONALDO
+2025-05-13 14:34:45,170 - root - INFO - wipo.crawl_wipo_by_name:159 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 14:35:06,864 - root - INFO - wipo.crawl_wipo_by_name:173 - WIPO Crawler: User has indicated search is complete. Proceeding to fetch HTML.
+2025-05-13 14:35:21,865 - root - INFO - wipo.crawl_wipo_by_name:179 - WIPO Crawler: Waiting up to 120s for search results (selector: 'li.result-viewed')...
+2025-05-13 14:37:21,965 - root - ERROR - wipo.crawl_wipo_by_name:194 - WIPO Crawler: Timeout waiting for search results for 'RONALDO'. The page might not have loaded correctly or no results found with the selector.
+Traceback (most recent call last):
+  File "/home/minhdangpy134/DuAnWipoVNmark/crawlers/wipo.py", line 181, in crawl_wipo_by_name
+    WebDriverWait(driver, wait_time_for_results).until(
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2025-05-13 14:37:22,039 - root - INFO - wipo.crawl_wipo_by_name:209 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 14:37:22,039 - root - WARNING - wipo.crawl_wipo_by_name:214 - WIPO Crawler: No HTML content was retrieved for 'RONALDO'. Aborting further processing for this name.
+2025-05-13 14:37:22,039 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 14:37:22,039 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 14:45:45,767 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 14:45:45,767 - root - INFO - wipo.crawl_wipo_by_name:126 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 14:45:45,785 - root - INFO - wipo.crawl_wipo_by_name:142 - WIPO Crawler: Simulating user search for: RONALDO
+2025-05-13 14:45:47,006 - root - INFO - wipo.crawl_wipo_by_name:159 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 14:46:29,419 - root - INFO - wipo.crawl_wipo_by_name:173 - WIPO Crawler: User has indicated search is complete. Proceeding to fetch HTML.
+2025-05-13 14:46:44,420 - root - INFO - wipo.crawl_wipo_by_name:179 - WIPO Crawler: Waiting up to 120s for search results (selector: 'li.result-viewed')...
+2025-05-13 14:48:44,426 - root - ERROR - wipo.crawl_wipo_by_name:194 - WIPO Crawler: Timeout waiting for search results for 'RONALDO'. The page might not have loaded correctly or no results found with the selector.
+Traceback (most recent call last):
+  File "/home/minhdangpy134/DuAnWipoVNmark/crawlers/wipo.py", line 181, in crawl_wipo_by_name
+    WebDriverWait(driver, wait_time_for_results).until(
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2025-05-13 14:48:44,499 - root - INFO - wipo.crawl_wipo_by_name:209 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 14:48:44,499 - root - WARNING - wipo.crawl_wipo_by_name:214 - WIPO Crawler: No HTML content was retrieved for 'RONALDO'. Aborting further processing for this name.
+2025-05-13 14:48:44,499 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 14:48:44,500 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 14:51:04,386 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 14:51:04,387 - root - INFO - wipo.crawl_wipo_by_name:126 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 14:51:04,409 - root - INFO - wipo.crawl_wipo_by_name:142 - WIPO Crawler: Simulating user search for: RONALDO
+2025-05-13 14:51:05,618 - root - INFO - wipo.crawl_wipo_by_name:159 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 14:51:21,303 - root - INFO - wipo.crawl_wipo_by_name:173 - WIPO Crawler: User has indicated search is complete. Proceeding to fetch HTML.
+2025-05-13 14:51:36,304 - root - INFO - wipo.crawl_wipo_by_name:179 - WIPO Crawler: Waiting up to 120s for search results (selector: 'li.result-viewed')...
+2025-05-13 14:53:36,377 - root - ERROR - wipo.crawl_wipo_by_name:194 - WIPO Crawler: Timeout waiting for search results for 'RONALDO'. The page might not have loaded correctly or no results found with the selector.
+Traceback (most recent call last):
+  File "/home/minhdangpy134/DuAnWipoVNmark/crawlers/wipo.py", line 181, in crawl_wipo_by_name
+    WebDriverWait(driver, wait_time_for_results).until(
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2025-05-13 14:53:36,450 - root - INFO - wipo.crawl_wipo_by_name:209 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 14:53:36,450 - root - WARNING - wipo.crawl_wipo_by_name:214 - WIPO Crawler: No HTML content was retrieved for 'RONALDO'. Aborting further processing for this name.
+2025-05-13 14:53:36,450 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 14:53:36,450 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
