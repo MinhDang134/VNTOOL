@@ -12,13 +12,16 @@ def upsert_trademark_master(engine, item, source):
             registration_date DATE,
             image_url TEXT,
             source TEXT,
-            last_updated TIMESTAMP DEFAULT NOW()
+            owner TEXT,
+            original_number TEXT,
+            created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW(),
+            last_updated TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW()
         );
         """))
 
         conn.execute(text("""
-        INSERT INTO trademark (id, name, product_group, status, registration_date, image_url, source, last_updated)
-        VALUES (:id, :name, :product_group, :status, :registration_date, :image_url, :source, :last_updated)
+        INSERT INTO trademark (id, name, product_group, status, registration_date, image_url, source, owner, original_number, last_updated)
+        VALUES (:id, :name, :product_group, :status, :registration_date, :image_url, :source, :owner, :original_number, :last_updated)
         ON CONFLICT (id) DO UPDATE SET
             name = EXCLUDED.name,
             product_group = EXCLUDED.product_group,
@@ -26,6 +29,8 @@ def upsert_trademark_master(engine, item, source):
             registration_date = EXCLUDED.registration_date,
             image_url = EXCLUDED.image_url,
             source = EXCLUDED.source,
+            owner = EXCLUDED.owner,
+            original_number = EXCLUDED.original_number,
             last_updated = EXCLUDED.last_updated;
         """), {
             "id": item["id"],
@@ -35,5 +40,7 @@ def upsert_trademark_master(engine, item, source):
             "registration_date": item["registration_date"],
             "image_url": item["image_url"],
             "source": source,
+            "owner": item.get("owner"),
+            "original_number": item.get("original_number"),
             "last_updated": datetime.utcnow()
         })

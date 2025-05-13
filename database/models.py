@@ -1,5 +1,5 @@
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, String, Date, DateTime  # Thêm Integer nếu id là số
+from sqlalchemy import Column, String, Date, DateTime, func
 from datetime import datetime
 
 Base = declarative_base()
@@ -18,19 +18,17 @@ def get_brand_model(table_name: str):  # Thêm type hint cho rõ ràng
     # Tạo class động
     BrandClass = type(class_name, (Base,), {
         '__tablename__': table_name,
-        # Thêm __table_args__ nếu bạn cần ghi đè bảng hiện có khi test hoặc thay đổi cấu trúc
-        # '__table_args__': {'extend_existing': True},
-
-        'id': Column(String, primary_key=True, index=True),  # Thêm index=True cho primary key
-        'name': Column(String, index=True, nullable=True),  # Thêm index và nullable nếu phù hợp
-        'product_group': Column(String, nullable=True),
-        'status': Column(String, nullable=True),
-        'registration_date': Column(Date, nullable=True),  # Date là đúng nếu chỉ lưu ngày
-        'image_url': Column(String, nullable=True),
-        'source': Column(String, nullable=True),
-        'created_at': Column(DateTime, default=datetime.utcnow, nullable=False),
+        '__table_args__': {'extend_existing': True},
+        'id': Column(String(255), primary_key=True, index=True),  # Explicit length for String
+        'name': Column(String(255), index=True, nullable=True),
+        'product_group': Column(String(255), nullable=True),
+        'status': Column(String(255), nullable=True),
+        'registration_date': Column(Date, nullable=True),
+        'image_url': Column(String(1024), nullable=True),  # Longer for URLs
+        'source': Column(String(255), nullable=True),
+        'created_at': Column(DateTime, server_default=func.now(), nullable=False),
         # Thêm các cột khác nếu cần, ví dụ:
-        'owner': Column(String, nullable=True),
-        'original_number': Column(String, nullable=True)
+        'owner': Column(String(255), nullable=True),
+        'original_number': Column(String(255), nullable=True)
     })
     return BrandClass
