@@ -2257,3 +2257,1436 @@ DETAIL:  Key (id)=(812888227) already exists.
 2025-05-13 16:32:28,611 - root - INFO - wipo.crawl_wipo_by_name:548 - WIPO Crawler: Database session closed.
 2025-05-13 16:32:28,611 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
 2025-05-13 16:32:28,611 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 16:37:06,849 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 16:37:06,849 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 16:37:06,850 - root - INFO - wipo.crawl_wipo_by_name:366 - WIPO Crawler: Using cached data for 'RONALDO'
+2025-05-13 16:37:06,850 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 16:37:06,850 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 16:37:24,171 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 16:37:24,171 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 16:37:25,580 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 16:37:41,377 - root - INFO - wipo.crawl_wipo_by_name:423 - WIPO Crawler: Using dynamic timeout of 60 seconds
+2025-05-13 16:38:01,832 - root - INFO - wipo.crawl_wipo_by_name:462 - WIPO Crawler: Found results using selector: div[class*='result']
+2025-05-13 16:38:01,832 - root - INFO - wipo.crawl_wipo_by_name:463 - First result text: Brand name: contains the word 'RONALDO'and:Edit your searchTMviewSearch nameSave  Displaying 1-30 of...
+2025-05-13 16:38:06,917 - root - INFO - wipo.crawl_wipo_by_name:514 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 16:38:06,917 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-13 16:38:06,932 - root - INFO - parser.parse_wipo_html:125 - Found 30 result blocks to parse
+2025-05-13 16:38:06,932 - root - INFO - parser.extract_id_from_block:50 - Block 0: Starting ID extraction
+2025-05-13 16:38:06,933 - root - WARNING - parser.extract_id_from_block:112 - Block 0: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,933 - root - WARNING - parser.parse_wipo_html:149 - Block 1: Failed to extract ID
+2025-05-13 16:38:06,933 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 1: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,933 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 1 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,934 - root - INFO - parser.extract_id_from_block:50 - Block 1: Starting ID extraction
+2025-05-13 16:38:06,934 - root - INFO - parser.extract_id_from_block:76 - Block 1: Selector '.number span.value' (attempt 1) found: '545,892'
+2025-05-13 16:38:06,934 - root - INFO - parser.parse_wipo_html:147 - Block 2: Using ID '545892' (found with selector: .number span.value)
+2025-05-13 16:38:06,935 - root - INFO - parser.extract_id_from_block:50 - Block 2: Starting ID extraction
+2025-05-13 16:38:06,936 - root - INFO - parser.extract_id_from_block:76 - Block 2: Selector '.number span.value' (attempt 1) found: '544,244'
+2025-05-13 16:38:06,936 - root - INFO - parser.parse_wipo_html:147 - Block 3: Using ID '544244' (found with selector: .number span.value)
+2025-05-13 16:38:06,936 - root - INFO - parser.extract_id_from_block:50 - Block 3: Starting ID extraction
+2025-05-13 16:38:06,937 - root - INFO - parser.extract_id_from_block:76 - Block 3: Selector '.number span.value' (attempt 1) found: '145299'
+2025-05-13 16:38:06,937 - root - INFO - parser.parse_wipo_html:147 - Block 4: Using ID '145299' (found with selector: .number span.value)
+2025-05-13 16:38:06,937 - root - INFO - parser.extract_id_from_block:50 - Block 4: Starting ID extraction
+2025-05-13 16:38:06,938 - root - INFO - parser.extract_id_from_block:76 - Block 4: Selector '.number span.value' (attempt 1) found: 'M1935158'
+2025-05-13 16:38:06,938 - root - INFO - parser.parse_wipo_html:147 - Block 5: Using ID 'M1935158' (found with selector: .number span.value)
+2025-05-13 16:38:06,939 - root - INFO - parser.extract_id_from_block:50 - Block 5: Starting ID extraction
+2025-05-13 16:38:06,939 - root - INFO - parser.extract_id_from_block:76 - Block 5: Selector '.number span.value' (attempt 1) found: '4004598630000'
+2025-05-13 16:38:06,939 - root - INFO - parser.parse_wipo_html:147 - Block 6: Using ID '4004598630000' (found with selector: .number span.value)
+2025-05-13 16:38:06,940 - root - INFO - parser.extract_id_from_block:50 - Block 6: Starting ID extraction
+2025-05-13 16:38:06,940 - root - INFO - parser.extract_id_from_block:76 - Block 6: Selector '.number span.value' (attempt 1) found: 'VN-4-2009-23685'
+2025-05-13 16:38:06,940 - root - INFO - parser.parse_wipo_html:147 - Block 7: Using ID 'VN-4-2009-23685' (found with selector: .number span.value)
+2025-05-13 16:38:06,941 - root - INFO - parser.extract_id_from_block:50 - Block 7: Starting ID extraction
+2025-05-13 16:38:06,942 - root - INFO - parser.extract_id_from_block:76 - Block 7: Selector '.number span.value' (attempt 1) found: '2483811'
+2025-05-13 16:38:06,942 - root - INFO - parser.parse_wipo_html:147 - Block 8: Using ID '2483811' (found with selector: .number span.value)
+2025-05-13 16:38:06,942 - root - INFO - parser.extract_id_from_block:50 - Block 8: Starting ID extraction
+2025-05-13 16:38:06,943 - root - INFO - parser.extract_id_from_block:76 - Block 8: Selector '.number span.value' (attempt 1) found: '39818247'
+2025-05-13 16:38:06,943 - root - INFO - parser.parse_wipo_html:147 - Block 9: Using ID '39818247' (found with selector: .number span.value)
+2025-05-13 16:38:06,943 - root - INFO - parser.extract_id_from_block:50 - Block 9: Starting ID extraction
+2025-05-13 16:38:06,944 - root - INFO - parser.extract_id_from_block:76 - Block 9: Selector '.number span.value' (attempt 1) found: '2246596'
+2025-05-13 16:38:06,944 - root - INFO - parser.parse_wipo_html:147 - Block 10: Using ID '2246596' (found with selector: .number span.value)
+2025-05-13 16:38:06,944 - root - INFO - parser.extract_id_from_block:50 - Block 10: Starting ID extraction
+2025-05-13 16:38:06,945 - root - WARNING - parser.extract_id_from_block:112 - Block 10: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,945 - root - WARNING - parser.parse_wipo_html:149 - Block 11: Failed to extract ID
+2025-05-13 16:38:06,945 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 11: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,945 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 11 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,945 - root - INFO - parser.extract_id_from_block:50 - Block 11: Starting ID extraction
+2025-05-13 16:38:06,945 - root - WARNING - parser.extract_id_from_block:112 - Block 11: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,945 - root - WARNING - parser.parse_wipo_html:149 - Block 12: Failed to extract ID
+2025-05-13 16:38:06,945 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 12: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,945 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 12 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,945 - root - INFO - parser.extract_id_from_block:50 - Block 12: Starting ID extraction
+2025-05-13 16:38:06,945 - root - WARNING - parser.extract_id_from_block:112 - Block 12: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,945 - root - WARNING - parser.parse_wipo_html:149 - Block 13: Failed to extract ID
+2025-05-13 16:38:06,945 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 13: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,945 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 13 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,945 - root - INFO - parser.extract_id_from_block:50 - Block 13: Starting ID extraction
+2025-05-13 16:38:06,946 - root - WARNING - parser.extract_id_from_block:112 - Block 13: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,946 - root - WARNING - parser.parse_wipo_html:149 - Block 14: Failed to extract ID
+2025-05-13 16:38:06,946 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 14: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,946 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 14 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,946 - root - INFO - parser.extract_id_from_block:50 - Block 14: Starting ID extraction
+2025-05-13 16:38:06,946 - root - WARNING - parser.extract_id_from_block:112 - Block 14: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,946 - root - WARNING - parser.parse_wipo_html:149 - Block 15: Failed to extract ID
+2025-05-13 16:38:06,946 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 15: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,946 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 15 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,946 - root - INFO - parser.extract_id_from_block:50 - Block 15: Starting ID extraction
+2025-05-13 16:38:06,946 - root - WARNING - parser.extract_id_from_block:112 - Block 15: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,946 - root - WARNING - parser.parse_wipo_html:149 - Block 16: Failed to extract ID
+2025-05-13 16:38:06,946 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 16: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,946 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 16 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,946 - root - INFO - parser.extract_id_from_block:50 - Block 16: Starting ID extraction
+2025-05-13 16:38:06,947 - root - WARNING - parser.extract_id_from_block:112 - Block 16: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,947 - root - WARNING - parser.parse_wipo_html:149 - Block 17: Failed to extract ID
+2025-05-13 16:38:06,947 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 17: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,947 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 17 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,947 - root - INFO - parser.extract_id_from_block:50 - Block 17: Starting ID extraction
+2025-05-13 16:38:06,947 - root - WARNING - parser.extract_id_from_block:112 - Block 17: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,947 - root - WARNING - parser.parse_wipo_html:149 - Block 18: Failed to extract ID
+2025-05-13 16:38:06,947 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 18: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,947 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 18 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,947 - root - INFO - parser.extract_id_from_block:50 - Block 18: Starting ID extraction
+2025-05-13 16:38:06,947 - root - WARNING - parser.extract_id_from_block:112 - Block 18: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,947 - root - WARNING - parser.parse_wipo_html:149 - Block 19: Failed to extract ID
+2025-05-13 16:38:06,947 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 19: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,947 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 19 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,947 - root - INFO - parser.extract_id_from_block:50 - Block 19: Starting ID extraction
+2025-05-13 16:38:06,948 - root - WARNING - parser.extract_id_from_block:112 - Block 19: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,948 - root - WARNING - parser.parse_wipo_html:149 - Block 20: Failed to extract ID
+2025-05-13 16:38:06,948 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 20: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,948 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 20 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,948 - root - INFO - parser.extract_id_from_block:50 - Block 20: Starting ID extraction
+2025-05-13 16:38:06,948 - root - WARNING - parser.extract_id_from_block:112 - Block 20: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,948 - root - WARNING - parser.parse_wipo_html:149 - Block 21: Failed to extract ID
+2025-05-13 16:38:06,948 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 21: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,948 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 21 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,948 - root - INFO - parser.extract_id_from_block:50 - Block 21: Starting ID extraction
+2025-05-13 16:38:06,948 - root - WARNING - parser.extract_id_from_block:112 - Block 21: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,948 - root - WARNING - parser.parse_wipo_html:149 - Block 22: Failed to extract ID
+2025-05-13 16:38:06,948 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 22: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,948 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 22 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,948 - root - INFO - parser.extract_id_from_block:50 - Block 22: Starting ID extraction
+2025-05-13 16:38:06,949 - root - WARNING - parser.extract_id_from_block:112 - Block 22: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,949 - root - WARNING - parser.parse_wipo_html:149 - Block 23: Failed to extract ID
+2025-05-13 16:38:06,949 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 23: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,949 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 23 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,949 - root - INFO - parser.extract_id_from_block:50 - Block 23: Starting ID extraction
+2025-05-13 16:38:06,949 - root - WARNING - parser.extract_id_from_block:112 - Block 23: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,949 - root - WARNING - parser.parse_wipo_html:149 - Block 24: Failed to extract ID
+2025-05-13 16:38:06,949 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 24: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,949 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 24 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,949 - root - INFO - parser.extract_id_from_block:50 - Block 24: Starting ID extraction
+2025-05-13 16:38:06,949 - root - WARNING - parser.extract_id_from_block:112 - Block 24: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,949 - root - WARNING - parser.parse_wipo_html:149 - Block 25: Failed to extract ID
+2025-05-13 16:38:06,949 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 25: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,949 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 25 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,950 - root - INFO - parser.extract_id_from_block:50 - Block 25: Starting ID extraction
+2025-05-13 16:38:06,950 - root - WARNING - parser.extract_id_from_block:112 - Block 25: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,950 - root - WARNING - parser.parse_wipo_html:149 - Block 26: Failed to extract ID
+2025-05-13 16:38:06,950 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 26: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,950 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 26 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,950 - root - INFO - parser.extract_id_from_block:50 - Block 26: Starting ID extraction
+2025-05-13 16:38:06,950 - root - WARNING - parser.extract_id_from_block:112 - Block 26: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,950 - root - WARNING - parser.parse_wipo_html:149 - Block 27: Failed to extract ID
+2025-05-13 16:38:06,950 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 27: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,950 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 27 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,950 - root - INFO - parser.extract_id_from_block:50 - Block 27: Starting ID extraction
+2025-05-13 16:38:06,950 - root - WARNING - parser.extract_id_from_block:112 - Block 27: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,950 - root - WARNING - parser.parse_wipo_html:149 - Block 28: Failed to extract ID
+2025-05-13 16:38:06,950 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 28: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,950 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 28 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,951 - root - INFO - parser.extract_id_from_block:50 - Block 28: Starting ID extraction
+2025-05-13 16:38:06,951 - root - WARNING - parser.extract_id_from_block:112 - Block 28: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,951 - root - WARNING - parser.parse_wipo_html:149 - Block 29: Failed to extract ID
+2025-05-13 16:38:06,951 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 29: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,951 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 29 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,951 - root - INFO - parser.extract_id_from_block:50 - Block 29: Starting ID extraction
+2025-05-13 16:38:06,951 - root - WARNING - parser.extract_id_from_block:112 - Block 29: No ID found using any method after trying 14 selectors.
+2025-05-13 16:38:06,951 - root - WARNING - parser.parse_wipo_html:149 - Block 30: Failed to extract ID
+2025-05-13 16:38:06,951 - root - WARNING - parser.parse_wipo_html:182 - Parser: Block 30: 'application_or_registration_number' not found. Using fallback ID 'None_None'. This might not be unique.
+2025-05-13 16:38:06,951 - root - WARNING - parser.parse_wipo_html:191 - Parser: Skipping item for block 30 due to missing critical data (ID or Name). ID: None_None, Name: None
+2025-05-13 16:38:06,951 - root - INFO - parser.parse_wipo_html:206 - Parser: Successfully parsed 9 items from 30 blocks.
+2025-05-13 16:38:06,956 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 545892
+2025-05-13 16:38:06,958 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 545892
+2025-05-13 16:38:06,960 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 544244
+2025-05-13 16:38:06,961 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 544244
+2025-05-13 16:38:06,961 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 145299
+2025-05-13 16:38:06,962 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 145299
+2025-05-13 16:38:06,962 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: M1935158
+2025-05-13 16:38:06,963 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item M1935158
+2025-05-13 16:38:06,964 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 4004598630000
+2025-05-13 16:38:06,965 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 4004598630000
+2025-05-13 16:38:06,965 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: VN-4-2009-23685
+2025-05-13 16:38:06,966 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item VN-4-2009-23685
+2025-05-13 16:38:06,966 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 2483811
+2025-05-13 16:38:06,967 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 2483811
+2025-05-13 16:38:06,968 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 39818247
+2025-05-13 16:38:06,968 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 39818247
+2025-05-13 16:38:06,969 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 2246596
+2025-05-13 16:38:06,971 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 2246596
+2025-05-13 16:38:06,971 - root - INFO - wipo._save_wipo_items_to_db:158 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 9, Saved: 9, Skipped: 0, Errors: 0
+2025-05-13 16:38:06,971 - root - INFO - wipo.crawl_wipo_by_name:542 - WIPO Crawler: Successfully saved 9 items to database
+2025-05-13 16:38:06,971 - root - INFO - wipo.crawl_wipo_by_name:548 - WIPO Crawler: Database session closed.
+2025-05-13 16:38:06,971 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 16:38:06,971 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 16:41:15,987 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 16:41:15,987 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 16:41:17,836 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 16:41:45,739 - root - INFO - wipo.crawl_wipo_by_name:423 - WIPO Crawler: Using dynamic timeout of 60 seconds
+2025-05-13 16:42:06,106 - root - INFO - wipo.crawl_wipo_by_name:462 - WIPO Crawler: Found results using selector: div[class*='result']
+2025-05-13 16:42:06,106 - root - INFO - wipo.crawl_wipo_by_name:463 - First result text: Status: Expired, Pending, Registeredand:Edit your searchTMviewSearch nameSave  Displaying 1-30 of 51...
+2025-05-13 16:42:11,184 - root - INFO - wipo.crawl_wipo_by_name:514 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 16:42:11,184 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-13 16:42:11,196 - root - INFO - parser.parse_wipo_html:131 - Found 30 result blocks to parse
+2025-05-13 16:42:11,197 - root - INFO - parser.extract_id_from_block:50 - Block 0: Starting ID extraction
+2025-05-13 16:42:11,198 - root - INFO - parser.extract_id_from_block:76 - Block 0: Selector '.number span.value' (attempt 1) found: '3020130300246'
+2025-05-13 16:42:11,198 - root - INFO - parser.parse_wipo_html:153 - Block 1: Using ID '3020130300246' (found with selector: .number span.value)
+2025-05-13 16:42:11,199 - root - INFO - parser.extract_id_from_block:50 - Block 1: Starting ID extraction
+2025-05-13 16:42:11,199 - root - INFO - parser.extract_id_from_block:76 - Block 1: Selector '.number span.value' (attempt 1) found: '3020140200481'
+2025-05-13 16:42:11,199 - root - INFO - parser.parse_wipo_html:153 - Block 2: Using ID '3020140200481' (found with selector: .number span.value)
+2025-05-13 16:42:11,200 - root - INFO - parser.extract_id_from_block:50 - Block 2: Starting ID extraction
+2025-05-13 16:42:11,201 - root - INFO - parser.extract_id_from_block:76 - Block 2: Selector '.number span.value' (attempt 1) found: '3020130300459'
+2025-05-13 16:42:11,201 - root - INFO - parser.parse_wipo_html:153 - Block 3: Using ID '3020130300459' (found with selector: .number span.value)
+2025-05-13 16:42:11,201 - root - INFO - parser.extract_id_from_block:50 - Block 3: Starting ID extraction
+2025-05-13 16:42:11,202 - root - INFO - parser.extract_id_from_block:76 - Block 3: Selector '.number span.value' (attempt 1) found: '3020140400960'
+2025-05-13 16:42:11,202 - root - INFO - parser.parse_wipo_html:153 - Block 4: Using ID '3020140400960' (found with selector: .number span.value)
+2025-05-13 16:42:11,203 - root - INFO - parser.extract_id_from_block:50 - Block 4: Starting ID extraction
+2025-05-13 16:42:11,204 - root - INFO - parser.extract_id_from_block:76 - Block 4: Selector '.number span.value' (attempt 1) found: '3020150100374'
+2025-05-13 16:42:11,204 - root - INFO - parser.parse_wipo_html:153 - Block 5: Using ID '3020150100374' (found with selector: .number span.value)
+2025-05-13 16:42:11,204 - root - INFO - parser.extract_id_from_block:50 - Block 5: Starting ID extraction
+2025-05-13 16:42:11,205 - root - INFO - parser.extract_id_from_block:90 - Block 5: Found ID from data-st13 attribute: 'DE500002010010091'
+2025-05-13 16:42:11,205 - root - INFO - parser.parse_wipo_html:153 - Block 6: Using ID 'DE500002010010091' (found with selector: data-st13)
+2025-05-13 16:42:11,205 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 6 due to missing critical data (ID or Name). ID: DE500002010010091, Name: None
+2025-05-13 16:42:11,205 - root - INFO - parser.extract_id_from_block:50 - Block 6: Starting ID extraction
+2025-05-13 16:42:11,205 - root - INFO - parser.extract_id_from_block:90 - Block 6: Found ID from data-st13 attribute: 'DE500002012040070'
+2025-05-13 16:42:11,205 - root - INFO - parser.parse_wipo_html:153 - Block 7: Using ID 'DE500002012040070' (found with selector: data-st13)
+2025-05-13 16:42:11,205 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 7 due to missing critical data (ID or Name). ID: DE500002012040070, Name: None
+2025-05-13 16:42:11,205 - root - INFO - parser.extract_id_from_block:50 - Block 7: Starting ID extraction
+2025-05-13 16:42:11,206 - root - INFO - parser.extract_id_from_block:90 - Block 7: Found ID from data-st13 attribute: 'DE500002013070022'
+2025-05-13 16:42:11,206 - root - INFO - parser.parse_wipo_html:153 - Block 8: Using ID 'DE500002013070022' (found with selector: data-st13)
+2025-05-13 16:42:11,206 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 8 due to missing critical data (ID or Name). ID: DE500002013070022, Name: None
+2025-05-13 16:42:11,206 - root - INFO - parser.extract_id_from_block:50 - Block 8: Starting ID extraction
+2025-05-13 16:42:11,206 - root - INFO - parser.extract_id_from_block:90 - Block 8: Found ID from data-st13 attribute: 'DE500002011070087'
+2025-05-13 16:42:11,206 - root - INFO - parser.parse_wipo_html:153 - Block 9: Using ID 'DE500002011070087' (found with selector: data-st13)
+2025-05-13 16:42:11,206 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 9 due to missing critical data (ID or Name). ID: DE500002011070087, Name: None
+2025-05-13 16:42:11,206 - root - INFO - parser.extract_id_from_block:50 - Block 9: Starting ID extraction
+2025-05-13 16:42:11,206 - root - INFO - parser.extract_id_from_block:90 - Block 9: Found ID from data-st13 attribute: 'DE500002014040019'
+2025-05-13 16:42:11,206 - root - INFO - parser.parse_wipo_html:153 - Block 10: Using ID 'DE500002014040019' (found with selector: data-st13)
+2025-05-13 16:42:11,206 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 10 due to missing critical data (ID or Name). ID: DE500002014040019, Name: None
+2025-05-13 16:42:11,207 - root - INFO - parser.extract_id_from_block:50 - Block 10: Starting ID extraction
+2025-05-13 16:42:11,207 - root - INFO - parser.extract_id_from_block:90 - Block 10: Found ID from data-st13 attribute: 'DE500002013070057'
+2025-05-13 16:42:11,207 - root - INFO - parser.parse_wipo_html:153 - Block 11: Using ID 'DE500002013070057' (found with selector: data-st13)
+2025-05-13 16:42:11,207 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 11 due to missing critical data (ID or Name). ID: DE500002013070057, Name: None
+2025-05-13 16:42:11,207 - root - INFO - parser.extract_id_from_block:50 - Block 11: Starting ID extraction
+2025-05-13 16:42:11,207 - root - INFO - parser.extract_id_from_block:90 - Block 11: Found ID from data-st13 attribute: 'DE500002012020022'
+2025-05-13 16:42:11,207 - root - INFO - parser.parse_wipo_html:153 - Block 12: Using ID 'DE500002012020022' (found with selector: data-st13)
+2025-05-13 16:42:11,207 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 12 due to missing critical data (ID or Name). ID: DE500002012020022, Name: None
+2025-05-13 16:42:11,207 - root - INFO - parser.extract_id_from_block:50 - Block 12: Starting ID extraction
+2025-05-13 16:42:11,207 - root - INFO - parser.extract_id_from_block:90 - Block 12: Found ID from data-st13 attribute: 'DE500002015030057'
+2025-05-13 16:42:11,207 - root - INFO - parser.parse_wipo_html:153 - Block 13: Using ID 'DE500002015030057' (found with selector: data-st13)
+2025-05-13 16:42:11,207 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 13 due to missing critical data (ID or Name). ID: DE500002015030057, Name: None
+2025-05-13 16:42:11,207 - root - INFO - parser.extract_id_from_block:50 - Block 13: Starting ID extraction
+2025-05-13 16:42:11,208 - root - INFO - parser.extract_id_from_block:90 - Block 13: Found ID from data-st13 attribute: 'DE500002014040082'
+2025-05-13 16:42:11,208 - root - INFO - parser.parse_wipo_html:153 - Block 14: Using ID 'DE500002014040082' (found with selector: data-st13)
+2025-05-13 16:42:11,208 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 14 due to missing critical data (ID or Name). ID: DE500002014040082, Name: None
+2025-05-13 16:42:11,208 - root - INFO - parser.extract_id_from_block:50 - Block 14: Starting ID extraction
+2025-05-13 16:42:11,208 - root - INFO - parser.extract_id_from_block:90 - Block 14: Found ID from data-st13 attribute: 'DE500002014020006'
+2025-05-13 16:42:11,208 - root - INFO - parser.parse_wipo_html:153 - Block 15: Using ID 'DE500002014020006' (found with selector: data-st13)
+2025-05-13 16:42:11,208 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 15 due to missing critical data (ID or Name). ID: DE500002014020006, Name: None
+2025-05-13 16:42:11,208 - root - INFO - parser.extract_id_from_block:50 - Block 15: Starting ID extraction
+2025-05-13 16:42:11,208 - root - INFO - parser.extract_id_from_block:90 - Block 15: Found ID from data-st13 attribute: 'DE500002013070099'
+2025-05-13 16:42:11,208 - root - INFO - parser.parse_wipo_html:153 - Block 16: Using ID 'DE500002013070099' (found with selector: data-st13)
+2025-05-13 16:42:11,208 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 16 due to missing critical data (ID or Name). ID: DE500002013070099, Name: None
+2025-05-13 16:42:11,208 - root - INFO - parser.extract_id_from_block:50 - Block 16: Starting ID extraction
+2025-05-13 16:42:11,209 - root - INFO - parser.extract_id_from_block:90 - Block 16: Found ID from data-st13 attribute: 'DE500002010050096'
+2025-05-13 16:42:11,209 - root - INFO - parser.parse_wipo_html:153 - Block 17: Using ID 'DE500002010050096' (found with selector: data-st13)
+2025-05-13 16:42:11,209 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 17 due to missing critical data (ID or Name). ID: DE500002010050096, Name: None
+2025-05-13 16:42:11,209 - root - INFO - parser.extract_id_from_block:50 - Block 17: Starting ID extraction
+2025-05-13 16:42:11,209 - root - INFO - parser.extract_id_from_block:90 - Block 17: Found ID from data-st13 attribute: 'DE500002012060083'
+2025-05-13 16:42:11,209 - root - INFO - parser.parse_wipo_html:153 - Block 18: Using ID 'DE500002012060083' (found with selector: data-st13)
+2025-05-13 16:42:11,209 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 18 due to missing critical data (ID or Name). ID: DE500002012060083, Name: None
+2025-05-13 16:42:11,209 - root - INFO - parser.extract_id_from_block:50 - Block 18: Starting ID extraction
+2025-05-13 16:42:11,209 - root - INFO - parser.extract_id_from_block:90 - Block 18: Found ID from data-st13 attribute: 'DE500002013070071'
+2025-05-13 16:42:11,209 - root - INFO - parser.parse_wipo_html:153 - Block 19: Using ID 'DE500002013070071' (found with selector: data-st13)
+2025-05-13 16:42:11,209 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 19 due to missing critical data (ID or Name). ID: DE500002013070071, Name: None
+2025-05-13 16:42:11,209 - root - INFO - parser.extract_id_from_block:50 - Block 19: Starting ID extraction
+2025-05-13 16:42:11,209 - root - INFO - parser.extract_id_from_block:90 - Block 19: Found ID from data-st13 attribute: 'DE500002011040078'
+2025-05-13 16:42:11,209 - root - INFO - parser.parse_wipo_html:153 - Block 20: Using ID 'DE500002011040078' (found with selector: data-st13)
+2025-05-13 16:42:11,210 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 20 due to missing critical data (ID or Name). ID: DE500002011040078, Name: None
+2025-05-13 16:42:11,210 - root - INFO - parser.extract_id_from_block:50 - Block 20: Starting ID extraction
+2025-05-13 16:42:11,210 - root - INFO - parser.extract_id_from_block:90 - Block 20: Found ID from data-st13 attribute: 'DE500002010070081'
+2025-05-13 16:42:11,210 - root - INFO - parser.parse_wipo_html:153 - Block 21: Using ID 'DE500002010070081' (found with selector: data-st13)
+2025-05-13 16:42:11,210 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 21 due to missing critical data (ID or Name). ID: DE500002010070081, Name: None
+2025-05-13 16:42:11,210 - root - INFO - parser.extract_id_from_block:50 - Block 21: Starting ID extraction
+2025-05-13 16:42:11,210 - root - INFO - parser.extract_id_from_block:90 - Block 21: Found ID from data-st13 attribute: 'DE500002010050005'
+2025-05-13 16:42:11,210 - root - INFO - parser.parse_wipo_html:153 - Block 22: Using ID 'DE500002010050005' (found with selector: data-st13)
+2025-05-13 16:42:11,210 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 22 due to missing critical data (ID or Name). ID: DE500002010050005, Name: None
+2025-05-13 16:42:11,210 - root - INFO - parser.extract_id_from_block:50 - Block 22: Starting ID extraction
+2025-05-13 16:42:11,211 - root - INFO - parser.extract_id_from_block:90 - Block 22: Found ID from data-st13 attribute: 'DE500002011000003'
+2025-05-13 16:42:11,211 - root - INFO - parser.parse_wipo_html:153 - Block 23: Using ID 'DE500002011000003' (found with selector: data-st13)
+2025-05-13 16:42:11,211 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 23 due to missing critical data (ID or Name). ID: DE500002011000003, Name: None
+2025-05-13 16:42:11,211 - root - INFO - parser.extract_id_from_block:50 - Block 23: Starting ID extraction
+2025-05-13 16:42:11,211 - root - INFO - parser.extract_id_from_block:90 - Block 23: Found ID from data-st13 attribute: 'DE500002013000043'
+2025-05-13 16:42:11,211 - root - INFO - parser.parse_wipo_html:153 - Block 24: Using ID 'DE500002013000043' (found with selector: data-st13)
+2025-05-13 16:42:11,211 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 24 due to missing critical data (ID or Name). ID: DE500002013000043, Name: None
+2025-05-13 16:42:11,211 - root - INFO - parser.extract_id_from_block:50 - Block 24: Starting ID extraction
+2025-05-13 16:42:11,211 - root - INFO - parser.extract_id_from_block:90 - Block 24: Found ID from data-st13 attribute: 'DE500002011000087'
+2025-05-13 16:42:11,211 - root - INFO - parser.parse_wipo_html:153 - Block 25: Using ID 'DE500002011000087' (found with selector: data-st13)
+2025-05-13 16:42:11,211 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 25 due to missing critical data (ID or Name). ID: DE500002011000087, Name: None
+2025-05-13 16:42:11,211 - root - INFO - parser.extract_id_from_block:50 - Block 25: Starting ID extraction
+2025-05-13 16:42:11,212 - root - INFO - parser.extract_id_from_block:90 - Block 25: Found ID from data-st13 attribute: 'DE500002023210082'
+2025-05-13 16:42:11,212 - root - INFO - parser.parse_wipo_html:153 - Block 26: Using ID 'DE500002023210082' (found with selector: data-st13)
+2025-05-13 16:42:11,212 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 26 due to missing critical data (ID or Name). ID: DE500002023210082, Name: None
+2025-05-13 16:42:11,212 - root - INFO - parser.extract_id_from_block:50 - Block 26: Starting ID extraction
+2025-05-13 16:42:11,212 - root - INFO - parser.extract_id_from_block:90 - Block 26: Found ID from data-st13 attribute: 'DE500002013040048'
+2025-05-13 16:42:11,212 - root - INFO - parser.parse_wipo_html:153 - Block 27: Using ID 'DE500002013040048' (found with selector: data-st13)
+2025-05-13 16:42:11,212 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 27 due to missing critical data (ID or Name). ID: DE500002013040048, Name: None
+2025-05-13 16:42:11,212 - root - INFO - parser.extract_id_from_block:50 - Block 27: Starting ID extraction
+2025-05-13 16:42:11,212 - root - INFO - parser.extract_id_from_block:90 - Block 27: Found ID from data-st13 attribute: 'DE500002013040083'
+2025-05-13 16:42:11,212 - root - INFO - parser.parse_wipo_html:153 - Block 28: Using ID 'DE500002013040083' (found with selector: data-st13)
+2025-05-13 16:42:11,212 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 28 due to missing critical data (ID or Name). ID: DE500002013040083, Name: None
+2025-05-13 16:42:11,212 - root - INFO - parser.extract_id_from_block:50 - Block 28: Starting ID extraction
+2025-05-13 16:42:11,213 - root - INFO - parser.extract_id_from_block:90 - Block 28: Found ID from data-st13 attribute: 'DE500002013020028'
+2025-05-13 16:42:11,213 - root - INFO - parser.parse_wipo_html:153 - Block 29: Using ID 'DE500002013020028' (found with selector: data-st13)
+2025-05-13 16:42:11,213 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 29 due to missing critical data (ID or Name). ID: DE500002013020028, Name: None
+2025-05-13 16:42:11,213 - root - INFO - parser.extract_id_from_block:50 - Block 29: Starting ID extraction
+2025-05-13 16:42:11,213 - root - INFO - parser.extract_id_from_block:90 - Block 29: Found ID from data-st13 attribute: 'DE500002014030072'
+2025-05-13 16:42:11,213 - root - INFO - parser.parse_wipo_html:153 - Block 30: Using ID 'DE500002014030072' (found with selector: data-st13)
+2025-05-13 16:42:11,213 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 30 due to missing critical data (ID or Name). ID: DE500002014030072, Name: None
+2025-05-13 16:42:11,213 - root - INFO - parser.parse_wipo_html:212 - Parser: Successfully parsed 5 items from 30 blocks.
+2025-05-13 16:42:11,218 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 3020130300246
+2025-05-13 16:42:11,221 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 3020130300246
+2025-05-13 16:42:11,222 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 3020140200481
+2025-05-13 16:42:11,223 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 3020140200481
+2025-05-13 16:42:11,224 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 3020130300459
+2025-05-13 16:42:11,225 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 3020130300459
+2025-05-13 16:42:11,225 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 3020140400960
+2025-05-13 16:42:11,228 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 3020140400960
+2025-05-13 16:42:11,229 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 3020150100374
+2025-05-13 16:42:11,231 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 3020150100374
+2025-05-13 16:42:11,231 - root - INFO - wipo._save_wipo_items_to_db:158 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 5, Saved: 5, Skipped: 0, Errors: 0
+2025-05-13 16:42:11,231 - root - INFO - wipo.crawl_wipo_by_name:542 - WIPO Crawler: Successfully saved 5 items to database
+2025-05-13 16:42:11,231 - root - INFO - wipo.crawl_wipo_by_name:548 - WIPO Crawler: Database session closed.
+2025-05-13 16:42:11,231 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 16:42:11,231 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 16:42:57,598 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 16:42:57,598 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 16:42:59,460 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 16:43:18,802 - root - INFO - wipo.crawl_wipo_by_name:423 - WIPO Crawler: Using dynamic timeout of 60 seconds
+2025-05-13 16:43:39,410 - root - INFO - wipo.crawl_wipo_by_name:462 - WIPO Crawler: Found results using selector: div[class*='result']
+2025-05-13 16:43:39,410 - root - INFO - wipo.crawl_wipo_by_name:463 - First result text: Brand name: contains the word 'RONALDO'and:Edit your searchTMviewSearch nameSave  Displaying 1-30 of...
+2025-05-13 16:43:44,496 - root - INFO - wipo.crawl_wipo_by_name:514 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 16:43:44,496 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-13 16:43:44,509 - root - INFO - parser.parse_wipo_html:131 - Found 30 result blocks to parse
+2025-05-13 16:43:44,509 - root - INFO - parser.extract_id_from_block:50 - Block 0: Starting ID extraction
+2025-05-13 16:43:44,510 - root - INFO - parser.extract_id_from_block:76 - Block 0: Selector '.number span.value' (attempt 1) found: '812888227'
+2025-05-13 16:43:44,510 - root - INFO - parser.parse_wipo_html:153 - Block 1: Using ID '812888227' (found with selector: .number span.value)
+2025-05-13 16:43:44,512 - root - INFO - parser.extract_id_from_block:50 - Block 1: Starting ID extraction
+2025-05-13 16:43:44,512 - root - INFO - parser.extract_id_from_block:76 - Block 1: Selector '.number span.value' (attempt 1) found: '545,892'
+2025-05-13 16:43:44,512 - root - INFO - parser.parse_wipo_html:153 - Block 2: Using ID '545892' (found with selector: .number span.value)
+2025-05-13 16:43:44,513 - root - INFO - parser.extract_id_from_block:50 - Block 2: Starting ID extraction
+2025-05-13 16:43:44,513 - root - INFO - parser.extract_id_from_block:76 - Block 2: Selector '.number span.value' (attempt 1) found: '544,244'
+2025-05-13 16:43:44,514 - root - INFO - parser.parse_wipo_html:153 - Block 3: Using ID '544244' (found with selector: .number span.value)
+2025-05-13 16:43:44,514 - root - INFO - parser.extract_id_from_block:50 - Block 3: Starting ID extraction
+2025-05-13 16:43:44,515 - root - INFO - parser.extract_id_from_block:76 - Block 3: Selector '.number span.value' (attempt 1) found: '145299'
+2025-05-13 16:43:44,515 - root - INFO - parser.parse_wipo_html:153 - Block 4: Using ID '145299' (found with selector: .number span.value)
+2025-05-13 16:43:44,515 - root - INFO - parser.extract_id_from_block:50 - Block 4: Starting ID extraction
+2025-05-13 16:43:44,516 - root - INFO - parser.extract_id_from_block:76 - Block 4: Selector '.number span.value' (attempt 1) found: 'M1935158'
+2025-05-13 16:43:44,516 - root - INFO - parser.parse_wipo_html:153 - Block 5: Using ID 'M1935158' (found with selector: .number span.value)
+2025-05-13 16:43:44,516 - root - INFO - parser.extract_id_from_block:50 - Block 5: Starting ID extraction
+2025-05-13 16:43:44,517 - root - INFO - parser.extract_id_from_block:90 - Block 5: Found ID from data-st13 attribute: 'KR501998400015637'
+2025-05-13 16:43:44,517 - root - INFO - parser.parse_wipo_html:153 - Block 6: Using ID 'KR501998400015637' (found with selector: data-st13)
+2025-05-13 16:43:44,517 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 6 due to missing critical data (ID or Name). ID: KR501998400015637, Name: None
+2025-05-13 16:43:44,517 - root - INFO - parser.extract_id_from_block:50 - Block 6: Starting ID extraction
+2025-05-13 16:43:44,518 - root - INFO - parser.extract_id_from_block:90 - Block 6: Found ID from data-st13 attribute: 'VN502009000023685'
+2025-05-13 16:43:44,518 - root - INFO - parser.parse_wipo_html:153 - Block 7: Using ID 'VN502009000023685' (found with selector: data-st13)
+2025-05-13 16:43:44,518 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 7 due to missing critical data (ID or Name). ID: VN502009000023685, Name: None
+2025-05-13 16:43:44,518 - root - INFO - parser.extract_id_from_block:50 - Block 7: Starting ID extraction
+2025-05-13 16:43:44,518 - root - INFO - parser.extract_id_from_block:90 - Block 7: Found ID from data-st13 attribute: 'IN502013002483811'
+2025-05-13 16:43:44,518 - root - INFO - parser.parse_wipo_html:153 - Block 8: Using ID 'IN502013002483811' (found with selector: data-st13)
+2025-05-13 16:43:44,518 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 8 due to missing critical data (ID or Name). ID: IN502013002483811, Name: None
+2025-05-13 16:43:44,518 - root - INFO - parser.extract_id_from_block:50 - Block 8: Starting ID extraction
+2025-05-13 16:43:44,518 - root - INFO - parser.extract_id_from_block:90 - Block 8: Found ID from data-st13 attribute: 'DE500000039818247'
+2025-05-13 16:43:44,518 - root - INFO - parser.parse_wipo_html:153 - Block 9: Using ID 'DE500000039818247' (found with selector: data-st13)
+2025-05-13 16:43:44,518 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 9 due to missing critical data (ID or Name). ID: DE500000039818247, Name: None
+2025-05-13 16:43:44,518 - root - INFO - parser.extract_id_from_block:50 - Block 9: Starting ID extraction
+2025-05-13 16:43:44,519 - root - INFO - parser.extract_id_from_block:90 - Block 9: Found ID from data-st13 attribute: 'IN502011002246596'
+2025-05-13 16:43:44,519 - root - INFO - parser.parse_wipo_html:153 - Block 10: Using ID 'IN502011002246596' (found with selector: data-st13)
+2025-05-13 16:43:44,519 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 10 due to missing critical data (ID or Name). ID: IN502011002246596, Name: None
+2025-05-13 16:43:44,519 - root - INFO - parser.extract_id_from_block:50 - Block 10: Starting ID extraction
+2025-05-13 16:43:44,519 - root - INFO - parser.extract_id_from_block:90 - Block 10: Found ID from data-st13 attribute: 'IN502006001487861'
+2025-05-13 16:43:44,519 - root - INFO - parser.parse_wipo_html:153 - Block 11: Using ID 'IN502006001487861' (found with selector: data-st13)
+2025-05-13 16:43:44,519 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 11 due to missing critical data (ID or Name). ID: IN502006001487861, Name: None
+2025-05-13 16:43:44,519 - root - INFO - parser.extract_id_from_block:50 - Block 11: Starting ID extraction
+2025-05-13 16:43:44,519 - root - INFO - parser.extract_id_from_block:90 - Block 11: Found ID from data-st13 attribute: 'VN502014000026479'
+2025-05-13 16:43:44,519 - root - INFO - parser.parse_wipo_html:153 - Block 12: Using ID 'VN502014000026479' (found with selector: data-st13)
+2025-05-13 16:43:44,520 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 12 due to missing critical data (ID or Name). ID: VN502014000026479, Name: None
+2025-05-13 16:43:44,520 - root - INFO - parser.extract_id_from_block:50 - Block 12: Starting ID extraction
+2025-05-13 16:43:44,520 - root - INFO - parser.extract_id_from_block:90 - Block 12: Found ID from data-st13 attribute: 'MW502014000000215'
+2025-05-13 16:43:44,520 - root - INFO - parser.parse_wipo_html:153 - Block 13: Using ID 'MW502014000000215' (found with selector: data-st13)
+2025-05-13 16:43:44,520 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 13 due to missing critical data (ID or Name). ID: MW502014000000215, Name: None
+2025-05-13 16:43:44,520 - root - INFO - parser.extract_id_from_block:50 - Block 13: Starting ID extraction
+2025-05-13 16:43:44,520 - root - INFO - parser.extract_id_from_block:90 - Block 13: Found ID from data-st13 attribute: 'MA501997000062876'
+2025-05-13 16:43:44,520 - root - INFO - parser.parse_wipo_html:153 - Block 14: Using ID 'MA501997000062876' (found with selector: data-st13)
+2025-05-13 16:43:44,520 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 14 due to missing critical data (ID or Name). ID: MA501997000062876, Name: None
+2025-05-13 16:43:44,520 - root - INFO - parser.extract_id_from_block:50 - Block 14: Starting ID extraction
+2025-05-13 16:43:44,520 - root - INFO - parser.extract_id_from_block:90 - Block 14: Found ID from data-st13 attribute: 'FR501996096650666'
+2025-05-13 16:43:44,521 - root - INFO - parser.parse_wipo_html:153 - Block 15: Using ID 'FR501996096650666' (found with selector: data-st13)
+2025-05-13 16:43:44,521 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 15 due to missing critical data (ID or Name). ID: FR501996096650666, Name: None
+2025-05-13 16:43:44,521 - root - INFO - parser.extract_id_from_block:50 - Block 15: Starting ID extraction
+2025-05-13 16:43:44,521 - root - INFO - parser.extract_id_from_block:90 - Block 15: Found ID from data-st13 attribute: 'BR500000823972631'
+2025-05-13 16:43:44,521 - root - INFO - parser.parse_wipo_html:153 - Block 16: Using ID 'BR500000823972631' (found with selector: data-st13)
+2025-05-13 16:43:44,521 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 16 due to missing critical data (ID or Name). ID: BR500000823972631, Name: None
+2025-05-13 16:43:44,521 - root - INFO - parser.extract_id_from_block:50 - Block 16: Starting ID extraction
+2025-05-13 16:43:44,521 - root - INFO - parser.extract_id_from_block:90 - Block 16: Found ID from data-st13 attribute: 'ID501998D00014009'
+2025-05-13 16:43:44,521 - root - INFO - parser.parse_wipo_html:153 - Block 17: Using ID 'ID501998D00014009' (found with selector: data-st13)
+2025-05-13 16:43:44,521 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 17 due to missing critical data (ID or Name). ID: ID501998D00014009, Name: None
+2025-05-13 16:43:44,521 - root - INFO - parser.extract_id_from_block:50 - Block 17: Starting ID extraction
+2025-05-13 16:43:44,522 - root - INFO - parser.extract_id_from_block:90 - Block 17: Found ID from data-st13 attribute: 'IT501998900672355'
+2025-05-13 16:43:44,522 - root - INFO - parser.parse_wipo_html:153 - Block 18: Using ID 'IT501998900672355' (found with selector: data-st13)
+2025-05-13 16:43:44,522 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 18 due to missing critical data (ID or Name). ID: IT501998900672355, Name: None
+2025-05-13 16:43:44,522 - root - INFO - parser.extract_id_from_block:50 - Block 18: Starting ID extraction
+2025-05-13 16:43:44,522 - root - INFO - parser.extract_id_from_block:90 - Block 18: Found ID from data-st13 attribute: 'MA502003000029253'
+2025-05-13 16:43:44,522 - root - INFO - parser.parse_wipo_html:153 - Block 19: Using ID 'MA502003000029253' (found with selector: data-st13)
+2025-05-13 16:43:44,522 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 19 due to missing critical data (ID or Name). ID: MA502003000029253, Name: None
+2025-05-13 16:43:44,522 - root - INFO - parser.extract_id_from_block:50 - Block 19: Starting ID extraction
+2025-05-13 16:43:44,522 - root - INFO - parser.extract_id_from_block:90 - Block 19: Found ID from data-st13 attribute: 'MA502003000089467'
+2025-05-13 16:43:44,522 - root - INFO - parser.parse_wipo_html:153 - Block 20: Using ID 'MA502003000089467' (found with selector: data-st13)
+2025-05-13 16:43:44,522 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 20 due to missing critical data (ID or Name). ID: MA502003000089467, Name: None
+2025-05-13 16:43:44,523 - root - INFO - parser.extract_id_from_block:50 - Block 20: Starting ID extraction
+2025-05-13 16:43:44,523 - root - INFO - parser.extract_id_from_block:90 - Block 20: Found ID from data-st13 attribute: 'IN502009001820335'
+2025-05-13 16:43:44,523 - root - INFO - parser.parse_wipo_html:153 - Block 21: Using ID 'IN502009001820335' (found with selector: data-st13)
+2025-05-13 16:43:44,523 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 21 due to missing critical data (ID or Name). ID: IN502009001820335, Name: None
+2025-05-13 16:43:44,523 - root - INFO - parser.extract_id_from_block:50 - Block 21: Starting ID extraction
+2025-05-13 16:43:44,523 - root - INFO - parser.extract_id_from_block:90 - Block 21: Found ID from data-st13 attribute: 'IN502014002740266'
+2025-05-13 16:43:44,523 - root - INFO - parser.parse_wipo_html:153 - Block 22: Using ID 'IN502014002740266' (found with selector: data-st13)
+2025-05-13 16:43:44,523 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 22 due to missing critical data (ID or Name). ID: IN502014002740266, Name: None
+2025-05-13 16:43:44,523 - root - INFO - parser.extract_id_from_block:50 - Block 22: Starting ID extraction
+2025-05-13 16:43:44,523 - root - INFO - parser.extract_id_from_block:90 - Block 22: Found ID from data-st13 attribute: 'IN502006001487860'
+2025-05-13 16:43:44,523 - root - INFO - parser.parse_wipo_html:153 - Block 23: Using ID 'IN502006001487860' (found with selector: data-st13)
+2025-05-13 16:43:44,524 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 23 due to missing critical data (ID or Name). ID: IN502006001487860, Name: None
+2025-05-13 16:43:44,524 - root - INFO - parser.extract_id_from_block:50 - Block 23: Starting ID extraction
+2025-05-13 16:43:44,524 - root - INFO - parser.extract_id_from_block:90 - Block 23: Found ID from data-st13 attribute: 'VN502018000033678'
+2025-05-13 16:43:44,524 - root - INFO - parser.parse_wipo_html:153 - Block 24: Using ID 'VN502018000033678' (found with selector: data-st13)
+2025-05-13 16:43:44,524 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 24 due to missing critical data (ID or Name). ID: VN502018000033678, Name: None
+2025-05-13 16:43:44,524 - root - INFO - parser.extract_id_from_block:50 - Block 24: Starting ID extraction
+2025-05-13 16:43:44,524 - root - INFO - parser.extract_id_from_block:90 - Block 24: Found ID from data-st13 attribute: 'US502014086281920'
+2025-05-13 16:43:44,524 - root - INFO - parser.parse_wipo_html:153 - Block 25: Using ID 'US502014086281920' (found with selector: data-st13)
+2025-05-13 16:43:44,524 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 25 due to missing critical data (ID or Name). ID: US502014086281920, Name: None
+2025-05-13 16:43:44,524 - root - INFO - parser.extract_id_from_block:50 - Block 25: Starting ID extraction
+2025-05-13 16:43:44,525 - root - INFO - parser.extract_id_from_block:90 - Block 25: Found ID from data-st13 attribute: 'KR502011400007448'
+2025-05-13 16:43:44,525 - root - INFO - parser.parse_wipo_html:153 - Block 26: Using ID 'KR502011400007448' (found with selector: data-st13)
+2025-05-13 16:43:44,525 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 26 due to missing critical data (ID or Name). ID: KR502011400007448, Name: None
+2025-05-13 16:43:44,525 - root - INFO - parser.extract_id_from_block:50 - Block 26: Starting ID extraction
+2025-05-13 16:43:44,525 - root - INFO - parser.extract_id_from_block:90 - Block 26: Found ID from data-st13 attribute: 'IN502021005088248'
+2025-05-13 16:43:44,525 - root - INFO - parser.parse_wipo_html:153 - Block 27: Using ID 'IN502021005088248' (found with selector: data-st13)
+2025-05-13 16:43:44,525 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 27 due to missing critical data (ID or Name). ID: IN502021005088248, Name: None
+2025-05-13 16:43:44,525 - root - INFO - parser.extract_id_from_block:50 - Block 27: Starting ID extraction
+2025-05-13 16:43:44,525 - root - INFO - parser.extract_id_from_block:90 - Block 27: Found ID from data-st13 attribute: 'BR500000930286006'
+2025-05-13 16:43:44,525 - root - INFO - parser.parse_wipo_html:153 - Block 28: Using ID 'BR500000930286006' (found with selector: data-st13)
+2025-05-13 16:43:44,525 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 28 due to missing critical data (ID or Name). ID: BR500000930286006, Name: None
+2025-05-13 16:43:44,525 - root - INFO - parser.extract_id_from_block:50 - Block 28: Starting ID extraction
+2025-05-13 16:43:44,526 - root - INFO - parser.extract_id_from_block:90 - Block 28: Found ID from data-st13 attribute: 'BR500000815394071'
+2025-05-13 16:43:44,526 - root - INFO - parser.parse_wipo_html:153 - Block 29: Using ID 'BR500000815394071' (found with selector: data-st13)
+2025-05-13 16:43:44,526 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 29 due to missing critical data (ID or Name). ID: BR500000815394071, Name: None
+2025-05-13 16:43:44,526 - root - INFO - parser.extract_id_from_block:50 - Block 29: Starting ID extraction
+2025-05-13 16:43:44,526 - root - INFO - parser.extract_id_from_block:90 - Block 29: Found ID from data-st13 attribute: 'FR501997097682953'
+2025-05-13 16:43:44,526 - root - INFO - parser.parse_wipo_html:153 - Block 30: Using ID 'FR501997097682953' (found with selector: data-st13)
+2025-05-13 16:43:44,526 - root - WARNING - parser.parse_wipo_html:197 - Parser: Skipping item for block 30 due to missing critical data (ID or Name). ID: FR501997097682953, Name: None
+2025-05-13 16:43:44,526 - root - INFO - parser.parse_wipo_html:212 - Parser: Successfully parsed 5 items from 30 blocks.
+2025-05-13 16:43:44,532 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 812888227
+2025-05-13 16:43:44,537 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 812888227
+2025-05-13 16:43:44,538 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 545892
+2025-05-13 16:43:44,540 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 545892
+2025-05-13 16:43:44,541 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 544244
+2025-05-13 16:43:44,543 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 544244
+2025-05-13 16:43:44,544 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 145299
+2025-05-13 16:43:44,545 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 145299
+2025-05-13 16:43:44,545 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: M1935158
+2025-05-13 16:43:44,546 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item M1935158
+2025-05-13 16:43:44,546 - root - INFO - wipo._save_wipo_items_to_db:158 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 5, Saved: 5, Skipped: 0, Errors: 0
+2025-05-13 16:43:44,546 - root - INFO - wipo.crawl_wipo_by_name:542 - WIPO Crawler: Successfully saved 5 items to database
+2025-05-13 16:43:44,547 - root - INFO - wipo.crawl_wipo_by_name:548 - WIPO Crawler: Database session closed.
+2025-05-13 16:43:44,547 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 16:43:44,547 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 16:46:58,804 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 16:46:58,805 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 16:47:00,104 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 16:47:14,854 - root - INFO - wipo.crawl_wipo_by_name:423 - WIPO Crawler: Using dynamic timeout of 60 seconds
+2025-05-13 16:47:35,648 - root - INFO - wipo.crawl_wipo_by_name:462 - WIPO Crawler: Found results using selector: div[class*='result']
+2025-05-13 16:47:35,648 - root - INFO - wipo.crawl_wipo_by_name:463 - First result text: Brand name: contains the word 'RONALDO'and:Edit your searchTMviewSearch nameSave  Displaying 1-30 of...
+2025-05-13 16:47:40,738 - root - INFO - wipo.crawl_wipo_by_name:514 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 16:47:40,738 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-13 16:47:40,750 - root - INFO - parser.parse_wipo_html:161 - Found 30 result blocks to parse
+2025-05-13 16:47:40,750 - root - INFO - parser.extract_brand_name_from_block:136 - Block 0: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 16:47:40,750 - root - INFO - parser.parse_wipo_html:171 - Block 1: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 16:47:40,751 - root - INFO - parser.extract_id_from_block:50 - Block 0: Starting ID extraction
+2025-05-13 16:47:40,752 - root - INFO - parser.extract_id_from_block:76 - Block 0: Selector '.number span.value' (attempt 1) found: '812888227'
+2025-05-13 16:47:40,752 - root - INFO - parser.parse_wipo_html:184 - Block 1: Using ID '812888227' (found with selector: .number span.value)
+2025-05-13 16:47:40,752 - root - INFO - parser.extract_brand_name_from_block:136 - Block 1: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 16:47:40,752 - root - INFO - parser.parse_wipo_html:171 - Block 2: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 16:47:40,753 - root - INFO - parser.extract_id_from_block:50 - Block 1: Starting ID extraction
+2025-05-13 16:47:40,753 - root - INFO - parser.extract_id_from_block:76 - Block 1: Selector '.number span.value' (attempt 1) found: '545,892'
+2025-05-13 16:47:40,753 - root - INFO - parser.parse_wipo_html:184 - Block 2: Using ID '545892' (found with selector: .number span.value)
+2025-05-13 16:47:40,754 - root - INFO - parser.extract_brand_name_from_block:136 - Block 2: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 16:47:40,754 - root - INFO - parser.parse_wipo_html:171 - Block 3: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 16:47:40,754 - root - INFO - parser.extract_id_from_block:50 - Block 2: Starting ID extraction
+2025-05-13 16:47:40,755 - root - INFO - parser.extract_id_from_block:76 - Block 2: Selector '.number span.value' (attempt 1) found: '544,244'
+2025-05-13 16:47:40,755 - root - INFO - parser.parse_wipo_html:184 - Block 3: Using ID '544244' (found with selector: .number span.value)
+2025-05-13 16:47:40,755 - root - INFO - parser.extract_brand_name_from_block:136 - Block 3: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 16:47:40,755 - root - INFO - parser.parse_wipo_html:171 - Block 4: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 16:47:40,755 - root - INFO - parser.extract_id_from_block:50 - Block 3: Starting ID extraction
+2025-05-13 16:47:40,756 - root - INFO - parser.extract_id_from_block:76 - Block 3: Selector '.number span.value' (attempt 1) found: '145299'
+2025-05-13 16:47:40,756 - root - INFO - parser.parse_wipo_html:184 - Block 4: Using ID '145299' (found with selector: .number span.value)
+2025-05-13 16:47:40,756 - root - INFO - parser.extract_brand_name_from_block:136 - Block 4: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 16:47:40,756 - root - INFO - parser.parse_wipo_html:171 - Block 5: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 16:47:40,756 - root - INFO - parser.extract_id_from_block:50 - Block 4: Starting ID extraction
+2025-05-13 16:47:40,757 - root - INFO - parser.extract_id_from_block:76 - Block 4: Selector '.number span.value' (attempt 1) found: 'M1935158'
+2025-05-13 16:47:40,757 - root - INFO - parser.parse_wipo_html:184 - Block 5: Using ID 'M1935158' (found with selector: .number span.value)
+2025-05-13 16:47:40,758 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 5: Could not extract brand name with any method.
+2025-05-13 16:47:40,758 - root - WARNING - parser.parse_wipo_html:173 - Block 6: Could not extract brand name.
+2025-05-13 16:47:40,758 - root - INFO - parser.extract_id_from_block:50 - Block 5: Starting ID extraction
+2025-05-13 16:47:40,759 - root - INFO - parser.extract_id_from_block:90 - Block 5: Found ID from data-st13 attribute: 'KR501998400015637'
+2025-05-13 16:47:40,759 - root - INFO - parser.parse_wipo_html:184 - Block 6: Using ID 'KR501998400015637' (found with selector: data-st13)
+2025-05-13 16:47:40,759 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 6 due to missing critical data (ID or Name). ID: KR501998400015637, Name: None
+2025-05-13 16:47:40,759 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 6: Could not extract brand name with any method.
+2025-05-13 16:47:40,760 - root - WARNING - parser.parse_wipo_html:173 - Block 7: Could not extract brand name.
+2025-05-13 16:47:40,760 - root - INFO - parser.extract_id_from_block:50 - Block 6: Starting ID extraction
+2025-05-13 16:47:40,760 - root - INFO - parser.extract_id_from_block:90 - Block 6: Found ID from data-st13 attribute: 'VN502009000023685'
+2025-05-13 16:47:40,760 - root - INFO - parser.parse_wipo_html:184 - Block 7: Using ID 'VN502009000023685' (found with selector: data-st13)
+2025-05-13 16:47:40,760 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 7 due to missing critical data (ID or Name). ID: VN502009000023685, Name: None
+2025-05-13 16:47:40,760 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 7: Could not extract brand name with any method.
+2025-05-13 16:47:40,760 - root - WARNING - parser.parse_wipo_html:173 - Block 8: Could not extract brand name.
+2025-05-13 16:47:40,760 - root - INFO - parser.extract_id_from_block:50 - Block 7: Starting ID extraction
+2025-05-13 16:47:40,760 - root - INFO - parser.extract_id_from_block:90 - Block 7: Found ID from data-st13 attribute: 'IN502013002483811'
+2025-05-13 16:47:40,760 - root - INFO - parser.parse_wipo_html:184 - Block 8: Using ID 'IN502013002483811' (found with selector: data-st13)
+2025-05-13 16:47:40,760 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 8 due to missing critical data (ID or Name). ID: IN502013002483811, Name: None
+2025-05-13 16:47:40,760 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 8: Could not extract brand name with any method.
+2025-05-13 16:47:40,761 - root - WARNING - parser.parse_wipo_html:173 - Block 9: Could not extract brand name.
+2025-05-13 16:47:40,761 - root - INFO - parser.extract_id_from_block:50 - Block 8: Starting ID extraction
+2025-05-13 16:47:40,761 - root - INFO - parser.extract_id_from_block:90 - Block 8: Found ID from data-st13 attribute: 'DE500000039818247'
+2025-05-13 16:47:40,761 - root - INFO - parser.parse_wipo_html:184 - Block 9: Using ID 'DE500000039818247' (found with selector: data-st13)
+2025-05-13 16:47:40,761 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 9 due to missing critical data (ID or Name). ID: DE500000039818247, Name: None
+2025-05-13 16:47:40,761 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 9: Could not extract brand name with any method.
+2025-05-13 16:47:40,761 - root - WARNING - parser.parse_wipo_html:173 - Block 10: Could not extract brand name.
+2025-05-13 16:47:40,761 - root - INFO - parser.extract_id_from_block:50 - Block 9: Starting ID extraction
+2025-05-13 16:47:40,761 - root - INFO - parser.extract_id_from_block:90 - Block 9: Found ID from data-st13 attribute: 'IN502011002246596'
+2025-05-13 16:47:40,761 - root - INFO - parser.parse_wipo_html:184 - Block 10: Using ID 'IN502011002246596' (found with selector: data-st13)
+2025-05-13 16:47:40,761 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 10 due to missing critical data (ID or Name). ID: IN502011002246596, Name: None
+2025-05-13 16:47:40,761 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 10: Could not extract brand name with any method.
+2025-05-13 16:47:40,761 - root - WARNING - parser.parse_wipo_html:173 - Block 11: Could not extract brand name.
+2025-05-13 16:47:40,761 - root - INFO - parser.extract_id_from_block:50 - Block 10: Starting ID extraction
+2025-05-13 16:47:40,762 - root - INFO - parser.extract_id_from_block:90 - Block 10: Found ID from data-st13 attribute: 'IN502006001487861'
+2025-05-13 16:47:40,762 - root - INFO - parser.parse_wipo_html:184 - Block 11: Using ID 'IN502006001487861' (found with selector: data-st13)
+2025-05-13 16:47:40,762 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 11 due to missing critical data (ID or Name). ID: IN502006001487861, Name: None
+2025-05-13 16:47:40,762 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 11: Could not extract brand name with any method.
+2025-05-13 16:47:40,762 - root - WARNING - parser.parse_wipo_html:173 - Block 12: Could not extract brand name.
+2025-05-13 16:47:40,762 - root - INFO - parser.extract_id_from_block:50 - Block 11: Starting ID extraction
+2025-05-13 16:47:40,762 - root - INFO - parser.extract_id_from_block:90 - Block 11: Found ID from data-st13 attribute: 'VN502014000026479'
+2025-05-13 16:47:40,762 - root - INFO - parser.parse_wipo_html:184 - Block 12: Using ID 'VN502014000026479' (found with selector: data-st13)
+2025-05-13 16:47:40,762 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 12 due to missing critical data (ID or Name). ID: VN502014000026479, Name: None
+2025-05-13 16:47:40,762 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 12: Could not extract brand name with any method.
+2025-05-13 16:47:40,762 - root - WARNING - parser.parse_wipo_html:173 - Block 13: Could not extract brand name.
+2025-05-13 16:47:40,762 - root - INFO - parser.extract_id_from_block:50 - Block 12: Starting ID extraction
+2025-05-13 16:47:40,762 - root - INFO - parser.extract_id_from_block:90 - Block 12: Found ID from data-st13 attribute: 'MW502014000000215'
+2025-05-13 16:47:40,762 - root - INFO - parser.parse_wipo_html:184 - Block 13: Using ID 'MW502014000000215' (found with selector: data-st13)
+2025-05-13 16:47:40,763 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 13 due to missing critical data (ID or Name). ID: MW502014000000215, Name: None
+2025-05-13 16:47:40,763 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 13: Could not extract brand name with any method.
+2025-05-13 16:47:40,763 - root - WARNING - parser.parse_wipo_html:173 - Block 14: Could not extract brand name.
+2025-05-13 16:47:40,763 - root - INFO - parser.extract_id_from_block:50 - Block 13: Starting ID extraction
+2025-05-13 16:47:40,763 - root - INFO - parser.extract_id_from_block:90 - Block 13: Found ID from data-st13 attribute: 'MA501997000062876'
+2025-05-13 16:47:40,763 - root - INFO - parser.parse_wipo_html:184 - Block 14: Using ID 'MA501997000062876' (found with selector: data-st13)
+2025-05-13 16:47:40,763 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 14 due to missing critical data (ID or Name). ID: MA501997000062876, Name: None
+2025-05-13 16:47:40,763 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 14: Could not extract brand name with any method.
+2025-05-13 16:47:40,763 - root - WARNING - parser.parse_wipo_html:173 - Block 15: Could not extract brand name.
+2025-05-13 16:47:40,763 - root - INFO - parser.extract_id_from_block:50 - Block 14: Starting ID extraction
+2025-05-13 16:47:40,764 - root - INFO - parser.extract_id_from_block:90 - Block 14: Found ID from data-st13 attribute: 'FR501996096650666'
+2025-05-13 16:47:40,764 - root - INFO - parser.parse_wipo_html:184 - Block 15: Using ID 'FR501996096650666' (found with selector: data-st13)
+2025-05-13 16:47:40,764 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 15 due to missing critical data (ID or Name). ID: FR501996096650666, Name: None
+2025-05-13 16:47:40,764 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 15: Could not extract brand name with any method.
+2025-05-13 16:47:40,764 - root - WARNING - parser.parse_wipo_html:173 - Block 16: Could not extract brand name.
+2025-05-13 16:47:40,764 - root - INFO - parser.extract_id_from_block:50 - Block 15: Starting ID extraction
+2025-05-13 16:47:40,764 - root - INFO - parser.extract_id_from_block:90 - Block 15: Found ID from data-st13 attribute: 'BR500000823972631'
+2025-05-13 16:47:40,764 - root - INFO - parser.parse_wipo_html:184 - Block 16: Using ID 'BR500000823972631' (found with selector: data-st13)
+2025-05-13 16:47:40,764 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 16 due to missing critical data (ID or Name). ID: BR500000823972631, Name: None
+2025-05-13 16:47:40,764 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 16: Could not extract brand name with any method.
+2025-05-13 16:47:40,764 - root - WARNING - parser.parse_wipo_html:173 - Block 17: Could not extract brand name.
+2025-05-13 16:47:40,764 - root - INFO - parser.extract_id_from_block:50 - Block 16: Starting ID extraction
+2025-05-13 16:47:40,765 - root - INFO - parser.extract_id_from_block:90 - Block 16: Found ID from data-st13 attribute: 'ID501998D00014009'
+2025-05-13 16:47:40,765 - root - INFO - parser.parse_wipo_html:184 - Block 17: Using ID 'ID501998D00014009' (found with selector: data-st13)
+2025-05-13 16:47:40,765 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 17 due to missing critical data (ID or Name). ID: ID501998D00014009, Name: None
+2025-05-13 16:47:40,765 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 17: Could not extract brand name with any method.
+2025-05-13 16:47:40,765 - root - WARNING - parser.parse_wipo_html:173 - Block 18: Could not extract brand name.
+2025-05-13 16:47:40,765 - root - INFO - parser.extract_id_from_block:50 - Block 17: Starting ID extraction
+2025-05-13 16:47:40,765 - root - INFO - parser.extract_id_from_block:90 - Block 17: Found ID from data-st13 attribute: 'IT501998900672355'
+2025-05-13 16:47:40,765 - root - INFO - parser.parse_wipo_html:184 - Block 18: Using ID 'IT501998900672355' (found with selector: data-st13)
+2025-05-13 16:47:40,765 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 18 due to missing critical data (ID or Name). ID: IT501998900672355, Name: None
+2025-05-13 16:47:40,765 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 18: Could not extract brand name with any method.
+2025-05-13 16:47:40,766 - root - WARNING - parser.parse_wipo_html:173 - Block 19: Could not extract brand name.
+2025-05-13 16:47:40,766 - root - INFO - parser.extract_id_from_block:50 - Block 18: Starting ID extraction
+2025-05-13 16:47:40,766 - root - INFO - parser.extract_id_from_block:90 - Block 18: Found ID from data-st13 attribute: 'MA502003000029253'
+2025-05-13 16:47:40,766 - root - INFO - parser.parse_wipo_html:184 - Block 19: Using ID 'MA502003000029253' (found with selector: data-st13)
+2025-05-13 16:47:40,766 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 19 due to missing critical data (ID or Name). ID: MA502003000029253, Name: None
+2025-05-13 16:47:40,766 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 19: Could not extract brand name with any method.
+2025-05-13 16:47:40,766 - root - WARNING - parser.parse_wipo_html:173 - Block 20: Could not extract brand name.
+2025-05-13 16:47:40,766 - root - INFO - parser.extract_id_from_block:50 - Block 19: Starting ID extraction
+2025-05-13 16:47:40,766 - root - INFO - parser.extract_id_from_block:90 - Block 19: Found ID from data-st13 attribute: 'MA502003000089467'
+2025-05-13 16:47:40,766 - root - INFO - parser.parse_wipo_html:184 - Block 20: Using ID 'MA502003000089467' (found with selector: data-st13)
+2025-05-13 16:47:40,766 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 20 due to missing critical data (ID or Name). ID: MA502003000089467, Name: None
+2025-05-13 16:47:40,767 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 20: Could not extract brand name with any method.
+2025-05-13 16:47:40,767 - root - WARNING - parser.parse_wipo_html:173 - Block 21: Could not extract brand name.
+2025-05-13 16:47:40,767 - root - INFO - parser.extract_id_from_block:50 - Block 20: Starting ID extraction
+2025-05-13 16:47:40,767 - root - INFO - parser.extract_id_from_block:90 - Block 20: Found ID from data-st13 attribute: 'IN502009001820335'
+2025-05-13 16:47:40,767 - root - INFO - parser.parse_wipo_html:184 - Block 21: Using ID 'IN502009001820335' (found with selector: data-st13)
+2025-05-13 16:47:40,767 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 21 due to missing critical data (ID or Name). ID: IN502009001820335, Name: None
+2025-05-13 16:47:40,767 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 21: Could not extract brand name with any method.
+2025-05-13 16:47:40,767 - root - WARNING - parser.parse_wipo_html:173 - Block 22: Could not extract brand name.
+2025-05-13 16:47:40,767 - root - INFO - parser.extract_id_from_block:50 - Block 21: Starting ID extraction
+2025-05-13 16:47:40,767 - root - INFO - parser.extract_id_from_block:90 - Block 21: Found ID from data-st13 attribute: 'IN502014002740266'
+2025-05-13 16:47:40,768 - root - INFO - parser.parse_wipo_html:184 - Block 22: Using ID 'IN502014002740266' (found with selector: data-st13)
+2025-05-13 16:47:40,768 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 22 due to missing critical data (ID or Name). ID: IN502014002740266, Name: None
+2025-05-13 16:47:40,768 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 22: Could not extract brand name with any method.
+2025-05-13 16:47:40,768 - root - WARNING - parser.parse_wipo_html:173 - Block 23: Could not extract brand name.
+2025-05-13 16:47:40,768 - root - INFO - parser.extract_id_from_block:50 - Block 22: Starting ID extraction
+2025-05-13 16:47:40,768 - root - INFO - parser.extract_id_from_block:90 - Block 22: Found ID from data-st13 attribute: 'IN502006001487860'
+2025-05-13 16:47:40,768 - root - INFO - parser.parse_wipo_html:184 - Block 23: Using ID 'IN502006001487860' (found with selector: data-st13)
+2025-05-13 16:47:40,768 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 23 due to missing critical data (ID or Name). ID: IN502006001487860, Name: None
+2025-05-13 16:47:40,768 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 23: Could not extract brand name with any method.
+2025-05-13 16:47:40,768 - root - WARNING - parser.parse_wipo_html:173 - Block 24: Could not extract brand name.
+2025-05-13 16:47:40,768 - root - INFO - parser.extract_id_from_block:50 - Block 23: Starting ID extraction
+2025-05-13 16:47:40,768 - root - INFO - parser.extract_id_from_block:90 - Block 23: Found ID from data-st13 attribute: 'VN502018000033678'
+2025-05-13 16:47:40,768 - root - INFO - parser.parse_wipo_html:184 - Block 24: Using ID 'VN502018000033678' (found with selector: data-st13)
+2025-05-13 16:47:40,768 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 24 due to missing critical data (ID or Name). ID: VN502018000033678, Name: None
+2025-05-13 16:47:40,769 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 24: Could not extract brand name with any method.
+2025-05-13 16:47:40,769 - root - WARNING - parser.parse_wipo_html:173 - Block 25: Could not extract brand name.
+2025-05-13 16:47:40,769 - root - INFO - parser.extract_id_from_block:50 - Block 24: Starting ID extraction
+2025-05-13 16:47:40,769 - root - INFO - parser.extract_id_from_block:90 - Block 24: Found ID from data-st13 attribute: 'US502014086281920'
+2025-05-13 16:47:40,769 - root - INFO - parser.parse_wipo_html:184 - Block 25: Using ID 'US502014086281920' (found with selector: data-st13)
+2025-05-13 16:47:40,769 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 25 due to missing critical data (ID or Name). ID: US502014086281920, Name: None
+2025-05-13 16:47:40,769 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 25: Could not extract brand name with any method.
+2025-05-13 16:47:40,769 - root - WARNING - parser.parse_wipo_html:173 - Block 26: Could not extract brand name.
+2025-05-13 16:47:40,769 - root - INFO - parser.extract_id_from_block:50 - Block 25: Starting ID extraction
+2025-05-13 16:47:40,769 - root - INFO - parser.extract_id_from_block:90 - Block 25: Found ID from data-st13 attribute: 'KR502011400007448'
+2025-05-13 16:47:40,769 - root - INFO - parser.parse_wipo_html:184 - Block 26: Using ID 'KR502011400007448' (found with selector: data-st13)
+2025-05-13 16:47:40,769 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 26 due to missing critical data (ID or Name). ID: KR502011400007448, Name: None
+2025-05-13 16:47:40,769 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 26: Could not extract brand name with any method.
+2025-05-13 16:47:40,769 - root - WARNING - parser.parse_wipo_html:173 - Block 27: Could not extract brand name.
+2025-05-13 16:47:40,769 - root - INFO - parser.extract_id_from_block:50 - Block 26: Starting ID extraction
+2025-05-13 16:47:40,770 - root - INFO - parser.extract_id_from_block:90 - Block 26: Found ID from data-st13 attribute: 'IN502021005088248'
+2025-05-13 16:47:40,770 - root - INFO - parser.parse_wipo_html:184 - Block 27: Using ID 'IN502021005088248' (found with selector: data-st13)
+2025-05-13 16:47:40,770 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 27 due to missing critical data (ID or Name). ID: IN502021005088248, Name: None
+2025-05-13 16:47:40,770 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 27: Could not extract brand name with any method.
+2025-05-13 16:47:40,770 - root - WARNING - parser.parse_wipo_html:173 - Block 28: Could not extract brand name.
+2025-05-13 16:47:40,770 - root - INFO - parser.extract_id_from_block:50 - Block 27: Starting ID extraction
+2025-05-13 16:47:40,770 - root - INFO - parser.extract_id_from_block:90 - Block 27: Found ID from data-st13 attribute: 'BR500000930286006'
+2025-05-13 16:47:40,770 - root - INFO - parser.parse_wipo_html:184 - Block 28: Using ID 'BR500000930286006' (found with selector: data-st13)
+2025-05-13 16:47:40,770 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 28 due to missing critical data (ID or Name). ID: BR500000930286006, Name: None
+2025-05-13 16:47:40,770 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 28: Could not extract brand name with any method.
+2025-05-13 16:47:40,771 - root - WARNING - parser.parse_wipo_html:173 - Block 29: Could not extract brand name.
+2025-05-13 16:47:40,771 - root - INFO - parser.extract_id_from_block:50 - Block 28: Starting ID extraction
+2025-05-13 16:47:40,771 - root - INFO - parser.extract_id_from_block:90 - Block 28: Found ID from data-st13 attribute: 'BR500000815394071'
+2025-05-13 16:47:40,771 - root - INFO - parser.parse_wipo_html:184 - Block 29: Using ID 'BR500000815394071' (found with selector: data-st13)
+2025-05-13 16:47:40,771 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 29 due to missing critical data (ID or Name). ID: BR500000815394071, Name: None
+2025-05-13 16:47:40,771 - root - WARNING - parser.extract_brand_name_from_block:148 - Block 29: Could not extract brand name with any method.
+2025-05-13 16:47:40,771 - root - WARNING - parser.parse_wipo_html:173 - Block 30: Could not extract brand name.
+2025-05-13 16:47:40,771 - root - INFO - parser.extract_id_from_block:50 - Block 29: Starting ID extraction
+2025-05-13 16:47:40,771 - root - INFO - parser.extract_id_from_block:90 - Block 29: Found ID from data-st13 attribute: 'FR501997097682953'
+2025-05-13 16:47:40,771 - root - INFO - parser.parse_wipo_html:184 - Block 30: Using ID 'FR501997097682953' (found with selector: data-st13)
+2025-05-13 16:47:40,771 - root - WARNING - parser.parse_wipo_html:228 - Parser: Skipping item for block 30 due to missing critical data (ID or Name). ID: FR501997097682953, Name: None
+2025-05-13 16:47:40,771 - root - INFO - parser.parse_wipo_html:243 - Parser: Successfully parsed 5 items from 30 blocks.
+2025-05-13 16:47:40,776 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 812888227
+2025-05-13 16:47:40,779 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 812888227
+2025-05-13 16:47:40,781 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 545892
+2025-05-13 16:47:40,782 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 545892
+2025-05-13 16:47:40,783 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 544244
+2025-05-13 16:47:40,784 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 544244
+2025-05-13 16:47:40,785 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 145299
+2025-05-13 16:47:40,785 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 145299
+2025-05-13 16:47:40,786 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: M1935158
+2025-05-13 16:47:40,787 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item M1935158
+2025-05-13 16:47:40,787 - root - INFO - wipo._save_wipo_items_to_db:158 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 5, Saved: 5, Skipped: 0, Errors: 0
+2025-05-13 16:47:40,787 - root - INFO - wipo.crawl_wipo_by_name:542 - WIPO Crawler: Successfully saved 5 items to database
+2025-05-13 16:47:40,787 - root - INFO - wipo.crawl_wipo_by_name:548 - WIPO Crawler: Database session closed.
+2025-05-13 16:47:40,787 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 16:47:40,787 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 16:50:45,484 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 16:50:45,484 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 16:50:46,827 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 16:50:57,374 - root - INFO - wipo.crawl_wipo_by_name:423 - WIPO Crawler: Using dynamic timeout of 60 seconds
+2025-05-13 16:51:17,747 - root - INFO - wipo.crawl_wipo_by_name:462 - WIPO Crawler: Found results using selector: div[class*='result']
+2025-05-13 16:51:17,747 - root - INFO - wipo.crawl_wipo_by_name:463 - First result text: Brand name: contains the word 'RONALDO'and:Edit your searchTMviewSearch nameSave  Displaying 1-30 of...
+2025-05-13 16:51:22,825 - root - INFO - wipo.crawl_wipo_by_name:514 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 16:51:22,825 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-13 16:51:22,837 - root - INFO - parser.parse_wipo_html:140 - Found 30 result blocks to parse
+2025-05-13 16:51:22,837 - root - INFO - parser.extract_brand_name_from_block:125 - Block 0: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 16:51:22,837 - root - INFO - parser.parse_wipo_html:150 - Block 1: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 16:51:22,837 - root - INFO - parser.extract_id_from_block:50 - Block 0: Starting ID extraction
+2025-05-13 16:51:22,838 - root - INFO - parser.extract_id_from_block:76 - Block 0: Selector '.number span.value' (attempt 1) found: '812888227'
+2025-05-13 16:51:22,838 - root - INFO - parser.parse_wipo_html:163 - Block 1: Using ID '812888227' (found with selector: .number span.value)
+2025-05-13 16:51:22,839 - root - INFO - parser.extract_brand_name_from_block:125 - Block 1: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 16:51:22,840 - root - INFO - parser.parse_wipo_html:150 - Block 2: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 16:51:22,840 - root - INFO - parser.extract_id_from_block:50 - Block 1: Starting ID extraction
+2025-05-13 16:51:22,840 - root - INFO - parser.extract_id_from_block:76 - Block 1: Selector '.number span.value' (attempt 1) found: '545,892'
+2025-05-13 16:51:22,840 - root - INFO - parser.parse_wipo_html:163 - Block 2: Using ID '545892' (found with selector: .number span.value)
+2025-05-13 16:51:22,841 - root - INFO - parser.extract_brand_name_from_block:125 - Block 2: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 16:51:22,841 - root - INFO - parser.parse_wipo_html:150 - Block 3: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 16:51:22,841 - root - INFO - parser.extract_id_from_block:50 - Block 2: Starting ID extraction
+2025-05-13 16:51:22,842 - root - INFO - parser.extract_id_from_block:76 - Block 2: Selector '.number span.value' (attempt 1) found: '544,244'
+2025-05-13 16:51:22,842 - root - INFO - parser.parse_wipo_html:163 - Block 3: Using ID '544244' (found with selector: .number span.value)
+2025-05-13 16:51:22,842 - root - INFO - parser.extract_brand_name_from_block:125 - Block 3: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 16:51:22,842 - root - INFO - parser.parse_wipo_html:150 - Block 4: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 16:51:22,842 - root - INFO - parser.extract_id_from_block:50 - Block 3: Starting ID extraction
+2025-05-13 16:51:22,843 - root - INFO - parser.extract_id_from_block:76 - Block 3: Selector '.number span.value' (attempt 1) found: '145299'
+2025-05-13 16:51:22,843 - root - INFO - parser.parse_wipo_html:163 - Block 4: Using ID '145299' (found with selector: .number span.value)
+2025-05-13 16:51:22,843 - root - INFO - parser.extract_brand_name_from_block:125 - Block 4: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 16:51:22,843 - root - INFO - parser.parse_wipo_html:150 - Block 5: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 16:51:22,844 - root - INFO - parser.extract_id_from_block:50 - Block 4: Starting ID extraction
+2025-05-13 16:51:22,844 - root - INFO - parser.extract_id_from_block:76 - Block 4: Selector '.number span.value' (attempt 1) found: 'M1935158'
+2025-05-13 16:51:22,844 - root - INFO - parser.parse_wipo_html:163 - Block 5: Using ID 'M1935158' (found with selector: .number span.value)
+2025-05-13 16:51:22,845 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 5: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,845 - root - WARNING - parser.parse_wipo_html:152 - Block 6: Could not extract brand name.
+2025-05-13 16:51:22,845 - root - INFO - parser.extract_id_from_block:50 - Block 5: Starting ID extraction
+2025-05-13 16:51:22,845 - root - INFO - parser.extract_id_from_block:90 - Block 5: Found ID from data-st13 attribute: 'KR501998400015637'
+2025-05-13 16:51:22,845 - root - INFO - parser.parse_wipo_html:163 - Block 6: Using ID 'KR501998400015637' (found with selector: data-st13)
+2025-05-13 16:51:22,846 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 6 due to missing critical data (ID or Name). ID: KR501998400015637, Name: None
+2025-05-13 16:51:22,846 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 6: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,846 - root - WARNING - parser.parse_wipo_html:152 - Block 7: Could not extract brand name.
+2025-05-13 16:51:22,846 - root - INFO - parser.extract_id_from_block:50 - Block 6: Starting ID extraction
+2025-05-13 16:51:22,846 - root - INFO - parser.extract_id_from_block:90 - Block 6: Found ID from data-st13 attribute: 'VN502009000023685'
+2025-05-13 16:51:22,846 - root - INFO - parser.parse_wipo_html:163 - Block 7: Using ID 'VN502009000023685' (found with selector: data-st13)
+2025-05-13 16:51:22,846 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 7 due to missing critical data (ID or Name). ID: VN502009000023685, Name: None
+2025-05-13 16:51:22,846 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 7: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,846 - root - WARNING - parser.parse_wipo_html:152 - Block 8: Could not extract brand name.
+2025-05-13 16:51:22,846 - root - INFO - parser.extract_id_from_block:50 - Block 7: Starting ID extraction
+2025-05-13 16:51:22,846 - root - INFO - parser.extract_id_from_block:90 - Block 7: Found ID from data-st13 attribute: 'IN502013002483811'
+2025-05-13 16:51:22,846 - root - INFO - parser.parse_wipo_html:163 - Block 8: Using ID 'IN502013002483811' (found with selector: data-st13)
+2025-05-13 16:51:22,847 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 8 due to missing critical data (ID or Name). ID: IN502013002483811, Name: None
+2025-05-13 16:51:22,847 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 8: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,847 - root - WARNING - parser.parse_wipo_html:152 - Block 9: Could not extract brand name.
+2025-05-13 16:51:22,847 - root - INFO - parser.extract_id_from_block:50 - Block 8: Starting ID extraction
+2025-05-13 16:51:22,847 - root - INFO - parser.extract_id_from_block:90 - Block 8: Found ID from data-st13 attribute: 'DE500000039818247'
+2025-05-13 16:51:22,847 - root - INFO - parser.parse_wipo_html:163 - Block 9: Using ID 'DE500000039818247' (found with selector: data-st13)
+2025-05-13 16:51:22,847 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 9 due to missing critical data (ID or Name). ID: DE500000039818247, Name: None
+2025-05-13 16:51:22,847 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 9: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,847 - root - WARNING - parser.parse_wipo_html:152 - Block 10: Could not extract brand name.
+2025-05-13 16:51:22,847 - root - INFO - parser.extract_id_from_block:50 - Block 9: Starting ID extraction
+2025-05-13 16:51:22,847 - root - INFO - parser.extract_id_from_block:90 - Block 9: Found ID from data-st13 attribute: 'IN502011002246596'
+2025-05-13 16:51:22,847 - root - INFO - parser.parse_wipo_html:163 - Block 10: Using ID 'IN502011002246596' (found with selector: data-st13)
+2025-05-13 16:51:22,847 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 10 due to missing critical data (ID or Name). ID: IN502011002246596, Name: None
+2025-05-13 16:51:22,847 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 10: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,847 - root - WARNING - parser.parse_wipo_html:152 - Block 11: Could not extract brand name.
+2025-05-13 16:51:22,847 - root - INFO - parser.extract_id_from_block:50 - Block 10: Starting ID extraction
+2025-05-13 16:51:22,848 - root - INFO - parser.extract_id_from_block:90 - Block 10: Found ID from data-st13 attribute: 'IN502006001487861'
+2025-05-13 16:51:22,848 - root - INFO - parser.parse_wipo_html:163 - Block 11: Using ID 'IN502006001487861' (found with selector: data-st13)
+2025-05-13 16:51:22,848 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 11 due to missing critical data (ID or Name). ID: IN502006001487861, Name: None
+2025-05-13 16:51:22,848 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 11: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,848 - root - WARNING - parser.parse_wipo_html:152 - Block 12: Could not extract brand name.
+2025-05-13 16:51:22,848 - root - INFO - parser.extract_id_from_block:50 - Block 11: Starting ID extraction
+2025-05-13 16:51:22,848 - root - INFO - parser.extract_id_from_block:90 - Block 11: Found ID from data-st13 attribute: 'VN502014000026479'
+2025-05-13 16:51:22,848 - root - INFO - parser.parse_wipo_html:163 - Block 12: Using ID 'VN502014000026479' (found with selector: data-st13)
+2025-05-13 16:51:22,848 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 12 due to missing critical data (ID or Name). ID: VN502014000026479, Name: None
+2025-05-13 16:51:22,848 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 12: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,848 - root - WARNING - parser.parse_wipo_html:152 - Block 13: Could not extract brand name.
+2025-05-13 16:51:22,848 - root - INFO - parser.extract_id_from_block:50 - Block 12: Starting ID extraction
+2025-05-13 16:51:22,848 - root - INFO - parser.extract_id_from_block:90 - Block 12: Found ID from data-st13 attribute: 'MW502014000000215'
+2025-05-13 16:51:22,848 - root - INFO - parser.parse_wipo_html:163 - Block 13: Using ID 'MW502014000000215' (found with selector: data-st13)
+2025-05-13 16:51:22,848 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 13 due to missing critical data (ID or Name). ID: MW502014000000215, Name: None
+2025-05-13 16:51:22,848 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 13: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,849 - root - WARNING - parser.parse_wipo_html:152 - Block 14: Could not extract brand name.
+2025-05-13 16:51:22,849 - root - INFO - parser.extract_id_from_block:50 - Block 13: Starting ID extraction
+2025-05-13 16:51:22,849 - root - INFO - parser.extract_id_from_block:90 - Block 13: Found ID from data-st13 attribute: 'MA501997000062876'
+2025-05-13 16:51:22,849 - root - INFO - parser.parse_wipo_html:163 - Block 14: Using ID 'MA501997000062876' (found with selector: data-st13)
+2025-05-13 16:51:22,849 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 14 due to missing critical data (ID or Name). ID: MA501997000062876, Name: None
+2025-05-13 16:51:22,849 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 14: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,849 - root - WARNING - parser.parse_wipo_html:152 - Block 15: Could not extract brand name.
+2025-05-13 16:51:22,849 - root - INFO - parser.extract_id_from_block:50 - Block 14: Starting ID extraction
+2025-05-13 16:51:22,849 - root - INFO - parser.extract_id_from_block:90 - Block 14: Found ID from data-st13 attribute: 'FR501996096650666'
+2025-05-13 16:51:22,849 - root - INFO - parser.parse_wipo_html:163 - Block 15: Using ID 'FR501996096650666' (found with selector: data-st13)
+2025-05-13 16:51:22,849 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 15 due to missing critical data (ID or Name). ID: FR501996096650666, Name: None
+2025-05-13 16:51:22,849 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 15: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,849 - root - WARNING - parser.parse_wipo_html:152 - Block 16: Could not extract brand name.
+2025-05-13 16:51:22,849 - root - INFO - parser.extract_id_from_block:50 - Block 15: Starting ID extraction
+2025-05-13 16:51:22,849 - root - INFO - parser.extract_id_from_block:90 - Block 15: Found ID from data-st13 attribute: 'BR500000823972631'
+2025-05-13 16:51:22,850 - root - INFO - parser.parse_wipo_html:163 - Block 16: Using ID 'BR500000823972631' (found with selector: data-st13)
+2025-05-13 16:51:22,850 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 16 due to missing critical data (ID or Name). ID: BR500000823972631, Name: None
+2025-05-13 16:51:22,850 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 16: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,850 - root - WARNING - parser.parse_wipo_html:152 - Block 17: Could not extract brand name.
+2025-05-13 16:51:22,850 - root - INFO - parser.extract_id_from_block:50 - Block 16: Starting ID extraction
+2025-05-13 16:51:22,850 - root - INFO - parser.extract_id_from_block:90 - Block 16: Found ID from data-st13 attribute: 'ID501998D00014009'
+2025-05-13 16:51:22,850 - root - INFO - parser.parse_wipo_html:163 - Block 17: Using ID 'ID501998D00014009' (found with selector: data-st13)
+2025-05-13 16:51:22,850 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 17 due to missing critical data (ID or Name). ID: ID501998D00014009, Name: None
+2025-05-13 16:51:22,850 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 17: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,850 - root - WARNING - parser.parse_wipo_html:152 - Block 18: Could not extract brand name.
+2025-05-13 16:51:22,850 - root - INFO - parser.extract_id_from_block:50 - Block 17: Starting ID extraction
+2025-05-13 16:51:22,850 - root - INFO - parser.extract_id_from_block:90 - Block 17: Found ID from data-st13 attribute: 'IT501998900672355'
+2025-05-13 16:51:22,850 - root - INFO - parser.parse_wipo_html:163 - Block 18: Using ID 'IT501998900672355' (found with selector: data-st13)
+2025-05-13 16:51:22,850 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 18 due to missing critical data (ID or Name). ID: IT501998900672355, Name: None
+2025-05-13 16:51:22,850 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 18: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,850 - root - WARNING - parser.parse_wipo_html:152 - Block 19: Could not extract brand name.
+2025-05-13 16:51:22,850 - root - INFO - parser.extract_id_from_block:50 - Block 18: Starting ID extraction
+2025-05-13 16:51:22,851 - root - INFO - parser.extract_id_from_block:90 - Block 18: Found ID from data-st13 attribute: 'MA502003000029253'
+2025-05-13 16:51:22,851 - root - INFO - parser.parse_wipo_html:163 - Block 19: Using ID 'MA502003000029253' (found with selector: data-st13)
+2025-05-13 16:51:22,851 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 19 due to missing critical data (ID or Name). ID: MA502003000029253, Name: None
+2025-05-13 16:51:22,851 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 19: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,851 - root - WARNING - parser.parse_wipo_html:152 - Block 20: Could not extract brand name.
+2025-05-13 16:51:22,851 - root - INFO - parser.extract_id_from_block:50 - Block 19: Starting ID extraction
+2025-05-13 16:51:22,851 - root - INFO - parser.extract_id_from_block:90 - Block 19: Found ID from data-st13 attribute: 'MA502003000089467'
+2025-05-13 16:51:22,851 - root - INFO - parser.parse_wipo_html:163 - Block 20: Using ID 'MA502003000089467' (found with selector: data-st13)
+2025-05-13 16:51:22,851 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 20 due to missing critical data (ID or Name). ID: MA502003000089467, Name: None
+2025-05-13 16:51:22,851 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 20: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,851 - root - WARNING - parser.parse_wipo_html:152 - Block 21: Could not extract brand name.
+2025-05-13 16:51:22,851 - root - INFO - parser.extract_id_from_block:50 - Block 20: Starting ID extraction
+2025-05-13 16:51:22,851 - root - INFO - parser.extract_id_from_block:90 - Block 20: Found ID from data-st13 attribute: 'IN502009001820335'
+2025-05-13 16:51:22,851 - root - INFO - parser.parse_wipo_html:163 - Block 21: Using ID 'IN502009001820335' (found with selector: data-st13)
+2025-05-13 16:51:22,851 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 21 due to missing critical data (ID or Name). ID: IN502009001820335, Name: None
+2025-05-13 16:51:22,852 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 21: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,852 - root - WARNING - parser.parse_wipo_html:152 - Block 22: Could not extract brand name.
+2025-05-13 16:51:22,852 - root - INFO - parser.extract_id_from_block:50 - Block 21: Starting ID extraction
+2025-05-13 16:51:22,852 - root - INFO - parser.extract_id_from_block:90 - Block 21: Found ID from data-st13 attribute: 'IN502014002740266'
+2025-05-13 16:51:22,852 - root - INFO - parser.parse_wipo_html:163 - Block 22: Using ID 'IN502014002740266' (found with selector: data-st13)
+2025-05-13 16:51:22,852 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 22 due to missing critical data (ID or Name). ID: IN502014002740266, Name: None
+2025-05-13 16:51:22,852 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 22: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,852 - root - WARNING - parser.parse_wipo_html:152 - Block 23: Could not extract brand name.
+2025-05-13 16:51:22,852 - root - INFO - parser.extract_id_from_block:50 - Block 22: Starting ID extraction
+2025-05-13 16:51:22,852 - root - INFO - parser.extract_id_from_block:90 - Block 22: Found ID from data-st13 attribute: 'IN502006001487860'
+2025-05-13 16:51:22,852 - root - INFO - parser.parse_wipo_html:163 - Block 23: Using ID 'IN502006001487860' (found with selector: data-st13)
+2025-05-13 16:51:22,852 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 23 due to missing critical data (ID or Name). ID: IN502006001487860, Name: None
+2025-05-13 16:51:22,852 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 23: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,852 - root - WARNING - parser.parse_wipo_html:152 - Block 24: Could not extract brand name.
+2025-05-13 16:51:22,852 - root - INFO - parser.extract_id_from_block:50 - Block 23: Starting ID extraction
+2025-05-13 16:51:22,853 - root - INFO - parser.extract_id_from_block:90 - Block 23: Found ID from data-st13 attribute: 'VN502018000033678'
+2025-05-13 16:51:22,853 - root - INFO - parser.parse_wipo_html:163 - Block 24: Using ID 'VN502018000033678' (found with selector: data-st13)
+2025-05-13 16:51:22,853 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 24 due to missing critical data (ID or Name). ID: VN502018000033678, Name: None
+2025-05-13 16:51:22,853 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 24: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,853 - root - WARNING - parser.parse_wipo_html:152 - Block 25: Could not extract brand name.
+2025-05-13 16:51:22,853 - root - INFO - parser.extract_id_from_block:50 - Block 24: Starting ID extraction
+2025-05-13 16:51:22,853 - root - INFO - parser.extract_id_from_block:90 - Block 24: Found ID from data-st13 attribute: 'US502014086281920'
+2025-05-13 16:51:22,853 - root - INFO - parser.parse_wipo_html:163 - Block 25: Using ID 'US502014086281920' (found with selector: data-st13)
+2025-05-13 16:51:22,853 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 25 due to missing critical data (ID or Name). ID: US502014086281920, Name: None
+2025-05-13 16:51:22,853 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 25: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,853 - root - WARNING - parser.parse_wipo_html:152 - Block 26: Could not extract brand name.
+2025-05-13 16:51:22,853 - root - INFO - parser.extract_id_from_block:50 - Block 25: Starting ID extraction
+2025-05-13 16:51:22,853 - root - INFO - parser.extract_id_from_block:90 - Block 25: Found ID from data-st13 attribute: 'KR502011400007448'
+2025-05-13 16:51:22,853 - root - INFO - parser.parse_wipo_html:163 - Block 26: Using ID 'KR502011400007448' (found with selector: data-st13)
+2025-05-13 16:51:22,853 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 26 due to missing critical data (ID or Name). ID: KR502011400007448, Name: None
+2025-05-13 16:51:22,854 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 26: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,854 - root - WARNING - parser.parse_wipo_html:152 - Block 27: Could not extract brand name.
+2025-05-13 16:51:22,854 - root - INFO - parser.extract_id_from_block:50 - Block 26: Starting ID extraction
+2025-05-13 16:51:22,854 - root - INFO - parser.extract_id_from_block:90 - Block 26: Found ID from data-st13 attribute: 'IN502021005088248'
+2025-05-13 16:51:22,854 - root - INFO - parser.parse_wipo_html:163 - Block 27: Using ID 'IN502021005088248' (found with selector: data-st13)
+2025-05-13 16:51:22,854 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 27 due to missing critical data (ID or Name). ID: IN502021005088248, Name: None
+2025-05-13 16:51:22,854 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 27: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,854 - root - WARNING - parser.parse_wipo_html:152 - Block 28: Could not extract brand name.
+2025-05-13 16:51:22,854 - root - INFO - parser.extract_id_from_block:50 - Block 27: Starting ID extraction
+2025-05-13 16:51:22,854 - root - INFO - parser.extract_id_from_block:90 - Block 27: Found ID from data-st13 attribute: 'BR500000930286006'
+2025-05-13 16:51:22,854 - root - INFO - parser.parse_wipo_html:163 - Block 28: Using ID 'BR500000930286006' (found with selector: data-st13)
+2025-05-13 16:51:22,854 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 28 due to missing critical data (ID or Name). ID: BR500000930286006, Name: None
+2025-05-13 16:51:22,854 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 28: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,854 - root - WARNING - parser.parse_wipo_html:152 - Block 29: Could not extract brand name.
+2025-05-13 16:51:22,854 - root - INFO - parser.extract_id_from_block:50 - Block 28: Starting ID extraction
+2025-05-13 16:51:22,855 - root - INFO - parser.extract_id_from_block:90 - Block 28: Found ID from data-st13 attribute: 'BR500000815394071'
+2025-05-13 16:51:22,855 - root - INFO - parser.parse_wipo_html:163 - Block 29: Using ID 'BR500000815394071' (found with selector: data-st13)
+2025-05-13 16:51:22,855 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 29 due to missing critical data (ID or Name). ID: BR500000815394071, Name: None
+2025-05-13 16:51:22,855 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 29: Could not extract brand name with selector '.brandName'.
+2025-05-13 16:51:22,855 - root - WARNING - parser.parse_wipo_html:152 - Block 30: Could not extract brand name.
+2025-05-13 16:51:22,855 - root - INFO - parser.extract_id_from_block:50 - Block 29: Starting ID extraction
+2025-05-13 16:51:22,855 - root - INFO - parser.extract_id_from_block:90 - Block 29: Found ID from data-st13 attribute: 'FR501997097682953'
+2025-05-13 16:51:22,855 - root - INFO - parser.parse_wipo_html:163 - Block 30: Using ID 'FR501997097682953' (found with selector: data-st13)
+2025-05-13 16:51:22,855 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 30 due to missing critical data (ID or Name). ID: FR501997097682953, Name: None
+2025-05-13 16:51:22,855 - root - INFO - parser.parse_wipo_html:222 - Parser: Successfully parsed 5 items from 30 blocks.
+2025-05-13 16:51:22,860 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 812888227
+2025-05-13 16:51:22,863 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 812888227
+2025-05-13 16:51:22,864 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 545892
+2025-05-13 16:51:22,865 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 545892
+2025-05-13 16:51:22,866 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 544244
+2025-05-13 16:51:22,867 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 544244
+2025-05-13 16:51:22,868 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 145299
+2025-05-13 16:51:22,868 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 145299
+2025-05-13 16:51:22,869 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: M1935158
+2025-05-13 16:51:22,869 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item M1935158
+2025-05-13 16:51:22,869 - root - INFO - wipo._save_wipo_items_to_db:158 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 5, Saved: 5, Skipped: 0, Errors: 0
+2025-05-13 16:51:22,869 - root - INFO - wipo.crawl_wipo_by_name:542 - WIPO Crawler: Successfully saved 5 items to database
+2025-05-13 16:51:22,870 - root - INFO - wipo.crawl_wipo_by_name:548 - WIPO Crawler: Database session closed.
+2025-05-13 16:51:22,870 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 16:51:22,870 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 17:07:27,396 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 17:07:27,396 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 17:07:28,747 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 17:07:52,891 - root - INFO - wipo.crawl_wipo_by_name:423 - WIPO Crawler: Using dynamic timeout of 60 seconds
+2025-05-13 17:08:13,441 - root - INFO - wipo.crawl_wipo_by_name:462 - WIPO Crawler: Found results using selector: div[class*='result']
+2025-05-13 17:08:13,442 - root - INFO - wipo.crawl_wipo_by_name:463 - First result text: Brand name: contains the word 'RONALDO'and:Edit your searchTMviewSearch nameSave  Displaying 1-30 of...
+2025-05-13 17:08:18,462 - root - INFO - wipo.crawl_wipo_by_name:508 - WIPO Crawler: Found 30 potential result blocks using selector: 'li[class*='result']'.
+2025-05-13 17:08:18,984 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 0 seems to have '.brandName' loaded.
+2025-05-13 17:08:19,518 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 1 seems to have '.brandName' loaded.
+2025-05-13 17:08:20,049 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 2 seems to have '.brandName' loaded.
+2025-05-13 17:08:20,567 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 3 seems to have '.brandName' loaded.
+2025-05-13 17:08:21,086 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 4 seems to have '.brandName' loaded.
+2025-05-13 17:08:21,604 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 5 seems to have '.brandName' loaded.
+2025-05-13 17:08:22,122 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 6 seems to have '.brandName' loaded.
+2025-05-13 17:08:22,640 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 7 seems to have '.brandName' loaded.
+2025-05-13 17:08:23,158 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 8 seems to have '.brandName' loaded.
+2025-05-13 17:08:23,677 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 9 seems to have '.brandName' loaded.
+2025-05-13 17:08:24,195 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 10 seems to have '.brandName' loaded.
+2025-05-13 17:08:24,712 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 11 seems to have '.brandName' loaded.
+2025-05-13 17:08:25,230 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 12 seems to have '.brandName' loaded.
+2025-05-13 17:08:25,749 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 13 seems to have '.brandName' loaded.
+2025-05-13 17:08:26,268 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 14 seems to have '.brandName' loaded.
+2025-05-13 17:08:26,786 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 15 seems to have '.brandName' loaded.
+2025-05-13 17:08:27,304 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 16 seems to have '.brandName' loaded.
+2025-05-13 17:08:27,829 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 17 seems to have '.brandName' loaded.
+2025-05-13 17:08:28,346 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 18 seems to have '.brandName' loaded.
+2025-05-13 17:08:28,865 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 19 seems to have '.brandName' loaded.
+2025-05-13 17:08:29,385 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 20 seems to have '.brandName' loaded.
+2025-05-13 17:08:29,907 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 21 seems to have '.brandName' loaded.
+2025-05-13 17:08:30,424 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 22 seems to have '.brandName' loaded.
+2025-05-13 17:08:30,941 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 23 seems to have '.brandName' loaded.
+2025-05-13 17:08:31,459 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 24 seems to have '.brandName' loaded.
+2025-05-13 17:08:31,978 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 25 seems to have '.brandName' loaded.
+2025-05-13 17:08:32,497 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 26 seems to have '.brandName' loaded.
+2025-05-13 17:08:33,014 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 27 seems to have '.brandName' loaded.
+2025-05-13 17:08:33,530 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 28 seems to have '.brandName' loaded.
+2025-05-13 17:08:34,047 - root - INFO - wipo.crawl_wipo_by_name:524 - WIPO Crawler: Block 29 seems to have '.brandName' loaded.
+2025-05-13 17:08:34,047 - root - INFO - wipo.crawl_wipo_by_name:530 - WIPO Crawler: Finished attempting to load all individual blocks. Getting final page source for parsing.
+2025-05-13 17:08:34,129 - root - INFO - wipo.crawl_wipo_by_name:546 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 17:08:34,129 - root - INFO - wipo.crawl_wipo_by_name:556 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-13 17:08:34,143 - root - INFO - parser.parse_wipo_html:140 - Found 30 result blocks to parse
+2025-05-13 17:08:34,143 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 0: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,143 - root - WARNING - parser.parse_wipo_html:152 - Block 1: Could not extract brand name.
+2025-05-13 17:08:34,143 - root - INFO - parser.extract_id_from_block:50 - Block 0: Starting ID extraction
+2025-05-13 17:08:34,144 - root - INFO - parser.extract_id_from_block:90 - Block 0: Found ID from data-st13 attribute: 'BR500000812888227'
+2025-05-13 17:08:34,144 - root - INFO - parser.parse_wipo_html:163 - Block 1: Using ID 'BR500000812888227' (found with selector: data-st13)
+2025-05-13 17:08:34,144 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 1 due to missing critical data (ID or Name). ID: BR500000812888227, Name: None
+2025-05-13 17:08:34,144 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 1: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,144 - root - WARNING - parser.parse_wipo_html:152 - Block 2: Could not extract brand name.
+2025-05-13 17:08:34,144 - root - INFO - parser.extract_id_from_block:50 - Block 1: Starting ID extraction
+2025-05-13 17:08:34,145 - root - INFO - parser.extract_id_from_block:90 - Block 1: Found ID from data-st13 attribute: 'ID502002D00016477'
+2025-05-13 17:08:34,145 - root - INFO - parser.parse_wipo_html:163 - Block 2: Using ID 'ID502002D00016477' (found with selector: data-st13)
+2025-05-13 17:08:34,145 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 2 due to missing critical data (ID or Name). ID: ID502002D00016477, Name: None
+2025-05-13 17:08:34,145 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 2: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,145 - root - WARNING - parser.parse_wipo_html:152 - Block 3: Could not extract brand name.
+2025-05-13 17:08:34,145 - root - INFO - parser.extract_id_from_block:50 - Block 2: Starting ID extraction
+2025-05-13 17:08:34,145 - root - INFO - parser.extract_id_from_block:90 - Block 2: Found ID from data-st13 attribute: 'ID502002D00015147'
+2025-05-13 17:08:34,145 - root - INFO - parser.parse_wipo_html:163 - Block 3: Using ID 'ID502002D00015147' (found with selector: data-st13)
+2025-05-13 17:08:34,145 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 3 due to missing critical data (ID or Name). ID: ID502002D00015147, Name: None
+2025-05-13 17:08:34,145 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 3: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,145 - root - WARNING - parser.parse_wipo_html:152 - Block 4: Could not extract brand name.
+2025-05-13 17:08:34,145 - root - INFO - parser.extract_id_from_block:50 - Block 3: Starting ID extraction
+2025-05-13 17:08:34,146 - root - INFO - parser.extract_id_from_block:90 - Block 3: Found ID from data-st13 attribute: 'MA502012000145299'
+2025-05-13 17:08:34,146 - root - INFO - parser.parse_wipo_html:163 - Block 4: Using ID 'MA502012000145299' (found with selector: data-st13)
+2025-05-13 17:08:34,146 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 4 due to missing critical data (ID or Name). ID: MA502012000145299, Name: None
+2025-05-13 17:08:34,146 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 4: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,146 - root - WARNING - parser.parse_wipo_html:152 - Block 5: Could not extract brand name.
+2025-05-13 17:08:34,146 - root - INFO - parser.extract_id_from_block:50 - Block 4: Starting ID extraction
+2025-05-13 17:08:34,146 - root - INFO - parser.extract_id_from_block:90 - Block 4: Found ID from data-st13 attribute: 'ES5019940M1935158'
+2025-05-13 17:08:34,146 - root - INFO - parser.parse_wipo_html:163 - Block 5: Using ID 'ES5019940M1935158' (found with selector: data-st13)
+2025-05-13 17:08:34,146 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 5 due to missing critical data (ID or Name). ID: ES5019940M1935158, Name: None
+2025-05-13 17:08:34,146 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 5: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,146 - root - WARNING - parser.parse_wipo_html:152 - Block 6: Could not extract brand name.
+2025-05-13 17:08:34,146 - root - INFO - parser.extract_id_from_block:50 - Block 5: Starting ID extraction
+2025-05-13 17:08:34,147 - root - INFO - parser.extract_id_from_block:90 - Block 5: Found ID from data-st13 attribute: 'KR501998400015637'
+2025-05-13 17:08:34,147 - root - INFO - parser.parse_wipo_html:163 - Block 6: Using ID 'KR501998400015637' (found with selector: data-st13)
+2025-05-13 17:08:34,147 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 6 due to missing critical data (ID or Name). ID: KR501998400015637, Name: None
+2025-05-13 17:08:34,147 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 6: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,147 - root - WARNING - parser.parse_wipo_html:152 - Block 7: Could not extract brand name.
+2025-05-13 17:08:34,147 - root - INFO - parser.extract_id_from_block:50 - Block 6: Starting ID extraction
+2025-05-13 17:08:34,147 - root - INFO - parser.extract_id_from_block:90 - Block 6: Found ID from data-st13 attribute: 'VN502009000023685'
+2025-05-13 17:08:34,147 - root - INFO - parser.parse_wipo_html:163 - Block 7: Using ID 'VN502009000023685' (found with selector: data-st13)
+2025-05-13 17:08:34,147 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 7 due to missing critical data (ID or Name). ID: VN502009000023685, Name: None
+2025-05-13 17:08:34,147 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 7: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,147 - root - WARNING - parser.parse_wipo_html:152 - Block 8: Could not extract brand name.
+2025-05-13 17:08:34,147 - root - INFO - parser.extract_id_from_block:50 - Block 7: Starting ID extraction
+2025-05-13 17:08:34,148 - root - INFO - parser.extract_id_from_block:90 - Block 7: Found ID from data-st13 attribute: 'IN502013002483811'
+2025-05-13 17:08:34,148 - root - INFO - parser.parse_wipo_html:163 - Block 8: Using ID 'IN502013002483811' (found with selector: data-st13)
+2025-05-13 17:08:34,148 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 8 due to missing critical data (ID or Name). ID: IN502013002483811, Name: None
+2025-05-13 17:08:34,148 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 8: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,148 - root - WARNING - parser.parse_wipo_html:152 - Block 9: Could not extract brand name.
+2025-05-13 17:08:34,148 - root - INFO - parser.extract_id_from_block:50 - Block 8: Starting ID extraction
+2025-05-13 17:08:34,148 - root - INFO - parser.extract_id_from_block:90 - Block 8: Found ID from data-st13 attribute: 'DE500000039818247'
+2025-05-13 17:08:34,148 - root - INFO - parser.parse_wipo_html:163 - Block 9: Using ID 'DE500000039818247' (found with selector: data-st13)
+2025-05-13 17:08:34,148 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 9 due to missing critical data (ID or Name). ID: DE500000039818247, Name: None
+2025-05-13 17:08:34,148 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 9: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,148 - root - WARNING - parser.parse_wipo_html:152 - Block 10: Could not extract brand name.
+2025-05-13 17:08:34,148 - root - INFO - parser.extract_id_from_block:50 - Block 9: Starting ID extraction
+2025-05-13 17:08:34,148 - root - INFO - parser.extract_id_from_block:90 - Block 9: Found ID from data-st13 attribute: 'IN502011002246596'
+2025-05-13 17:08:34,148 - root - INFO - parser.parse_wipo_html:163 - Block 10: Using ID 'IN502011002246596' (found with selector: data-st13)
+2025-05-13 17:08:34,149 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 10 due to missing critical data (ID or Name). ID: IN502011002246596, Name: None
+2025-05-13 17:08:34,149 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 10: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,149 - root - WARNING - parser.parse_wipo_html:152 - Block 11: Could not extract brand name.
+2025-05-13 17:08:34,149 - root - INFO - parser.extract_id_from_block:50 - Block 10: Starting ID extraction
+2025-05-13 17:08:34,149 - root - INFO - parser.extract_id_from_block:90 - Block 10: Found ID from data-st13 attribute: 'IN502006001487861'
+2025-05-13 17:08:34,149 - root - INFO - parser.parse_wipo_html:163 - Block 11: Using ID 'IN502006001487861' (found with selector: data-st13)
+2025-05-13 17:08:34,149 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 11 due to missing critical data (ID or Name). ID: IN502006001487861, Name: None
+2025-05-13 17:08:34,149 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 11: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,149 - root - WARNING - parser.parse_wipo_html:152 - Block 12: Could not extract brand name.
+2025-05-13 17:08:34,149 - root - INFO - parser.extract_id_from_block:50 - Block 11: Starting ID extraction
+2025-05-13 17:08:34,149 - root - INFO - parser.extract_id_from_block:90 - Block 11: Found ID from data-st13 attribute: 'VN502014000026479'
+2025-05-13 17:08:34,150 - root - INFO - parser.parse_wipo_html:163 - Block 12: Using ID 'VN502014000026479' (found with selector: data-st13)
+2025-05-13 17:08:34,150 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 12 due to missing critical data (ID or Name). ID: VN502014000026479, Name: None
+2025-05-13 17:08:34,150 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 12: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,150 - root - WARNING - parser.parse_wipo_html:152 - Block 13: Could not extract brand name.
+2025-05-13 17:08:34,150 - root - INFO - parser.extract_id_from_block:50 - Block 12: Starting ID extraction
+2025-05-13 17:08:34,150 - root - INFO - parser.extract_id_from_block:90 - Block 12: Found ID from data-st13 attribute: 'MW502014000000215'
+2025-05-13 17:08:34,150 - root - INFO - parser.parse_wipo_html:163 - Block 13: Using ID 'MW502014000000215' (found with selector: data-st13)
+2025-05-13 17:08:34,150 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 13 due to missing critical data (ID or Name). ID: MW502014000000215, Name: None
+2025-05-13 17:08:34,150 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 13: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,150 - root - WARNING - parser.parse_wipo_html:152 - Block 14: Could not extract brand name.
+2025-05-13 17:08:34,150 - root - INFO - parser.extract_id_from_block:50 - Block 13: Starting ID extraction
+2025-05-13 17:08:34,150 - root - INFO - parser.extract_id_from_block:90 - Block 13: Found ID from data-st13 attribute: 'MA501997000062876'
+2025-05-13 17:08:34,150 - root - INFO - parser.parse_wipo_html:163 - Block 14: Using ID 'MA501997000062876' (found with selector: data-st13)
+2025-05-13 17:08:34,151 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 14 due to missing critical data (ID or Name). ID: MA501997000062876, Name: None
+2025-05-13 17:08:34,151 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 14: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,151 - root - WARNING - parser.parse_wipo_html:152 - Block 15: Could not extract brand name.
+2025-05-13 17:08:34,151 - root - INFO - parser.extract_id_from_block:50 - Block 14: Starting ID extraction
+2025-05-13 17:08:34,151 - root - INFO - parser.extract_id_from_block:90 - Block 14: Found ID from data-st13 attribute: 'FR501996096650666'
+2025-05-13 17:08:34,151 - root - INFO - parser.parse_wipo_html:163 - Block 15: Using ID 'FR501996096650666' (found with selector: data-st13)
+2025-05-13 17:08:34,151 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 15 due to missing critical data (ID or Name). ID: FR501996096650666, Name: None
+2025-05-13 17:08:34,151 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 15: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,151 - root - WARNING - parser.parse_wipo_html:152 - Block 16: Could not extract brand name.
+2025-05-13 17:08:34,151 - root - INFO - parser.extract_id_from_block:50 - Block 15: Starting ID extraction
+2025-05-13 17:08:34,151 - root - INFO - parser.extract_id_from_block:90 - Block 15: Found ID from data-st13 attribute: 'BR500000823972631'
+2025-05-13 17:08:34,151 - root - INFO - parser.parse_wipo_html:163 - Block 16: Using ID 'BR500000823972631' (found with selector: data-st13)
+2025-05-13 17:08:34,151 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 16 due to missing critical data (ID or Name). ID: BR500000823972631, Name: None
+2025-05-13 17:08:34,151 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 16: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,152 - root - WARNING - parser.parse_wipo_html:152 - Block 17: Could not extract brand name.
+2025-05-13 17:08:34,152 - root - INFO - parser.extract_id_from_block:50 - Block 16: Starting ID extraction
+2025-05-13 17:08:34,152 - root - INFO - parser.extract_id_from_block:90 - Block 16: Found ID from data-st13 attribute: 'ID501998D00014009'
+2025-05-13 17:08:34,152 - root - INFO - parser.parse_wipo_html:163 - Block 17: Using ID 'ID501998D00014009' (found with selector: data-st13)
+2025-05-13 17:08:34,152 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 17 due to missing critical data (ID or Name). ID: ID501998D00014009, Name: None
+2025-05-13 17:08:34,152 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 17: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,152 - root - WARNING - parser.parse_wipo_html:152 - Block 18: Could not extract brand name.
+2025-05-13 17:08:34,152 - root - INFO - parser.extract_id_from_block:50 - Block 17: Starting ID extraction
+2025-05-13 17:08:34,152 - root - INFO - parser.extract_id_from_block:90 - Block 17: Found ID from data-st13 attribute: 'IT501998900672355'
+2025-05-13 17:08:34,152 - root - INFO - parser.parse_wipo_html:163 - Block 18: Using ID 'IT501998900672355' (found with selector: data-st13)
+2025-05-13 17:08:34,152 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 18 due to missing critical data (ID or Name). ID: IT501998900672355, Name: None
+2025-05-13 17:08:34,153 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 18: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,153 - root - WARNING - parser.parse_wipo_html:152 - Block 19: Could not extract brand name.
+2025-05-13 17:08:34,153 - root - INFO - parser.extract_id_from_block:50 - Block 18: Starting ID extraction
+2025-05-13 17:08:34,153 - root - INFO - parser.extract_id_from_block:90 - Block 18: Found ID from data-st13 attribute: 'MA502003000029253'
+2025-05-13 17:08:34,153 - root - INFO - parser.parse_wipo_html:163 - Block 19: Using ID 'MA502003000029253' (found with selector: data-st13)
+2025-05-13 17:08:34,153 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 19 due to missing critical data (ID or Name). ID: MA502003000029253, Name: None
+2025-05-13 17:08:34,153 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 19: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,153 - root - WARNING - parser.parse_wipo_html:152 - Block 20: Could not extract brand name.
+2025-05-13 17:08:34,153 - root - INFO - parser.extract_id_from_block:50 - Block 19: Starting ID extraction
+2025-05-13 17:08:34,153 - root - INFO - parser.extract_id_from_block:90 - Block 19: Found ID from data-st13 attribute: 'MA502003000089467'
+2025-05-13 17:08:34,153 - root - INFO - parser.parse_wipo_html:163 - Block 20: Using ID 'MA502003000089467' (found with selector: data-st13)
+2025-05-13 17:08:34,153 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 20 due to missing critical data (ID or Name). ID: MA502003000089467, Name: None
+2025-05-13 17:08:34,153 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 20: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,154 - root - WARNING - parser.parse_wipo_html:152 - Block 21: Could not extract brand name.
+2025-05-13 17:08:34,154 - root - INFO - parser.extract_id_from_block:50 - Block 20: Starting ID extraction
+2025-05-13 17:08:34,154 - root - INFO - parser.extract_id_from_block:90 - Block 20: Found ID from data-st13 attribute: 'IN502009001820335'
+2025-05-13 17:08:34,154 - root - INFO - parser.parse_wipo_html:163 - Block 21: Using ID 'IN502009001820335' (found with selector: data-st13)
+2025-05-13 17:08:34,154 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 21 due to missing critical data (ID or Name). ID: IN502009001820335, Name: None
+2025-05-13 17:08:34,154 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 21: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,154 - root - WARNING - parser.parse_wipo_html:152 - Block 22: Could not extract brand name.
+2025-05-13 17:08:34,154 - root - INFO - parser.extract_id_from_block:50 - Block 21: Starting ID extraction
+2025-05-13 17:08:34,154 - root - INFO - parser.extract_id_from_block:90 - Block 21: Found ID from data-st13 attribute: 'IN502014002740266'
+2025-05-13 17:08:34,154 - root - INFO - parser.parse_wipo_html:163 - Block 22: Using ID 'IN502014002740266' (found with selector: data-st13)
+2025-05-13 17:08:34,154 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 22 due to missing critical data (ID or Name). ID: IN502014002740266, Name: None
+2025-05-13 17:08:34,154 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 22: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:08:34,154 - root - WARNING - parser.parse_wipo_html:152 - Block 23: Could not extract brand name.
+2025-05-13 17:08:34,154 - root - INFO - parser.extract_id_from_block:50 - Block 22: Starting ID extraction
+2025-05-13 17:08:34,154 - root - INFO - parser.extract_id_from_block:90 - Block 22: Found ID from data-st13 attribute: 'IN502006001487860'
+2025-05-13 17:08:34,154 - root - INFO - parser.parse_wipo_html:163 - Block 23: Using ID 'IN502006001487860' (found with selector: data-st13)
+2025-05-13 17:08:34,154 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 23 due to missing critical data (ID or Name). ID: IN502006001487860, Name: None
+2025-05-13 17:08:34,155 - root - INFO - parser.extract_brand_name_from_block:125 - Block 23: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 17:08:34,155 - root - INFO - parser.parse_wipo_html:150 - Block 24: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 17:08:34,155 - root - INFO - parser.extract_id_from_block:50 - Block 23: Starting ID extraction
+2025-05-13 17:08:34,156 - root - INFO - parser.extract_id_from_block:76 - Block 23: Selector '.number span.value' (attempt 1) found: 'VN-4-2018-33678'
+2025-05-13 17:08:34,156 - root - INFO - parser.parse_wipo_html:163 - Block 24: Using ID 'VN-4-2018-33678' (found with selector: .number span.value)
+2025-05-13 17:08:34,157 - root - INFO - parser.extract_brand_name_from_block:125 - Block 24: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 17:08:34,157 - root - INFO - parser.parse_wipo_html:150 - Block 25: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 17:08:34,157 - root - INFO - parser.extract_id_from_block:50 - Block 24: Starting ID extraction
+2025-05-13 17:08:34,158 - root - INFO - parser.extract_id_from_block:76 - Block 24: Selector '.number span.value' (attempt 1) found: '4815819'
+2025-05-13 17:08:34,159 - root - INFO - parser.parse_wipo_html:163 - Block 25: Using ID '4815819' (found with selector: .number span.value)
+2025-05-13 17:08:34,159 - root - INFO - parser.extract_brand_name_from_block:125 - Block 25: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 17:08:34,160 - root - INFO - parser.parse_wipo_html:150 - Block 26: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 17:08:34,160 - root - INFO - parser.extract_id_from_block:50 - Block 25: Starting ID extraction
+2025-05-13 17:08:34,161 - root - INFO - parser.extract_id_from_block:76 - Block 25: Selector '.number span.value' (attempt 1) found: '4020110007448'
+2025-05-13 17:08:34,161 - root - INFO - parser.parse_wipo_html:163 - Block 26: Using ID '4020110007448' (found with selector: .number span.value)
+2025-05-13 17:08:34,162 - root - INFO - parser.extract_brand_name_from_block:125 - Block 26: Found brand name '“RONALDO”' using selector '.brandName'
+2025-05-13 17:08:34,162 - root - INFO - parser.parse_wipo_html:150 - Block 27: Using brand name '“RONALDO”' (found with selector: .brandName)
+2025-05-13 17:08:34,162 - root - INFO - parser.extract_id_from_block:50 - Block 26: Starting ID extraction
+2025-05-13 17:08:34,163 - root - INFO - parser.extract_id_from_block:76 - Block 26: Selector '.number span.value' (attempt 1) found: '5088248'
+2025-05-13 17:08:34,163 - root - INFO - parser.parse_wipo_html:163 - Block 27: Using ID '5088248' (found with selector: .number span.value)
+2025-05-13 17:08:34,164 - root - INFO - parser.extract_brand_name_from_block:125 - Block 27: Found brand name 'Ronaldo' using selector '.brandName'
+2025-05-13 17:08:34,164 - root - INFO - parser.parse_wipo_html:150 - Block 28: Using brand name 'Ronaldo' (found with selector: .brandName)
+2025-05-13 17:08:34,165 - root - INFO - parser.extract_id_from_block:50 - Block 27: Starting ID extraction
+2025-05-13 17:08:34,166 - root - INFO - parser.extract_id_from_block:76 - Block 27: Selector '.number span.value' (attempt 1) found: '930286006'
+2025-05-13 17:08:34,166 - root - INFO - parser.parse_wipo_html:163 - Block 28: Using ID '930286006' (found with selector: .number span.value)
+2025-05-13 17:08:34,167 - root - INFO - parser.extract_brand_name_from_block:125 - Block 28: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 17:08:34,167 - root - INFO - parser.parse_wipo_html:150 - Block 29: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 17:08:34,167 - root - INFO - parser.extract_id_from_block:50 - Block 28: Starting ID extraction
+2025-05-13 17:08:34,168 - root - INFO - parser.extract_id_from_block:76 - Block 28: Selector '.number span.value' (attempt 1) found: '815394071'
+2025-05-13 17:08:34,168 - root - INFO - parser.parse_wipo_html:163 - Block 29: Using ID '815394071' (found with selector: .number span.value)
+2025-05-13 17:08:34,169 - root - INFO - parser.extract_brand_name_from_block:125 - Block 29: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 17:08:34,169 - root - INFO - parser.parse_wipo_html:150 - Block 30: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 17:08:34,170 - root - INFO - parser.extract_id_from_block:50 - Block 29: Starting ID extraction
+2025-05-13 17:08:34,171 - root - INFO - parser.extract_id_from_block:76 - Block 29: Selector '.number span.value' (attempt 1) found: '97682953'
+2025-05-13 17:08:34,171 - root - INFO - parser.parse_wipo_html:163 - Block 30: Using ID '97682953' (found with selector: .number span.value)
+2025-05-13 17:08:34,172 - root - INFO - parser.parse_wipo_html:222 - Parser: Successfully parsed 7 items from 30 blocks.
+2025-05-13 17:08:34,180 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VN-4-2018-33678
+2025-05-13 17:08:34,190 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item VN-4-2018-33678
+2025-05-13 17:08:34,192 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 4815819
+2025-05-13 17:08:34,194 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 4815819
+2025-05-13 17:08:34,196 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 4020110007448
+2025-05-13 17:08:34,197 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 4020110007448
+2025-05-13 17:08:34,198 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 5088248
+2025-05-13 17:08:34,201 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 5088248
+2025-05-13 17:08:34,203 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 930286006
+2025-05-13 17:08:34,205 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 930286006
+2025-05-13 17:08:34,206 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 815394071
+2025-05-13 17:08:34,209 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 815394071
+2025-05-13 17:08:34,210 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 97682953
+2025-05-13 17:08:34,211 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 97682953
+2025-05-13 17:08:34,212 - root - INFO - wipo._save_wipo_items_to_db:158 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 7, Saved: 7, Skipped: 0, Errors: 0
+2025-05-13 17:08:34,212 - root - INFO - wipo.crawl_wipo_by_name:574 - WIPO Crawler: Successfully saved 7 items to database
+2025-05-13 17:08:34,212 - root - INFO - wipo.crawl_wipo_by_name:580 - WIPO Crawler: Database session closed.
+2025-05-13 17:08:34,212 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 17:08:34,212 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 17:13:43,653 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 17:13:43,654 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 17:13:45,847 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 17:14:18,924 - root - INFO - wipo.crawl_wipo_by_name:423 - WIPO Crawler: Using dynamic timeout of 60 seconds
+2025-05-13 17:14:39,522 - root - INFO - wipo.crawl_wipo_by_name:462 - WIPO Crawler: Found results using selector: div[class*='result']
+2025-05-13 17:14:39,522 - root - INFO - wipo.crawl_wipo_by_name:463 - First result text: Brand name: contains the word 'RONALDO'and:Edit your searchTMviewSearch nameSave  Displaying 1-30 of...
+2025-05-13 17:14:44,542 - root - INFO - wipo.crawl_wipo_by_name:508 - WIPO Crawler: Found 30 potential result blocks using selector: 'li[class*='result']'.
+2025-05-13 17:14:44,861 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 0 đã được render chi tiết.
+2025-05-13 17:14:45,178 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 1 đã được render chi tiết.
+2025-05-13 17:14:45,495 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 2 đã được render chi tiết.
+2025-05-13 17:14:45,812 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 3 đã được render chi tiết.
+2025-05-13 17:14:46,128 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 4 đã được render chi tiết.
+2025-05-13 17:14:46,445 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 5 đã được render chi tiết.
+2025-05-13 17:14:46,763 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 6 đã được render chi tiết.
+2025-05-13 17:14:47,079 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 7 đã được render chi tiết.
+2025-05-13 17:14:47,397 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 8 đã được render chi tiết.
+2025-05-13 17:14:47,716 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 9 đã được render chi tiết.
+2025-05-13 17:14:48,033 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 10 đã được render chi tiết.
+2025-05-13 17:14:48,350 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 11 đã được render chi tiết.
+2025-05-13 17:14:48,666 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 12 đã được render chi tiết.
+2025-05-13 17:14:48,985 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 13 đã được render chi tiết.
+2025-05-13 17:14:49,301 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 14 đã được render chi tiết.
+2025-05-13 17:14:49,651 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 15 đã được render chi tiết.
+2025-05-13 17:14:49,975 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 16 đã được render chi tiết.
+2025-05-13 17:14:50,292 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 17 đã được render chi tiết.
+2025-05-13 17:14:50,611 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 18 đã được render chi tiết.
+2025-05-13 17:14:50,926 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 19 đã được render chi tiết.
+2025-05-13 17:14:51,242 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 20 đã được render chi tiết.
+2025-05-13 17:14:51,558 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 21 đã được render chi tiết.
+2025-05-13 17:14:51,874 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 22 đã được render chi tiết.
+2025-05-13 17:14:52,217 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 23 đã được render chi tiết.
+2025-05-13 17:14:52,536 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 24 đã được render chi tiết.
+2025-05-13 17:14:52,857 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 25 đã được render chi tiết.
+2025-05-13 17:14:53,174 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 26 đã được render chi tiết.
+2025-05-13 17:14:53,490 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 27 đã được render chi tiết.
+2025-05-13 17:14:53,814 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 28 đã được render chi tiết.
+2025-05-13 17:14:54,141 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 29 đã được render chi tiết.
+2025-05-13 17:14:57,165 - root - INFO - wipo.crawl_wipo_by_name:544 - WIPO Crawler: Finished attempting to load all individual blocks. Getting final page source for parsing.
+2025-05-13 17:14:57,246 - root - INFO - wipo.crawl_wipo_by_name:560 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 17:14:57,246 - root - INFO - wipo.crawl_wipo_by_name:570 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-13 17:14:57,259 - root - INFO - parser.parse_wipo_html:140 - Found 30 result blocks to parse
+2025-05-13 17:14:57,259 - root - INFO - parser.extract_brand_name_from_block:125 - Block 0: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 17:14:57,259 - root - INFO - parser.parse_wipo_html:150 - Block 1: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 17:14:57,259 - root - INFO - parser.extract_id_from_block:50 - Block 0: Starting ID extraction
+2025-05-13 17:14:57,260 - root - INFO - parser.extract_id_from_block:76 - Block 0: Selector '.number span.value' (attempt 1) found: '812888227'
+2025-05-13 17:14:57,260 - root - INFO - parser.parse_wipo_html:163 - Block 1: Using ID '812888227' (found with selector: .number span.value)
+2025-05-13 17:14:57,261 - root - INFO - parser.extract_brand_name_from_block:125 - Block 1: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 17:14:57,261 - root - INFO - parser.parse_wipo_html:150 - Block 2: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 17:14:57,261 - root - INFO - parser.extract_id_from_block:50 - Block 1: Starting ID extraction
+2025-05-13 17:14:57,261 - root - INFO - parser.extract_id_from_block:76 - Block 1: Selector '.number span.value' (attempt 1) found: '545,892'
+2025-05-13 17:14:57,262 - root - INFO - parser.parse_wipo_html:163 - Block 2: Using ID '545892' (found with selector: .number span.value)
+2025-05-13 17:14:57,262 - root - INFO - parser.extract_brand_name_from_block:125 - Block 2: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 17:14:57,262 - root - INFO - parser.parse_wipo_html:150 - Block 3: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 17:14:57,262 - root - INFO - parser.extract_id_from_block:50 - Block 2: Starting ID extraction
+2025-05-13 17:14:57,263 - root - INFO - parser.extract_id_from_block:76 - Block 2: Selector '.number span.value' (attempt 1) found: '544,244'
+2025-05-13 17:14:57,263 - root - INFO - parser.parse_wipo_html:163 - Block 3: Using ID '544244' (found with selector: .number span.value)
+2025-05-13 17:14:57,263 - root - INFO - parser.extract_brand_name_from_block:125 - Block 3: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 17:14:57,263 - root - INFO - parser.parse_wipo_html:150 - Block 4: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 17:14:57,263 - root - INFO - parser.extract_id_from_block:50 - Block 3: Starting ID extraction
+2025-05-13 17:14:57,264 - root - INFO - parser.extract_id_from_block:76 - Block 3: Selector '.number span.value' (attempt 1) found: '145299'
+2025-05-13 17:14:57,264 - root - INFO - parser.parse_wipo_html:163 - Block 4: Using ID '145299' (found with selector: .number span.value)
+2025-05-13 17:14:57,265 - root - INFO - parser.extract_brand_name_from_block:125 - Block 4: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 17:14:57,265 - root - INFO - parser.parse_wipo_html:150 - Block 5: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 17:14:57,265 - root - INFO - parser.extract_id_from_block:50 - Block 4: Starting ID extraction
+2025-05-13 17:14:57,265 - root - INFO - parser.extract_id_from_block:76 - Block 4: Selector '.number span.value' (attempt 1) found: 'M1935158'
+2025-05-13 17:14:57,265 - root - INFO - parser.parse_wipo_html:163 - Block 5: Using ID 'M1935158' (found with selector: .number span.value)
+2025-05-13 17:14:57,266 - root - INFO - parser.extract_brand_name_from_block:125 - Block 5: Found brand name 'RONALDO' using selector '.brandName'
+2025-05-13 17:14:57,266 - root - INFO - parser.parse_wipo_html:150 - Block 6: Using brand name 'RONALDO' (found with selector: .brandName)
+2025-05-13 17:14:57,266 - root - INFO - parser.extract_id_from_block:50 - Block 5: Starting ID extraction
+2025-05-13 17:14:57,267 - root - INFO - parser.extract_id_from_block:76 - Block 5: Selector '.number span.value' (attempt 1) found: '4004598630000'
+2025-05-13 17:14:57,267 - root - INFO - parser.parse_wipo_html:163 - Block 6: Using ID '4004598630000' (found with selector: .number span.value)
+2025-05-13 17:14:57,267 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 6: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,267 - root - WARNING - parser.parse_wipo_html:152 - Block 7: Could not extract brand name.
+2025-05-13 17:14:57,267 - root - INFO - parser.extract_id_from_block:50 - Block 6: Starting ID extraction
+2025-05-13 17:14:57,268 - root - INFO - parser.extract_id_from_block:90 - Block 6: Found ID from data-st13 attribute: 'VN502009000023685'
+2025-05-13 17:14:57,268 - root - INFO - parser.parse_wipo_html:163 - Block 7: Using ID 'VN502009000023685' (found with selector: data-st13)
+2025-05-13 17:14:57,268 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 7 due to missing critical data (ID or Name). ID: VN502009000023685, Name: None
+2025-05-13 17:14:57,268 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 7: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,268 - root - WARNING - parser.parse_wipo_html:152 - Block 8: Could not extract brand name.
+2025-05-13 17:14:57,268 - root - INFO - parser.extract_id_from_block:50 - Block 7: Starting ID extraction
+2025-05-13 17:14:57,268 - root - INFO - parser.extract_id_from_block:90 - Block 7: Found ID from data-st13 attribute: 'IN502013002483811'
+2025-05-13 17:14:57,268 - root - INFO - parser.parse_wipo_html:163 - Block 8: Using ID 'IN502013002483811' (found with selector: data-st13)
+2025-05-13 17:14:57,268 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 8 due to missing critical data (ID or Name). ID: IN502013002483811, Name: None
+2025-05-13 17:14:57,268 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 8: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,268 - root - WARNING - parser.parse_wipo_html:152 - Block 9: Could not extract brand name.
+2025-05-13 17:14:57,268 - root - INFO - parser.extract_id_from_block:50 - Block 8: Starting ID extraction
+2025-05-13 17:14:57,269 - root - INFO - parser.extract_id_from_block:90 - Block 8: Found ID from data-st13 attribute: 'DE500000039818247'
+2025-05-13 17:14:57,269 - root - INFO - parser.parse_wipo_html:163 - Block 9: Using ID 'DE500000039818247' (found with selector: data-st13)
+2025-05-13 17:14:57,269 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 9 due to missing critical data (ID or Name). ID: DE500000039818247, Name: None
+2025-05-13 17:14:57,269 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 9: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,269 - root - WARNING - parser.parse_wipo_html:152 - Block 10: Could not extract brand name.
+2025-05-13 17:14:57,269 - root - INFO - parser.extract_id_from_block:50 - Block 9: Starting ID extraction
+2025-05-13 17:14:57,269 - root - INFO - parser.extract_id_from_block:90 - Block 9: Found ID from data-st13 attribute: 'IN502011002246596'
+2025-05-13 17:14:57,269 - root - INFO - parser.parse_wipo_html:163 - Block 10: Using ID 'IN502011002246596' (found with selector: data-st13)
+2025-05-13 17:14:57,269 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 10 due to missing critical data (ID or Name). ID: IN502011002246596, Name: None
+2025-05-13 17:14:57,269 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 10: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,269 - root - WARNING - parser.parse_wipo_html:152 - Block 11: Could not extract brand name.
+2025-05-13 17:14:57,269 - root - INFO - parser.extract_id_from_block:50 - Block 10: Starting ID extraction
+2025-05-13 17:14:57,269 - root - INFO - parser.extract_id_from_block:90 - Block 10: Found ID from data-st13 attribute: 'IN502006001487861'
+2025-05-13 17:14:57,269 - root - INFO - parser.parse_wipo_html:163 - Block 11: Using ID 'IN502006001487861' (found with selector: data-st13)
+2025-05-13 17:14:57,269 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 11 due to missing critical data (ID or Name). ID: IN502006001487861, Name: None
+2025-05-13 17:14:57,269 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 11: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,269 - root - WARNING - parser.parse_wipo_html:152 - Block 12: Could not extract brand name.
+2025-05-13 17:14:57,269 - root - INFO - parser.extract_id_from_block:50 - Block 11: Starting ID extraction
+2025-05-13 17:14:57,270 - root - INFO - parser.extract_id_from_block:90 - Block 11: Found ID from data-st13 attribute: 'VN502014000026479'
+2025-05-13 17:14:57,270 - root - INFO - parser.parse_wipo_html:163 - Block 12: Using ID 'VN502014000026479' (found with selector: data-st13)
+2025-05-13 17:14:57,270 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 12 due to missing critical data (ID or Name). ID: VN502014000026479, Name: None
+2025-05-13 17:14:57,270 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 12: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,270 - root - WARNING - parser.parse_wipo_html:152 - Block 13: Could not extract brand name.
+2025-05-13 17:14:57,270 - root - INFO - parser.extract_id_from_block:50 - Block 12: Starting ID extraction
+2025-05-13 17:14:57,270 - root - INFO - parser.extract_id_from_block:90 - Block 12: Found ID from data-st13 attribute: 'MW502014000000215'
+2025-05-13 17:14:57,270 - root - INFO - parser.parse_wipo_html:163 - Block 13: Using ID 'MW502014000000215' (found with selector: data-st13)
+2025-05-13 17:14:57,270 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 13 due to missing critical data (ID or Name). ID: MW502014000000215, Name: None
+2025-05-13 17:14:57,270 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 13: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,270 - root - WARNING - parser.parse_wipo_html:152 - Block 14: Could not extract brand name.
+2025-05-13 17:14:57,270 - root - INFO - parser.extract_id_from_block:50 - Block 13: Starting ID extraction
+2025-05-13 17:14:57,271 - root - INFO - parser.extract_id_from_block:90 - Block 13: Found ID from data-st13 attribute: 'MA501997000062876'
+2025-05-13 17:14:57,271 - root - INFO - parser.parse_wipo_html:163 - Block 14: Using ID 'MA501997000062876' (found with selector: data-st13)
+2025-05-13 17:14:57,271 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 14 due to missing critical data (ID or Name). ID: MA501997000062876, Name: None
+2025-05-13 17:14:57,271 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 14: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,271 - root - WARNING - parser.parse_wipo_html:152 - Block 15: Could not extract brand name.
+2025-05-13 17:14:57,271 - root - INFO - parser.extract_id_from_block:50 - Block 14: Starting ID extraction
+2025-05-13 17:14:57,271 - root - INFO - parser.extract_id_from_block:90 - Block 14: Found ID from data-st13 attribute: 'FR501996096650666'
+2025-05-13 17:14:57,271 - root - INFO - parser.parse_wipo_html:163 - Block 15: Using ID 'FR501996096650666' (found with selector: data-st13)
+2025-05-13 17:14:57,271 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 15 due to missing critical data (ID or Name). ID: FR501996096650666, Name: None
+2025-05-13 17:14:57,271 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 15: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,271 - root - WARNING - parser.parse_wipo_html:152 - Block 16: Could not extract brand name.
+2025-05-13 17:14:57,271 - root - INFO - parser.extract_id_from_block:50 - Block 15: Starting ID extraction
+2025-05-13 17:14:57,271 - root - INFO - parser.extract_id_from_block:90 - Block 15: Found ID from data-st13 attribute: 'BR500000823972631'
+2025-05-13 17:14:57,271 - root - INFO - parser.parse_wipo_html:163 - Block 16: Using ID 'BR500000823972631' (found with selector: data-st13)
+2025-05-13 17:14:57,271 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 16 due to missing critical data (ID or Name). ID: BR500000823972631, Name: None
+2025-05-13 17:14:57,271 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 16: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,271 - root - WARNING - parser.parse_wipo_html:152 - Block 17: Could not extract brand name.
+2025-05-13 17:14:57,271 - root - INFO - parser.extract_id_from_block:50 - Block 16: Starting ID extraction
+2025-05-13 17:14:57,272 - root - INFO - parser.extract_id_from_block:90 - Block 16: Found ID from data-st13 attribute: 'ID501998D00014009'
+2025-05-13 17:14:57,272 - root - INFO - parser.parse_wipo_html:163 - Block 17: Using ID 'ID501998D00014009' (found with selector: data-st13)
+2025-05-13 17:14:57,272 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 17 due to missing critical data (ID or Name). ID: ID501998D00014009, Name: None
+2025-05-13 17:14:57,272 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 17: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,272 - root - WARNING - parser.parse_wipo_html:152 - Block 18: Could not extract brand name.
+2025-05-13 17:14:57,272 - root - INFO - parser.extract_id_from_block:50 - Block 17: Starting ID extraction
+2025-05-13 17:14:57,272 - root - INFO - parser.extract_id_from_block:90 - Block 17: Found ID from data-st13 attribute: 'IT501998900672355'
+2025-05-13 17:14:57,272 - root - INFO - parser.parse_wipo_html:163 - Block 18: Using ID 'IT501998900672355' (found with selector: data-st13)
+2025-05-13 17:14:57,272 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 18 due to missing critical data (ID or Name). ID: IT501998900672355, Name: None
+2025-05-13 17:14:57,272 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 18: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,272 - root - WARNING - parser.parse_wipo_html:152 - Block 19: Could not extract brand name.
+2025-05-13 17:14:57,272 - root - INFO - parser.extract_id_from_block:50 - Block 18: Starting ID extraction
+2025-05-13 17:14:57,272 - root - INFO - parser.extract_id_from_block:90 - Block 18: Found ID from data-st13 attribute: 'MA502003000029253'
+2025-05-13 17:14:57,272 - root - INFO - parser.parse_wipo_html:163 - Block 19: Using ID 'MA502003000029253' (found with selector: data-st13)
+2025-05-13 17:14:57,272 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 19 due to missing critical data (ID or Name). ID: MA502003000029253, Name: None
+2025-05-13 17:14:57,272 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 19: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,272 - root - WARNING - parser.parse_wipo_html:152 - Block 20: Could not extract brand name.
+2025-05-13 17:14:57,273 - root - INFO - parser.extract_id_from_block:50 - Block 19: Starting ID extraction
+2025-05-13 17:14:57,273 - root - INFO - parser.extract_id_from_block:90 - Block 19: Found ID from data-st13 attribute: 'MA502003000089467'
+2025-05-13 17:14:57,273 - root - INFO - parser.parse_wipo_html:163 - Block 20: Using ID 'MA502003000089467' (found with selector: data-st13)
+2025-05-13 17:14:57,273 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 20 due to missing critical data (ID or Name). ID: MA502003000089467, Name: None
+2025-05-13 17:14:57,273 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 20: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,273 - root - WARNING - parser.parse_wipo_html:152 - Block 21: Could not extract brand name.
+2025-05-13 17:14:57,273 - root - INFO - parser.extract_id_from_block:50 - Block 20: Starting ID extraction
+2025-05-13 17:14:57,273 - root - INFO - parser.extract_id_from_block:90 - Block 20: Found ID from data-st13 attribute: 'IN502009001820335'
+2025-05-13 17:14:57,273 - root - INFO - parser.parse_wipo_html:163 - Block 21: Using ID 'IN502009001820335' (found with selector: data-st13)
+2025-05-13 17:14:57,273 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 21 due to missing critical data (ID or Name). ID: IN502009001820335, Name: None
+2025-05-13 17:14:57,273 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 21: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,273 - root - WARNING - parser.parse_wipo_html:152 - Block 22: Could not extract brand name.
+2025-05-13 17:14:57,273 - root - INFO - parser.extract_id_from_block:50 - Block 21: Starting ID extraction
+2025-05-13 17:14:57,273 - root - INFO - parser.extract_id_from_block:90 - Block 21: Found ID from data-st13 attribute: 'IN502014002740266'
+2025-05-13 17:14:57,273 - root - INFO - parser.parse_wipo_html:163 - Block 22: Using ID 'IN502014002740266' (found with selector: data-st13)
+2025-05-13 17:14:57,274 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 22 due to missing critical data (ID or Name). ID: IN502014002740266, Name: None
+2025-05-13 17:14:57,274 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 22: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,274 - root - WARNING - parser.parse_wipo_html:152 - Block 23: Could not extract brand name.
+2025-05-13 17:14:57,274 - root - INFO - parser.extract_id_from_block:50 - Block 22: Starting ID extraction
+2025-05-13 17:14:57,274 - root - INFO - parser.extract_id_from_block:90 - Block 22: Found ID from data-st13 attribute: 'IN502006001487860'
+2025-05-13 17:14:57,274 - root - INFO - parser.parse_wipo_html:163 - Block 23: Using ID 'IN502006001487860' (found with selector: data-st13)
+2025-05-13 17:14:57,274 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 23 due to missing critical data (ID or Name). ID: IN502006001487860, Name: None
+2025-05-13 17:14:57,274 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 23: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,274 - root - WARNING - parser.parse_wipo_html:152 - Block 24: Could not extract brand name.
+2025-05-13 17:14:57,274 - root - INFO - parser.extract_id_from_block:50 - Block 23: Starting ID extraction
+2025-05-13 17:14:57,274 - root - INFO - parser.extract_id_from_block:90 - Block 23: Found ID from data-st13 attribute: 'VN502018000033678'
+2025-05-13 17:14:57,274 - root - INFO - parser.parse_wipo_html:163 - Block 24: Using ID 'VN502018000033678' (found with selector: data-st13)
+2025-05-13 17:14:57,274 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 24 due to missing critical data (ID or Name). ID: VN502018000033678, Name: None
+2025-05-13 17:14:57,274 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 24: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,274 - root - WARNING - parser.parse_wipo_html:152 - Block 25: Could not extract brand name.
+2025-05-13 17:14:57,274 - root - INFO - parser.extract_id_from_block:50 - Block 24: Starting ID extraction
+2025-05-13 17:14:57,275 - root - INFO - parser.extract_id_from_block:90 - Block 24: Found ID from data-st13 attribute: 'US502014086281920'
+2025-05-13 17:14:57,275 - root - INFO - parser.parse_wipo_html:163 - Block 25: Using ID 'US502014086281920' (found with selector: data-st13)
+2025-05-13 17:14:57,275 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 25 due to missing critical data (ID or Name). ID: US502014086281920, Name: None
+2025-05-13 17:14:57,275 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 25: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,275 - root - WARNING - parser.parse_wipo_html:152 - Block 26: Could not extract brand name.
+2025-05-13 17:14:57,275 - root - INFO - parser.extract_id_from_block:50 - Block 25: Starting ID extraction
+2025-05-13 17:14:57,275 - root - INFO - parser.extract_id_from_block:90 - Block 25: Found ID from data-st13 attribute: 'KR502011400007448'
+2025-05-13 17:14:57,275 - root - INFO - parser.parse_wipo_html:163 - Block 26: Using ID 'KR502011400007448' (found with selector: data-st13)
+2025-05-13 17:14:57,275 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 26 due to missing critical data (ID or Name). ID: KR502011400007448, Name: None
+2025-05-13 17:14:57,275 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 26: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,275 - root - WARNING - parser.parse_wipo_html:152 - Block 27: Could not extract brand name.
+2025-05-13 17:14:57,275 - root - INFO - parser.extract_id_from_block:50 - Block 26: Starting ID extraction
+2025-05-13 17:14:57,275 - root - INFO - parser.extract_id_from_block:90 - Block 26: Found ID from data-st13 attribute: 'IN502021005088248'
+2025-05-13 17:14:57,275 - root - INFO - parser.parse_wipo_html:163 - Block 27: Using ID 'IN502021005088248' (found with selector: data-st13)
+2025-05-13 17:14:57,275 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 27 due to missing critical data (ID or Name). ID: IN502021005088248, Name: None
+2025-05-13 17:14:57,275 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 27: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,275 - root - WARNING - parser.parse_wipo_html:152 - Block 28: Could not extract brand name.
+2025-05-13 17:14:57,275 - root - INFO - parser.extract_id_from_block:50 - Block 27: Starting ID extraction
+2025-05-13 17:14:57,276 - root - INFO - parser.extract_id_from_block:90 - Block 27: Found ID from data-st13 attribute: 'BR500000930286006'
+2025-05-13 17:14:57,276 - root - INFO - parser.parse_wipo_html:163 - Block 28: Using ID 'BR500000930286006' (found with selector: data-st13)
+2025-05-13 17:14:57,276 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 28 due to missing critical data (ID or Name). ID: BR500000930286006, Name: None
+2025-05-13 17:14:57,276 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 28: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,276 - root - WARNING - parser.parse_wipo_html:152 - Block 29: Could not extract brand name.
+2025-05-13 17:14:57,276 - root - INFO - parser.extract_id_from_block:50 - Block 28: Starting ID extraction
+2025-05-13 17:14:57,276 - root - INFO - parser.extract_id_from_block:90 - Block 28: Found ID from data-st13 attribute: 'BR500000815394071'
+2025-05-13 17:14:57,276 - root - INFO - parser.parse_wipo_html:163 - Block 29: Using ID 'BR500000815394071' (found with selector: data-st13)
+2025-05-13 17:14:57,276 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 29 due to missing critical data (ID or Name). ID: BR500000815394071, Name: None
+2025-05-13 17:14:57,276 - root - WARNING - parser.extract_brand_name_from_block:127 - Block 29: Could not extract brand name with selector '.brandName'.
+2025-05-13 17:14:57,276 - root - WARNING - parser.parse_wipo_html:152 - Block 30: Could not extract brand name.
+2025-05-13 17:14:57,276 - root - INFO - parser.extract_id_from_block:50 - Block 29: Starting ID extraction
+2025-05-13 17:14:57,276 - root - INFO - parser.extract_id_from_block:90 - Block 29: Found ID from data-st13 attribute: 'FR501997097682953'
+2025-05-13 17:14:57,276 - root - INFO - parser.parse_wipo_html:163 - Block 30: Using ID 'FR501997097682953' (found with selector: data-st13)
+2025-05-13 17:14:57,276 - root - WARNING - parser.parse_wipo_html:207 - Parser: Skipping item for block 30 due to missing critical data (ID or Name). ID: FR501997097682953, Name: None
+2025-05-13 17:14:57,276 - root - INFO - parser.parse_wipo_html:222 - Parser: Successfully parsed 6 items from 30 blocks.
+2025-05-13 17:14:57,282 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 812888227
+2025-05-13 17:14:57,286 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 812888227
+2025-05-13 17:14:57,287 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 545892
+2025-05-13 17:14:57,289 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 545892
+2025-05-13 17:14:57,289 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 544244
+2025-05-13 17:14:57,290 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 544244
+2025-05-13 17:14:57,291 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 145299
+2025-05-13 17:14:57,292 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 145299
+2025-05-13 17:14:57,292 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: M1935158
+2025-05-13 17:14:57,293 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item M1935158
+2025-05-13 17:14:57,294 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 4004598630000
+2025-05-13 17:14:57,296 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 4004598630000
+2025-05-13 17:14:57,296 - root - INFO - wipo._save_wipo_items_to_db:158 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 6, Saved: 6, Skipped: 0, Errors: 0
+2025-05-13 17:14:57,296 - root - INFO - wipo.crawl_wipo_by_name:588 - WIPO Crawler: Successfully saved 6 items to database
+2025-05-13 17:14:57,296 - root - INFO - wipo.crawl_wipo_by_name:594 - WIPO Crawler: Database session closed.
+2025-05-13 17:14:57,296 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 17:14:57,296 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 17:20:28,638 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 17:20:28,639 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 17:20:35,122 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 17:21:02,753 - root - INFO - wipo.crawl_wipo_by_name:423 - WIPO Crawler: Using dynamic timeout of 60 seconds
+2025-05-13 17:21:23,259 - root - INFO - wipo.crawl_wipo_by_name:462 - WIPO Crawler: Found results using selector: div[class*='result']
+2025-05-13 17:21:23,259 - root - INFO - wipo.crawl_wipo_by_name:463 - First result text: Brand name: contains the word 'RONALDO'and:Edit your searchTMviewSearch nameSave  Displaying 1-30 of...
+2025-05-13 17:21:28,275 - root - INFO - wipo.crawl_wipo_by_name:508 - WIPO Crawler: Found 30 potential result blocks using selector: 'li[class*='result']'.
+2025-05-13 17:21:28,590 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 0 đã được render chi tiết.
+2025-05-13 17:21:28,911 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 1 đã được render chi tiết.
+2025-05-13 17:21:29,226 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 2 đã được render chi tiết.
+2025-05-13 17:21:29,537 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 3 đã được render chi tiết.
+2025-05-13 17:21:29,844 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 4 đã được render chi tiết.
+2025-05-13 17:21:30,152 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 5 đã được render chi tiết.
+2025-05-13 17:21:30,459 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 6 đã được render chi tiết.
+2025-05-13 17:21:30,770 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 7 đã được render chi tiết.
+2025-05-13 17:21:31,078 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 8 đã được render chi tiết.
+2025-05-13 17:21:31,385 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 9 đã được render chi tiết.
+2025-05-13 17:21:31,693 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 10 đã được render chi tiết.
+2025-05-13 17:21:32,003 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 11 đã được render chi tiết.
+2025-05-13 17:21:32,311 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 12 đã được render chi tiết.
+2025-05-13 17:21:32,621 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 13 đã được render chi tiết.
+2025-05-13 17:21:32,927 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 14 đã được render chi tiết.
+2025-05-13 17:21:33,236 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 15 đã được render chi tiết.
+2025-05-13 17:21:33,544 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 16 đã được render chi tiết.
+2025-05-13 17:21:33,852 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 17 đã được render chi tiết.
+2025-05-13 17:21:34,162 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 18 đã được render chi tiết.
+2025-05-13 17:21:34,471 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 19 đã được render chi tiết.
+2025-05-13 17:21:34,798 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 20 đã được render chi tiết.
+2025-05-13 17:21:35,114 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 21 đã được render chi tiết.
+2025-05-13 17:21:35,423 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 22 đã được render chi tiết.
+2025-05-13 17:21:35,732 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 23 đã được render chi tiết.
+2025-05-13 17:21:36,041 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 24 đã được render chi tiết.
+2025-05-13 17:21:36,348 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 25 đã được render chi tiết.
+2025-05-13 17:21:36,658 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 26 đã được render chi tiết.
+2025-05-13 17:21:36,971 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 27 đã được render chi tiết.
+2025-05-13 17:21:37,280 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 28 đã được render chi tiết.
+2025-05-13 17:21:37,588 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 29 đã được render chi tiết.
+2025-05-13 17:21:40,602 - root - INFO - wipo.crawl_wipo_by_name:544 - WIPO Crawler: Finished attempting to load all individual blocks. Getting final page source for parsing.
+2025-05-13 17:21:40,684 - root - INFO - wipo.crawl_wipo_by_name:560 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 17:21:40,684 - root - INFO - wipo.crawl_wipo_by_name:570 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-13 17:21:40,704 - root - INFO - parser.parse_wipo_html:207 - Parser: Extracted 6 valid trademark records from HTML
+2025-05-13 17:21:40,709 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: BR500000812888227
+2025-05-13 17:21:40,712 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item BR500000812888227
+2025-05-13 17:21:40,713 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: ID502002D00016477
+2025-05-13 17:21:40,714 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item ID502002D00016477
+2025-05-13 17:21:40,715 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: ID502002D00015147
+2025-05-13 17:21:40,715 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item ID502002D00015147
+2025-05-13 17:21:40,716 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: MA502012000145299
+2025-05-13 17:21:40,717 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item MA502012000145299
+2025-05-13 17:21:40,717 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: ES5019940M1935158
+2025-05-13 17:21:40,718 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item ES5019940M1935158
+2025-05-13 17:21:40,719 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: KR501998400015637
+2025-05-13 17:21:40,720 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item KR501998400015637
+2025-05-13 17:21:40,720 - root - INFO - wipo._save_wipo_items_to_db:158 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 6, Saved: 6, Skipped: 0, Errors: 0
+2025-05-13 17:21:40,720 - root - INFO - wipo.crawl_wipo_by_name:588 - WIPO Crawler: Successfully saved 6 items to database
+2025-05-13 17:21:40,720 - root - INFO - wipo.crawl_wipo_by_name:594 - WIPO Crawler: Database session closed.
+2025-05-13 17:21:40,720 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 17:21:40,720 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 17:30:21,238 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 17:30:21,238 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 17:30:22,522 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 17:30:36,789 - root - INFO - wipo.crawl_wipo_by_name:423 - WIPO Crawler: Using dynamic timeout of 60 seconds
+2025-05-13 17:30:57,303 - root - INFO - wipo.crawl_wipo_by_name:462 - WIPO Crawler: Found results using selector: div[class*='result']
+2025-05-13 17:30:57,303 - root - INFO - wipo.crawl_wipo_by_name:463 - First result text: Brand name: contains the word 'RONALDO'and:Edit your searchTMviewSearch nameSave  Displaying 1-30 of...
+2025-05-13 17:31:02,324 - root - INFO - wipo.crawl_wipo_by_name:508 - WIPO Crawler: Found 30 potential result blocks using selector: 'li[class*='result']'.
+2025-05-13 17:31:02,638 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 0 đã được render chi tiết.
+2025-05-13 17:31:02,950 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 1 đã được render chi tiết.
+2025-05-13 17:31:03,263 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 2 đã được render chi tiết.
+2025-05-13 17:31:03,578 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 3 đã được render chi tiết.
+2025-05-13 17:31:03,894 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 4 đã được render chi tiết.
+2025-05-13 17:31:04,210 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 5 đã được render chi tiết.
+2025-05-13 17:31:04,526 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 6 đã được render chi tiết.
+2025-05-13 17:31:04,857 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 7 đã được render chi tiết.
+2025-05-13 17:31:05,193 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 8 đã được render chi tiết.
+2025-05-13 17:31:05,512 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 9 đã được render chi tiết.
+2025-05-13 17:31:05,829 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 10 đã được render chi tiết.
+2025-05-13 17:31:06,148 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 11 đã được render chi tiết.
+2025-05-13 17:31:06,464 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 12 đã được render chi tiết.
+2025-05-13 17:31:06,781 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 13 đã được render chi tiết.
+2025-05-13 17:31:07,115 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 14 đã được render chi tiết.
+2025-05-13 17:31:07,443 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 15 đã được render chi tiết.
+2025-05-13 17:31:07,761 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 16 đã được render chi tiết.
+2025-05-13 17:31:08,078 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 17 đã được render chi tiết.
+2025-05-13 17:31:08,394 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 18 đã được render chi tiết.
+2025-05-13 17:31:08,710 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 19 đã được render chi tiết.
+2025-05-13 17:31:09,025 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 20 đã được render chi tiết.
+2025-05-13 17:31:09,340 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 21 đã được render chi tiết.
+2025-05-13 17:31:09,655 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 22 đã được render chi tiết.
+2025-05-13 17:31:09,970 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 23 đã được render chi tiết.
+2025-05-13 17:31:10,285 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 24 đã được render chi tiết.
+2025-05-13 17:31:10,600 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 25 đã được render chi tiết.
+2025-05-13 17:31:10,916 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 26 đã được render chi tiết.
+2025-05-13 17:31:11,231 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 27 đã được render chi tiết.
+2025-05-13 17:31:11,549 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 28 đã được render chi tiết.
+2025-05-13 17:31:11,864 - root - INFO - wipo.crawl_wipo_by_name:528 - WIPO Crawler: Block 29 đã được render chi tiết.
+2025-05-13 17:31:14,883 - root - INFO - wipo.crawl_wipo_by_name:544 - WIPO Crawler: Finished attempting to load all individual blocks. Getting final page source for parsing.
+2025-05-13 17:31:14,965 - root - INFO - wipo.crawl_wipo_by_name:560 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 17:31:14,965 - root - INFO - wipo.crawl_wipo_by_name:570 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-13 17:31:14,989 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 6 valid trademark records from HTML
+2025-05-13 17:31:14,995 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: BR500000812888227
+2025-05-13 17:31:14,995 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item BR500000812888227
+2025-05-13 17:31:14,996 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: ID502002D00016477
+2025-05-13 17:31:14,996 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item ID502002D00016477
+2025-05-13 17:31:14,997 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: ID502002D00015147
+2025-05-13 17:31:14,997 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item ID502002D00015147
+2025-05-13 17:31:14,997 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: MA502012000145299
+2025-05-13 17:31:14,998 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item MA502012000145299
+2025-05-13 17:31:14,998 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: ES5019940M1935158
+2025-05-13 17:31:14,998 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item ES5019940M1935158
+2025-05-13 17:31:14,999 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: KR501998400015637
+2025-05-13 17:31:14,999 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item KR501998400015637
+2025-05-13 17:31:14,999 - root - INFO - wipo._save_wipo_items_to_db:158 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 6, Saved: 6, Skipped: 0, Errors: 0
+2025-05-13 17:31:14,999 - root - INFO - wipo.crawl_wipo_by_name:588 - WIPO Crawler: Successfully saved 6 items to database
+2025-05-13 17:31:14,999 - root - INFO - wipo.crawl_wipo_by_name:594 - WIPO Crawler: Database session closed.
+2025-05-13 17:31:14,999 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 17:31:14,999 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.

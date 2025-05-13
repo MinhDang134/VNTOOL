@@ -496,6 +496,52 @@ def crawl_wipo_by_name(brand_name_to_search: str, force_refresh: bool = False):
 
         # Thêm delay nhỏ để đảm bảo trang đã load hoàn toàn
         time.sleep(5)
+
+        # ĐẢM BẢO TẤT CẢ BLOCK KẾT QUẢ ĐƯỢC RENDER ĐẦY ĐỦ TRƯỚC KHI LẤY HTML
+        results_list_selector = "li[class*='result']"
+        all_result_blocks_locator = (By.CSS_SELECTOR, results_list_selector)
+        try:
+            WebDriverWait(driver, timeout).until(
+                EC.presence_of_all_elements_located(all_result_blocks_locator)
+            )
+            result_elements = driver.find_elements(*all_result_blocks_locator)
+            logging.info(f"WIPO Crawler: Found {len(result_elements)} potential result blocks using selector: '{results_list_selector}'.")
+        except TimeoutException:
+            logging.error(f"WIPO Crawler: Timeout waiting for initial result blocks with selector '{results_list_selector}'. No results to process.")
+            if db_session:
+                db_session.close()
+            if driver:
+                driver.quit()
+            return None
+
+        # Cuộn qua từng block để ép render nội dung chi tiết
+        for index, block_element in enumerate(result_elements):
+            try:
+                # Cuộn block vào giữa màn hình
+                driver.execute_script("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", block_element)
+                time.sleep(0.3)  # Đợi render
+                
+                # Đợi cho đến khi nội dung chi tiết xuất hiện
+                WebDriverWait(driver, 2).until(
+                    lambda d: "brandName" in block_element.get_attribute("innerHTML")
+                )
+                logging.info(f"WIPO Crawler: Block {index} đã được render chi tiết.")
+            except Exception as e:
+                logging.warning(f"WIPO Crawler: Block {index} có thể không render đủ chi tiết hoặc lỗi: {e}")
+
+        # Cuộn lên đầu trang và đợi một chút để đảm bảo tất cả đã render
+        driver.execute_script("window.scrollTo(0, 0);")
+        time.sleep(1)
+
+        # Cuộn xuống cuối trang và đợi một chút
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(1)
+
+        # Cuộn lên đầu trang lần nữa
+        driver.execute_script("window.scrollTo(0, 0);")
+        time.sleep(1)
+
+        logging.info("WIPO Crawler: Finished attempting to load all individual blocks. Getting final page source for parsing.")
         html_content_for_parsing = driver.page_source
 
     except TimeoutException:
