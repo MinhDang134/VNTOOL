@@ -3690,3 +3690,237 @@ DETAIL:  Key (id)=(812888227) already exists.
 2025-05-13 17:31:14,999 - root - INFO - wipo.crawl_wipo_by_name:594 - WIPO Crawler: Database session closed.
 2025-05-13 17:31:14,999 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
 2025-05-13 17:31:14,999 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 17:43:45,054 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 17:43:45,054 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 17:43:46,368 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 17:43:59,910 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:43:59,949 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:43:59,989 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:00,023 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:00,057 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:00,091 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:00,122 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:01,174 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:01,207 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:01,239 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:01,272 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:01,307 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:02,360 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:02,392 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:02,423 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:02,455 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:02,498 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:03,055 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:03,088 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:03,120 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:03,151 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:03,184 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:04,237 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:04,269 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:04,299 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:04,329 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:04,361 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:05,429 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:05,461 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:05,493 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:12,579 - root - INFO - wipo.crawl_wipo_by_name:479 - Đã thu thập 0 mục, cuộn không ra mới: 1
+2025-05-13 17:44:12,639 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:12,688 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:12,728 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:12,758 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:12,787 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:12,823 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:12,854 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:13,900 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:13,929 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:13,958 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:13,988 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:14,039 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:15,102 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:15,133 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:15,164 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:15,197 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:15,226 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:15,762 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:15,799 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:15,833 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:15,865 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:15,898 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:16,949 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:16,985 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:17,017 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:17,051 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:17,087 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:18,135 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:18,167 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:18,198 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:25,283 - root - INFO - wipo.crawl_wipo_by_name:479 - Đã thu thập 0 mục, cuộn không ra mới: 2
+2025-05-13 17:44:25,344 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:25,400 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:25,456 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:25,506 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:25,536 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:25,565 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:26,608 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:26,640 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:26,673 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:26,707 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:26,737 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:27,786 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:27,815 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:27,848 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:27,882 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:27,914 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:28,452 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:28,482 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:28,517 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:28,550 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:28,582 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:29,631 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:29,675 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:29,707 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:29,737 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:29,767 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:30,825 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:30,856 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:30,886 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:30,924 - root - INFO - parser.parse_wipo_html:211 - Parser: Extracted 0 valid trademark records from HTML
+2025-05-13 17:44:38,017 - root - INFO - wipo.crawl_wipo_by_name:479 - Đã thu thập 0 mục, cuộn không ra mới: 3
+2025-05-13 17:44:38,088 - root - INFO - wipo.crawl_wipo_by_name:496 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 17:44:38,088 - root - WARNING - wipo.crawl_wipo_by_name:501 - WIPO Crawler: No HTML content retrieved for 'RONALDO'
+2025-05-13 17:44:38,089 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 17:44:38,089 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-13 17:48:28,062 - __main__ - INFO - test_manual.<module>:45 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-13 17:48:28,063 - root - INFO - wipo.crawl_wipo_by_name:360 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-13 17:48:29,362 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-13 17:48:41,625 - root - INFO - wipo.crawl_wipo_by_name:428 - Starting incremental scroll and parse. Target: 30 items.
+2025-05-13 17:48:41,639 - root - INFO - wipo.crawl_wipo_by_name:437 - Found 30 blocks on page after scroll/wait.
+2025-05-13 17:48:41,645 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID BR500000812888227. Processing...
+2025-05-13 17:48:41,936 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 812888227, st13: BR500000812888227
+2025-05-13 17:48:41,938 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID ID502002D00016477. Processing...
+2025-05-13 17:48:42,213 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 545892, st13: ID502002D00016477
+2025-05-13 17:48:42,215 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID ID502002D00015147. Processing...
+2025-05-13 17:48:42,482 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 544244, st13: ID502002D00015147
+2025-05-13 17:48:42,485 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID MA502012000145299. Processing...
+2025-05-13 17:48:42,755 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 145299, st13: MA502012000145299
+2025-05-13 17:48:42,757 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID ES5019940M1935158. Processing...
+2025-05-13 17:48:43,023 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): M1935158, st13: ES5019940M1935158
+2025-05-13 17:48:43,026 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID KR501998400015637. Processing...
+2025-05-13 17:48:43,301 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 4004598630000, st13: KR501998400015637
+2025-05-13 17:48:43,304 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID VN502009000023685. Processing...
+2025-05-13 17:48:43,575 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): VN-4-2009-23685, st13: VN502009000023685
+2025-05-13 17:48:43,578 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID IN502013002483811. Processing...
+2025-05-13 17:48:43,849 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 2483811, st13: IN502013002483811
+2025-05-13 17:48:43,852 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID DE500000039818247. Processing...
+2025-05-13 17:48:44,121 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 39818247, st13: DE500000039818247
+2025-05-13 17:48:44,123 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID IN502011002246596. Processing...
+2025-05-13 17:48:44,401 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 2246596, st13: IN502011002246596
+2025-05-13 17:48:44,404 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID IN502006001487861. Processing...
+2025-05-13 17:48:44,706 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 1487861, st13: IN502006001487861
+2025-05-13 17:48:44,709 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID VN502014000026479. Processing...
+2025-05-13 17:48:44,994 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): VN-4-2014-26479, st13: VN502014000026479
+2025-05-13 17:48:44,998 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID MW502014000000215. Processing...
+2025-05-13 17:48:45,262 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 2014/000215, st13: MW502014000000215
+2025-05-13 17:48:45,264 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID MA501997000062876. Processing...
+2025-05-13 17:48:45,543 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 62876, st13: MA501997000062876
+2025-05-13 17:48:45,546 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID FR501996096650666. Processing...
+2025-05-13 17:48:45,824 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 96650666, st13: FR501996096650666
+2025-05-13 17:48:45,827 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID BR500000823972631. Processing...
+2025-05-13 17:48:46,096 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 823972631, st13: BR500000823972631
+2025-05-13 17:48:46,099 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID ID501998D00014009. Processing...
+2025-05-13 17:48:46,363 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 445088, st13: ID501998D00014009
+2025-05-13 17:48:46,365 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID IT501998900672355. Processing...
+2025-05-13 17:48:46,628 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 0000821075, st13: IT501998900672355
+2025-05-13 17:48:46,630 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID MA502003000029253. Processing...
+2025-05-13 17:48:46,903 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 29253, st13: MA502003000029253
+2025-05-13 17:48:46,905 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID MA502003000089467. Processing...
+2025-05-13 17:48:47,174 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 89467, st13: MA502003000089467
+2025-05-13 17:48:47,176 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID IN502009001820335. Processing...
+2025-05-13 17:48:47,449 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 1820335, st13: IN502009001820335
+2025-05-13 17:48:47,451 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID IN502014002740266. Processing...
+2025-05-13 17:48:47,737 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 2740266, st13: IN502014002740266
+2025-05-13 17:48:47,739 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID IN502006001487860. Processing...
+2025-05-13 17:48:48,005 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 1487860, st13: IN502006001487860
+2025-05-13 17:48:48,008 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID VN502018000033678. Processing...
+2025-05-13 17:48:48,279 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): VN-4-2018-33678, st13: VN502018000033678
+2025-05-13 17:48:48,282 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID US502014086281920. Processing...
+2025-05-13 17:48:48,556 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 4815819, st13: US502014086281920
+2025-05-13 17:48:48,559 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID KR502011400007448. Processing...
+2025-05-13 17:48:48,846 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 4020110007448, st13: KR502011400007448
+2025-05-13 17:48:48,849 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID IN502021005088248. Processing...
+2025-05-13 17:48:49,122 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 5088248, st13: IN502021005088248
+2025-05-13 17:48:49,125 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID BR500000930286006. Processing...
+2025-05-13 17:48:49,403 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 930286006, st13: BR500000930286006
+2025-05-13 17:48:49,406 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID BR500000815394071. Processing...
+2025-05-13 17:48:49,692 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 815394071, st13: BR500000815394071
+2025-05-13 17:48:49,695 - root - INFO - wipo.crawl_wipo_by_name:455 - New item found: ID FR501997097682953. Processing...
+2025-05-13 17:48:50,120 - root - INFO - wipo.crawl_wipo_by_name:500 - Successfully parsed and added item ID (display): 97682953, st13: FR501997097682953
+2025-05-13 17:48:50,120 - root - INFO - wipo.crawl_wipo_by_name:510 - Reached target item count of 30.
+2025-05-13 17:48:50,120 - root - INFO - wipo.crawl_wipo_by_name:527 - Finished scrolling. Total items parsed: 30
+2025-05-13 17:48:50,200 - root - INFO - wipo.crawl_wipo_by_name:543 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-13 17:48:50,200 - root - INFO - wipo.crawl_wipo_by_name:553 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-13 17:48:50,207 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 812888227
+2025-05-13 17:48:50,209 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 812888227
+2025-05-13 17:48:50,211 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 545892
+2025-05-13 17:48:50,212 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 545892
+2025-05-13 17:48:50,212 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 544244
+2025-05-13 17:48:50,213 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 544244
+2025-05-13 17:48:50,214 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 145299
+2025-05-13 17:48:50,214 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 145299
+2025-05-13 17:48:50,215 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: M1935158
+2025-05-13 17:48:50,216 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item M1935158
+2025-05-13 17:48:50,217 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 4004598630000
+2025-05-13 17:48:50,224 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 4004598630000
+2025-05-13 17:48:50,225 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: VN-4-2009-23685
+2025-05-13 17:48:50,226 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item VN-4-2009-23685
+2025-05-13 17:48:50,227 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 2483811
+2025-05-13 17:48:50,228 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 2483811
+2025-05-13 17:48:50,228 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 39818247
+2025-05-13 17:48:50,229 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 39818247
+2025-05-13 17:48:50,230 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 2246596
+2025-05-13 17:48:50,237 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 2246596
+2025-05-13 17:48:50,238 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 1487861
+2025-05-13 17:48:50,240 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 1487861
+2025-05-13 17:48:50,241 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VN-4-2014-26479
+2025-05-13 17:48:50,242 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item VN-4-2014-26479
+2025-05-13 17:48:50,243 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 2014/000215
+2025-05-13 17:48:50,244 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 2014/000215
+2025-05-13 17:48:50,245 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 62876
+2025-05-13 17:48:50,252 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 62876
+2025-05-13 17:48:50,253 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 96650666
+2025-05-13 17:48:50,255 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 96650666
+2025-05-13 17:48:50,256 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 823972631
+2025-05-13 17:48:50,257 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 823972631
+2025-05-13 17:48:50,258 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 445088
+2025-05-13 17:48:50,259 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 445088
+2025-05-13 17:48:50,260 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 0000821075
+2025-05-13 17:48:50,267 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 0000821075
+2025-05-13 17:48:50,268 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 29253
+2025-05-13 17:48:50,270 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 29253
+2025-05-13 17:48:50,271 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 89467
+2025-05-13 17:48:50,273 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 89467
+2025-05-13 17:48:50,273 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 1820335
+2025-05-13 17:48:50,275 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 1820335
+2025-05-13 17:48:50,276 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 2740266
+2025-05-13 17:48:50,282 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 2740266
+2025-05-13 17:48:50,284 - root - INFO - wipo._save_wipo_items_to_db:130 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: 1487860
+2025-05-13 17:48:50,285 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 1487860
+2025-05-13 17:48:50,286 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: VN-4-2018-33678
+2025-05-13 17:48:50,287 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item VN-4-2018-33678
+2025-05-13 17:48:50,287 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 4815819
+2025-05-13 17:48:50,288 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 4815819
+2025-05-13 17:48:50,289 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 4020110007448
+2025-05-13 17:48:50,289 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 4020110007448
+2025-05-13 17:48:50,290 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 5088248
+2025-05-13 17:48:50,296 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 5088248
+2025-05-13 17:48:50,297 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 930286006
+2025-05-13 17:48:50,298 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 930286006
+2025-05-13 17:48:50,299 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 815394071
+2025-05-13 17:48:50,300 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 815394071
+2025-05-13 17:48:50,301 - root - INFO - wipo._save_wipo_items_to_db:121 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 97682953
+2025-05-13 17:48:50,302 - root - INFO - wipo._save_wipo_items_to_db:149 - DB Save (WIPO_Search_RONALDO): Successfully saved item 97682953
+2025-05-13 17:48:50,302 - root - INFO - wipo._save_wipo_items_to_db:158 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 30, Saved: 30, Skipped: 0, Errors: 0
+2025-05-13 17:48:50,302 - root - INFO - wipo.crawl_wipo_by_name:565 - WIPO Crawler: Successfully saved 30 items to database
+2025-05-13 17:48:50,302 - root - INFO - wipo.crawl_wipo_by_name:571 - WIPO Crawler: Database session closed.
+2025-05-13 17:48:50,302 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-13 17:48:50,302 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
