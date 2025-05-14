@@ -1,16 +1,18 @@
-from bs4 import BeautifulSoup
-import logging
-import re
-from typing import List, Dict, Any
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
+from bs4 import BeautifulSoup # là phường thức có thể bóc tách dữ liệu ra từ html
+import logging # dùng để hiện thông báo
+import re # cung cấp biểu thức chính quy để tương tác với html
+from typing import List, Dict, Any # là kiểu dữ liệu cũng cấp những kiểu dữ liệu dùng cho nhiều trường hợp
+from selenium.webdriver.support.ui import WebDriverWait # cái này dùng cái này sẽ dùng để đợi một điều kiện cụ thể cho đến khi nó chạy xong thì sẽ đến cái khác
+from selenium.webdriver.support import expected_conditions as EC # cung cấp tập hợp các điều kiện trước khi chạy webDriverWait
+from selenium.webdriver.common.by import By # phương thức này sẽ dùng để chỉ định tìm kiếm những phần tử nào trên trang web
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
+# NoSuchElementEXception : được lém ra khi không tìm thấy phần tử trong mảng
+# TimeoutException : nó có chức năng là hiển thị lỗi nếu mà trong thời gian quy định chưa lấy được dữ liệu
 
 
 # Cấu hình logging nếu chưa có ở đâu khác (ví dụ: trong main.py)
 # logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
+# hàm clean_id được truyền tham số raw_id và và phải trả ra kiểu str
 def clean_id(raw_id: str) -> str:
     """Clean and validate ID from WIPO.
     Handles various ID formats:
@@ -19,44 +21,51 @@ def clean_id(raw_id: str) -> str:
     - IDs with hyphens (e.g., "VN-1234")
     - Mixed format IDs
     """
+    # nếu mà không có raw_id sẽ hiển thị lỗi bên dưới và trả về none
     if not raw_id:
         logging.debug("clean_id: Empty raw_id received")
         return None
     
     # Log the input
+    #  hiển thị ra cái id mình lấy được
     logging.debug(f"clean_id: Processing raw_id: '{raw_id}'")
     
     # Remove extra whitespace
+    # loại bỏ khoảng trắng nếu như có khoảng trắng nào
     cleaned = raw_id.strip()
     logging.debug(f"clean_id: After strip: '{cleaned}'")
     
     # Handle numeric IDs with commas
+    # nếu dấu , có trong cái cái id đó thì ra sẽ thực hiện thay thế dấu , thành không có gì cả
     if ',' in cleaned:
         # Check if it's a numeric ID with commas
-        numeric_part = cleaned.replace(',', '')
-        if numeric_part.isdigit():
-            cleaned = numeric_part
-            logging.debug(f"clean_id: Removed commas from numeric ID: '{cleaned}'")
+        numeric_part = cleaned.replace(',', '') # trong trường hợp này là thay dấu , thành khoảng trắng
+        if numeric_part.isdigit(): # sau khi thay xong ta sẽ kiểm tra xem cái id này có phải là số không
+            cleaned = numeric_part # nếu hoàn toàn là số thì nó sẽ được lưu vào cleaned
+            logging.debug(f"clean_id: Removed commas from numeric ID: '{cleaned}'") # in ra là đã xóa dấu , từ id nào đó
         else:
+            # hoặc không nó sẽ hiển thi  là có dấu phẩy nhưng hoàn toàn là số và dữ lại số
             logging.debug(f"clean_id: ID contains commas but is not purely numeric, keeping commas: '{cleaned}'")
-    
     # Validate the cleaned ID
+    # nếu mà cleand không có dữ liệu nó sẽ in ra là không có id nào sau khi được cleaning
     if not cleaned:
         logging.warning("clean_id: Empty ID after cleaning")
         return None
-        
     # Log the final result
+    # nếu có thì sẽ id cuối cùng là gì đó gì đó
     logging.debug(f"clean_id: Final cleaned ID: '{cleaned}'")
-    
-    return cleaned
+    return cleaned # in ra id đó
 
+
+# một có tên là extract_id_from_clock  với tham số là block và id trả về kiểu tuple mảng hai chiều
+# Cái tuple này nó sẽ chứa cái id của cái được làm sạch đó và cách để làm sạch
 def extract_id_from_block(block, idx: int) -> tuple[str, str]:
     """Extract ID from a block using multiple strategies."""
-    logging.info(f"Block {idx}: Starting ID extraction")
-    logging.debug(f"Block {idx} HTML: {block.prettify()}")
+    logging.info(f"Block {idx}: Starting ID extraction") # hiển thị ra số id được startding
+    logging.debug(f"Block {idx} HTML: {block.prettify()}") # hiển thị id số mấy và block số mấy
     
     # Danh sách các selector để thử, theo thứ tự ưu tiên
-    id_selectors = [
+    id_selectors = [ # danh sách các selector để thử
         '.number span.value',  # Selector chính cho block 1-9
         '.number',  # Fallback 1
         'span.value',  # Fallback 2
@@ -74,7 +83,7 @@ def extract_id_from_block(block, idx: int) -> tuple[str, str]:
     ]
     
     # Thử từng selector
-    for selector_index, selector in enumerate(id_selectors):
+    for selector_index, selector in enumerate(id_selectors): # tạo ra hai biến để để lưu giá trị mà id_selector trả về gồm id và cái tìm ra nó
         element = block.select_one(selector)
         if element:
             raw_id = element.get_text(strip=True)
@@ -132,84 +141,87 @@ def extract_brand_name_from_block(block, idx: int) -> tuple[str, str]:
     logging.warning(f"Block {idx}: Could not extract brand name with selector '.brandName'.")
     return None, None
 
-def parse_wipo_html(html_content: str) -> List[Dict[str, Any]]:
-    """
-    Parse HTML content from WIPO search results page.
-    
-    Args:
-        html_content: HTML string from WIPO search results page
-        
-    Returns:
-        List of dictionaries containing extracted trademark information
-    """
-    soup = BeautifulSoup(html_content, 'html.parser')
-    results = []
+def parse_wipo_html(html_content: str) -> List[Dict[str, Any]]: # sau khi ;lấy được toàn bộ html của phần li đó thì
+    # nó bắt ép  phải trả về một list với nhiều dict bên trong
+
+    soup = BeautifulSoup(html_content, 'html.parser') # nó lấy toàn bộ cái source đó và phần tích từng phần ra
+    results = [] # tạo một cái result tí chứa dữ liệu
     
     # Find all result items
+    # dùng cái select lấy toàn bộ dự liệu trong ul và li trong file html
     result_items = soup.select('ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted')
-    
+
+    # duyệt toàn bộ từ cái ul li đó
     for item in result_items:
         # Skip empty items (no brand name)
+        # lấy ra cái .brandName nó thấy đầu tiên
         brand_name_el = item.select_one('.brandName')
-        if not brand_name_el:
+        if not brand_name_el: # nếu mà không có name thì bỏ qua phần dưới rồi tiếp tục chạy có thì chạy xuống dưới
             continue
             
         # Extract basic info
-        trademark_id = item.get('data-st13', '')
-        brand_name = brand_name_el.get_text(strip=True)
+        trademark_id = item.get('data-st13', '') # thông qua key data- st13 lấy được trademark_id
+        brand_name = brand_name_el.get_text(strip=True) # lấy brand name nếu có .brandName lấy text và toàn bộ khoảng trắng
         
         # Initialize result dict with required fields
-        result = {
-            'id': trademark_id,
-            'name': brand_name,
-            'owner': None,
-            'status': None,
-            'number': None,
-            'nice_class': None,
-            'country': None,
-            'ipr_type': None,
-            'logo': None
+        result = { # tạo một cái khung chứa dữ liệu
+            'id': trademark_id, # có trade id rồi
+            'name': brand_name, # trade name
+            'owner': None, # chưa có thì cho là none
+            'status': None, # chưa có thì cho là none
+            'number': None, # chưa có thì cho là none
+            'nice_class': None, # chưa có thì cho là none
+            'country': None, # chưa có thì cho là none
+            'ipr_type': None, # chưa có thì cho là none
+            'logo': None # chưa có thì cho là none
         }
         
         # Extract owner
+        # lấy dữ liệu owner từ select_ one
         owner_el = item.select_one('.owner span.value')
         if owner_el:
-            result['owner'] = owner_el.get_text(strip=True)
+            result['owner'] = owner_el.get_text(strip=True) # sau khi lấy được dữ liệu rồi thì gán vào bảng
             
         # Extract status
+        # lấy dữ liệu status_el
         status_el = item.select_one('.status span.value')
         if status_el:
-            result['status'] = status_el.get_text(strip=True)
+            result['status'] = status_el.get_text(strip=True) # lấy được thì gán vào bảng
             
         # Extract number
+        # lấy number lấy được dữ liệu thì gán vào bảng
         number_el = item.select_one('.number span.value')
         if number_el:
             result['number'] = number_el.get_text(strip=True)
             
         # Extract Nice class
+        # nice class là cái éo gì ấy chưa biết à nó là cái nhóm lấy được thì lưu vào
         class_el = item.select_one('.class span.value')
         if class_el:
             result['nice_class'] = class_el.get_text(strip=True)
             
         # Extract country
+        # lấy được dữ liệu coutry thì lưu vào
         country_el = item.select_one('.designation span.value')
         if country_el:
             result['country'] = country_el.get_text(strip=True)
             
         # Extract IPR type
+        # lấy được dữ liệu ipr_el thì lưu vào
         ipr_el = item.select_one('.ipr span.value')
         if ipr_el:
             result['ipr_type'] = ipr_el.get_text(strip=True)
             
         # Extract logo if exists
+        # lấy được logo thì in vào logo lạ vl
         logo_el = item.select_one('img.logo[src^="data:image"]')
         if logo_el:
             result['logo'] = logo_el.get('src')
             
         results.append(result)
-        
+        # sau đó append toàn bộ thông tin vào bảng result trả về result
     logging.info(f"Parser: Extracted {len(results)} valid trademark records from HTML")
-    return results
+    return results # trả về result nè
 
 def get_brand_details_from_wipo_page(driver, item_id_st13: str) -> Dict[str, Any]:
     """

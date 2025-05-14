@@ -3924,3 +3924,142 @@ DETAIL:  Key (id)=(812888227) already exists.
 2025-05-13 17:48:50,302 - root - INFO - wipo.crawl_wipo_by_name:571 - WIPO Crawler: Database session closed.
 2025-05-13 17:48:50,302 - __main__ - INFO - test_manual.<module>:48 - WIPO crawl application finished for brand: 'RONALDO'
 2025-05-13 17:48:50,302 - __main__ - INFO - test_manual.<module>:53 - WIPO crawl application is shutting down.
+2025-05-14 16:53:46,385 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-14 16:53:46,386 - root - INFO - wipo.crawl_wipo_by_name:382 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-14 16:53:46,387 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Using cached data for 'RONALDO'
+2025-05-14 16:53:46,387 - __main__ - INFO - test_manual.<module>:44 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-14 16:53:46,387 - __main__ - INFO - test_manual.<module>:49 - WIPO crawl application is shutting down.
+2025-05-14 16:54:36,682 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-14 16:54:36,682 - root - INFO - wipo.crawl_wipo_by_name:382 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-14 16:54:46,906 - root - INFO - wipo.crawl_wipo_by_name:414 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-14 16:55:07,449 - root - INFO - wipo.crawl_wipo_by_name:454 - Starting incremental scroll and parse. Target: 30 items.
+2025-05-14 16:55:07,471 - root - INFO - wipo.crawl_wipo_by_name:464 - Found 30 blocks on page after scroll/wait.
+2025-05-14 16:55:07,485 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID BR500000812888227. Processing...
+2025-05-14 16:55:07,843 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 812888227, st13: BR500000812888227
+2025-05-14 16:55:07,849 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID ID502002D00016477. Processing...
+2025-05-14 16:55:08,182 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 545892, st13: ID502002D00016477
+2025-05-14 16:55:08,189 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID ID502002D00015147. Processing...
+2025-05-14 16:55:08,519 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 544244, st13: ID502002D00015147
+2025-05-14 16:55:08,527 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID MA502012000145299. Processing...
+2025-05-14 16:55:08,898 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 145299, st13: MA502012000145299
+2025-05-14 16:55:08,905 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID ES5019940M1935158. Processing...
+2025-05-14 16:55:09,241 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): M1935158, st13: ES5019940M1935158
+2025-05-14 16:55:09,248 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID KR501998400015637. Processing...
+2025-05-14 16:55:09,586 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 4004598630000, st13: KR501998400015637
+2025-05-14 16:55:09,595 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID VN502009000023685. Processing...
+2025-05-14 16:55:09,954 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VN-4-2009-23685, st13: VN502009000023685
+2025-05-14 16:55:09,960 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID IN502013002483811. Processing...
+2025-05-14 16:55:10,301 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 2483811, st13: IN502013002483811
+2025-05-14 16:55:10,307 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DE500000039818247. Processing...
+2025-05-14 16:55:10,637 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 39818247, st13: DE500000039818247
+2025-05-14 16:55:10,644 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID IN502011002246596. Processing...
+2025-05-14 16:55:11,009 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 2246596, st13: IN502011002246596
+2025-05-14 16:55:11,021 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID IN502006001487861. Processing...
+2025-05-14 16:55:11,351 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 1487861, st13: IN502006001487861
+2025-05-14 16:55:11,358 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID VN502014000026479. Processing...
+2025-05-14 16:55:11,700 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VN-4-2014-26479, st13: VN502014000026479
+2025-05-14 16:55:11,707 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID MW502014000000215. Processing...
+2025-05-14 16:55:12,056 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 2014/000215, st13: MW502014000000215
+2025-05-14 16:55:12,063 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID MA501997000062876. Processing...
+2025-05-14 16:55:12,404 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 62876, st13: MA501997000062876
+2025-05-14 16:55:12,411 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID FR501996096650666. Processing...
+2025-05-14 16:55:12,748 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 96650666, st13: FR501996096650666
+2025-05-14 16:55:12,755 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID BR500000823972631. Processing...
+2025-05-14 16:55:13,090 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 823972631, st13: BR500000823972631
+2025-05-14 16:55:13,097 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID ID501998D00014009. Processing...
+2025-05-14 16:55:13,437 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 445088, st13: ID501998D00014009
+2025-05-14 16:55:13,445 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID IT501998900672355. Processing...
+2025-05-14 16:55:13,778 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 0000821075, st13: IT501998900672355
+2025-05-14 16:55:13,785 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID MA502003000029253. Processing...
+2025-05-14 16:55:14,125 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 29253, st13: MA502003000029253
+2025-05-14 16:55:14,132 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID MA502003000089467. Processing...
+2025-05-14 16:55:14,473 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 89467, st13: MA502003000089467
+2025-05-14 16:55:14,479 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID IN502009001820335. Processing...
+2025-05-14 16:55:14,817 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 1820335, st13: IN502009001820335
+2025-05-14 16:55:14,824 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID IN502014002740266. Processing...
+2025-05-14 16:55:15,185 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 2740266, st13: IN502014002740266
+2025-05-14 16:55:15,194 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID IN502006001487860. Processing...
+2025-05-14 16:55:15,529 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 1487860, st13: IN502006001487860
+2025-05-14 16:55:15,536 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID VN502018000033678. Processing...
+2025-05-14 16:55:15,892 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VN-4-2018-33678, st13: VN502018000033678
+2025-05-14 16:55:15,898 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID US502014086281920. Processing...
+2025-05-14 16:55:16,273 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 4815819, st13: US502014086281920
+2025-05-14 16:55:16,281 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID KR502011400007448. Processing...
+2025-05-14 16:55:16,611 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 4020110007448, st13: KR502011400007448
+2025-05-14 16:55:16,619 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID IN502021005088248. Processing...
+2025-05-14 16:55:16,996 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 5088248, st13: IN502021005088248
+2025-05-14 16:55:17,003 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID BR500000930286006. Processing...
+2025-05-14 16:55:17,332 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 930286006, st13: BR500000930286006
+2025-05-14 16:55:17,338 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID BR500000815394071. Processing...
+2025-05-14 16:55:17,671 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 815394071, st13: BR500000815394071
+2025-05-14 16:55:17,678 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID FR501997097682953. Processing...
+2025-05-14 16:55:18,008 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): 97682953, st13: FR501997097682953
+2025-05-14 16:55:18,008 - root - INFO - wipo.crawl_wipo_by_name:538 - Reached target item count of 30.
+2025-05-14 16:55:18,008 - root - INFO - wipo.crawl_wipo_by_name:555 - Finished scrolling. Total items parsed: 30
+2025-05-14 16:55:18,080 - root - INFO - wipo.crawl_wipo_by_name:571 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-14 16:55:18,080 - root - INFO - wipo.crawl_wipo_by_name:581 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-14 16:55:18,089 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 812888227
+2025-05-14 16:55:18,090 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 812888227
+2025-05-14 16:55:18,091 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 545892
+2025-05-14 16:55:18,091 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 545892
+2025-05-14 16:55:18,092 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 544244
+2025-05-14 16:55:18,092 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 544244
+2025-05-14 16:55:18,093 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 145299
+2025-05-14 16:55:18,093 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 145299
+2025-05-14 16:55:18,094 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: M1935158
+2025-05-14 16:55:18,094 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item M1935158
+2025-05-14 16:55:18,095 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 4004598630000
+2025-05-14 16:55:18,095 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 4004598630000
+2025-05-14 16:55:18,095 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: VN-4-2009-23685
+2025-05-14 16:55:18,096 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VN-4-2009-23685
+2025-05-14 16:55:18,096 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 2483811
+2025-05-14 16:55:18,097 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 2483811
+2025-05-14 16:55:18,097 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 39818247
+2025-05-14 16:55:18,097 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 39818247
+2025-05-14 16:55:18,098 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 2246596
+2025-05-14 16:55:18,098 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 2246596
+2025-05-14 16:55:18,098 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 1487861
+2025-05-14 16:55:18,099 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 1487861
+2025-05-14 16:55:18,099 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: VN-4-2014-26479
+2025-05-14 16:55:18,099 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VN-4-2014-26479
+2025-05-14 16:55:18,100 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 2014/000215
+2025-05-14 16:55:18,100 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 2014/000215
+2025-05-14 16:55:18,100 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 62876
+2025-05-14 16:55:18,100 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 62876
+2025-05-14 16:55:18,101 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 96650666
+2025-05-14 16:55:18,101 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 96650666
+2025-05-14 16:55:18,101 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 823972631
+2025-05-14 16:55:18,102 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 823972631
+2025-05-14 16:55:18,102 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 445088
+2025-05-14 16:55:18,102 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 445088
+2025-05-14 16:55:18,103 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 0000821075
+2025-05-14 16:55:18,103 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 0000821075
+2025-05-14 16:55:18,103 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 29253
+2025-05-14 16:55:18,104 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 29253
+2025-05-14 16:55:18,104 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 89467
+2025-05-14 16:55:18,104 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 89467
+2025-05-14 16:55:18,105 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 1820335
+2025-05-14 16:55:18,105 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 1820335
+2025-05-14 16:55:18,105 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 2740266
+2025-05-14 16:55:18,105 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 2740266
+2025-05-14 16:55:18,106 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 1487860
+2025-05-14 16:55:18,106 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 1487860
+2025-05-14 16:55:18,107 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: VN-4-2018-33678
+2025-05-14 16:55:18,107 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VN-4-2018-33678
+2025-05-14 16:55:18,107 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 4815819
+2025-05-14 16:55:18,107 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 4815819
+2025-05-14 16:55:18,108 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 4020110007448
+2025-05-14 16:55:18,108 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 4020110007448
+2025-05-14 16:55:18,109 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 5088248
+2025-05-14 16:55:18,109 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 5088248
+2025-05-14 16:55:18,110 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 930286006
+2025-05-14 16:55:18,110 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 930286006
+2025-05-14 16:55:18,111 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 815394071
+2025-05-14 16:55:18,111 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 815394071
+2025-05-14 16:55:18,112 - root - INFO - wipo._save_wipo_items_to_db:129 - DB Save (WIPO_Search_RONALDO): Updating existing record for ID: 97682953
+2025-05-14 16:55:18,112 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item 97682953
+2025-05-14 16:55:18,112 - root - INFO - wipo._save_wipo_items_to_db:168 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 30, Saved: 30, Skipped: 0, Errors: 0
+2025-05-14 16:55:18,112 - root - INFO - wipo.crawl_wipo_by_name:593 - WIPO Crawler: Successfully saved 30 items to database
+2025-05-14 16:55:18,112 - root - INFO - wipo.crawl_wipo_by_name:599 - WIPO Crawler: Database session closed.
+2025-05-14 16:55:18,112 - __main__ - INFO - test_manual.<module>:44 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-14 16:55:18,112 - __main__ - INFO - test_manual.<module>:49 - WIPO crawl application is shutting down.

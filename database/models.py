@@ -16,9 +16,11 @@ def get_brand_model(table_name: str):  # Thêm type hint cho rõ ràng
     # return globals()[class_name]
 
     # Tạo class động
+    # truyền class vào đây ví dụ là nó sẽ lấy tông tin của bảng gì ấy quên rồi
+    # đây là cách tạo class động mới với những class có thể dùng chung thuộc tính nhưng khác tên bảng
     BrandClass = type(class_name, (Base,), {
         '__tablename__': table_name,
-        '__table_args__': {'extend_existing': True},
+        '__table_args__': {'extend_existing': True}, # cho phep overwirte nếu class này từng được định nghĩa rồi
         'id': Column(String(255), primary_key=True, index=True),  # Explicit length for String
         'name': Column(String(255), index=True, nullable=True),
         'product_group': Column(String(255), nullable=True),

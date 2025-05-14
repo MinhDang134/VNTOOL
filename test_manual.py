@@ -35,19 +35,15 @@ def setup_database_schema():
 
 
 if __name__ == "__main__":
-    # Gọi hàm thiết lập database một lần khi ứng dụng khởi chạy
-    # setup_database_schema() # Bỏ comment nếu bạn muốn create_all được gọi từ main
-    # Hoặc bạn có thể chạy nó như một script riêng biệt khi deploy.
-
-    # Ví dụ tên thương hiệu để tìm kiếm
+    # khi mà chạy cái brand to search = Ronaldo thì nó sẽ truyền cái tên vào craw_wipo_by_name truyền theo tên
     brand_to_search = "RONALDO"  # Bạn có thể thay đổi hoặc lấy từ input/argument
-
-    logger.info(f"Starting WIPO crawl application for brand: '{brand_to_search}'")
-    try:
-        crawl_wipo_by_name(brand_to_search)
-        logger.info(f"WIPO crawl application finished for brand: '{brand_to_search}'")
+    # khai báo tên  để khi mà mà cho nó chạy
+    logger.info(f"Starting WIPO crawl application for brand: '{brand_to_search}'") # thông báo logging ra thôi
+    try:# trường hợp đúng nếu đúng thì chạy và đây
+        crawl_wipo_by_name(brand_to_search) # truyền name vào cho nó sử lý
+        logger.info(f"WIPO crawl application finished for brand: '{brand_to_search}'") # hiển thị ra finish thế thui
     except Exception as e:
         # Bắt các lỗi không mong muốn ở cấp độ cao nhất của ứng dụng
         logger.critical(f"An unhandled error occurred in main execution for '{brand_to_search}': {e}", exc_info=True)
-    finally:
+    finally:# cuối cùng thế nào thì nó cũng hiển thị cái này
         logger.info("WIPO crawl application is shutting down.")
