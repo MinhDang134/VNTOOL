@@ -162,7 +162,7 @@ def parse_wipo_html(html_content: str) -> List[Dict[str, Any]]: # sau khi ;lấy
         # Extract basic info
         trademark_id = item.get('data-st13', '') # thông qua key data- st13 lấy được trademark_id
         brand_name = brand_name_el.get_text(strip=True) # lấy brand name nếu có .brandName lấy text và toàn bộ khoảng trắng
-        
+        # chillll
         # Initialize result dict with required fields
         result = { # tạo một cái khung chứa dữ liệu
             'id': trademark_id, # có trade id rồi

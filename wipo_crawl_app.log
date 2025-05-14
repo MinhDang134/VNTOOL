@@ -4063,3 +4063,142 @@ DETAIL:  Key (id)=(812888227) already exists.
 2025-05-14 16:55:18,112 - root - INFO - wipo.crawl_wipo_by_name:599 - WIPO Crawler: Database session closed.
 2025-05-14 16:55:18,112 - __main__ - INFO - test_manual.<module>:44 - WIPO crawl application finished for brand: 'RONALDO'
 2025-05-14 16:55:18,112 - __main__ - INFO - test_manual.<module>:49 - WIPO crawl application is shutting down.
+2025-05-14 22:30:15,503 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-14 22:30:15,503 - root - INFO - wipo.crawl_wipo_by_name:382 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-14 22:30:15,504 - root - INFO - wipo.crawl_wipo_by_name:390 - WIPO Crawler: Using cached data for 'RONALDO'
+2025-05-14 22:30:15,504 - __main__ - INFO - test_manual.<module>:44 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-14 22:30:15,504 - __main__ - INFO - test_manual.<module>:49 - WIPO crawl application is shutting down.
+2025-05-14 22:34:55,410 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-14 22:34:55,410 - root - INFO - wipo.crawl_wipo_by_name:382 - WIPO Crawler: Starting crawl for brand name: 'RONALDO'
+2025-05-14 22:34:57,389 - root - INFO - wipo.crawl_wipo_by_name:414 - WIPO Crawler: Navigated to https://branddb.wipo.int/branddb/en/
+2025-05-14 22:35:44,085 - root - INFO - wipo.crawl_wipo_by_name:454 - Starting incremental scroll and parse. Target: 30 items.
+2025-05-14 22:35:44,108 - root - INFO - wipo.crawl_wipo_by_name:464 - Found 30 blocks on page after scroll/wait.
+2025-05-14 22:35:44,120 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50199400VA03680. Processing...
+2025-05-14 22:35:44,508 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1995 00807, st13: DK50199400VA03680
+2025-05-14 22:35:44,517 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50197400VA02977. Processing...
+2025-05-14 22:35:44,958 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1975 01150, st13: DK50197400VA02977
+2025-05-14 22:35:44,966 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50201500VA00173. Processing...
+2025-05-14 22:35:45,330 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2015 00594, st13: DK50201500VA00173
+2025-05-14 22:35:45,339 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50199500VA00135. Processing...
+2025-05-14 22:35:45,690 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1995 01717, st13: DK50199500VA00135
+2025-05-14 22:35:45,697 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50201400VA02948. Processing...
+2025-05-14 22:35:46,057 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2015 00451, st13: DK50201400VA02948
+2025-05-14 22:35:46,064 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50201400VA02976. Processing...
+2025-05-14 22:35:46,425 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2015 00063, st13: DK50201400VA02976
+2025-05-14 22:35:46,434 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50197300VA03680. Processing...
+2025-05-14 22:35:46,798 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1975 01102, st13: DK50197300VA03680
+2025-05-14 22:35:46,807 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50201300VA02937. Processing...
+2025-05-14 22:35:47,168 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2014 02662, st13: DK50201300VA02937
+2025-05-14 22:35:47,177 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50196100VA02981. Processing...
+2025-05-14 22:35:47,549 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1964 03456, st13: DK50196100VA02981
+2025-05-14 22:35:47,557 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50200400VA02964. Processing...
+2025-05-14 22:35:47,928 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2005 00597, st13: DK50200400VA02964
+2025-05-14 22:35:47,936 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50199400VA06536. Processing...
+2025-05-14 22:35:48,304 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1994 07877, st13: DK50199400VA06536
+2025-05-14 22:35:48,311 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50196400VA00123. Processing...
+2025-05-14 22:35:48,716 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1965 00381, st13: DK50196400VA00123
+2025-05-14 22:35:48,724 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50197300VA00943. Processing...
+2025-05-14 22:35:49,096 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1975 00532, st13: DK50197300VA00943
+2025-05-14 22:35:49,108 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50201400VA02983. Processing...
+2025-05-14 22:35:49,464 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2015 00167, st13: DK50201400VA02983
+2025-05-14 22:35:49,472 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50201400VA02990. Processing...
+2025-05-14 22:35:49,837 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2015 00168, st13: DK50201400VA02990
+2025-05-14 22:35:49,845 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50201400VA00939. Processing...
+2025-05-14 22:35:50,206 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2014 02150, st13: DK50201400VA00939
+2025-05-14 22:35:50,215 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50200500VA00945. Processing...
+2025-05-14 22:35:50,601 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2005 01030, st13: DK50200500VA00945
+2025-05-14 22:35:50,610 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50200500VA00903. Processing...
+2025-05-14 22:35:50,990 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2005 01292, st13: DK50200500VA00903
+2025-05-14 22:35:51,001 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50199100VA07665. Processing...
+2025-05-14 22:35:51,357 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1994 07917, st13: DK50199100VA07665
+2025-05-14 22:35:51,366 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50201400VA00974. Processing...
+2025-05-14 22:35:51,719 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2015 00472, st13: DK50201400VA00974
+2025-05-14 22:35:51,727 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50197400VA00177. Processing...
+2025-05-14 22:35:52,081 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1974 03241, st13: DK50197400VA00177
+2025-05-14 22:35:52,089 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50201400VA00589. Processing...
+2025-05-14 22:35:52,461 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2014 02740, st13: DK50201400VA00589
+2025-05-14 22:35:52,469 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50199300VA00582. Processing...
+2025-05-14 22:35:52,837 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1994 06606, st13: DK50199300VA00582
+2025-05-14 22:35:52,845 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50199500VA00716. Processing...
+2025-05-14 22:35:53,200 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1995 02545, st13: DK50199500VA00716
+2025-05-14 22:35:53,207 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50198200VA00706. Processing...
+2025-05-14 22:35:53,572 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1984 04300, st13: DK50198200VA00706
+2025-05-14 22:35:53,580 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50197400VA00828. Processing...
+2025-05-14 22:35:53,938 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1974 03942, st13: DK50197400VA00828
+2025-05-14 22:35:53,946 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50197400VA00835. Processing...
+2025-05-14 22:35:54,306 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 1974 03947, st13: DK50197400VA00835
+2025-05-14 22:35:54,314 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50200500VA00735. Processing...
+2025-05-14 22:35:54,677 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2005 00877, st13: DK50200500VA00735
+2025-05-14 22:35:54,684 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50201400VA00715. Processing...
+2025-05-14 22:35:55,042 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2015 00714, st13: DK50201400VA00715
+2025-05-14 22:35:55,050 - root - INFO - wipo.crawl_wipo_by_name:483 - New item found: ID DK50201400VA00792. Processing...
+2025-05-14 22:35:55,397 - root - INFO - wipo.crawl_wipo_by_name:528 - Successfully parsed and added item ID (display): VR 2015 00271, st13: DK50201400VA00792
+2025-05-14 22:35:55,397 - root - INFO - wipo.crawl_wipo_by_name:538 - Reached target item count of 30.
+2025-05-14 22:35:55,397 - root - INFO - wipo.crawl_wipo_by_name:555 - Finished scrolling. Total items parsed: 30
+2025-05-14 22:35:55,470 - root - INFO - wipo.crawl_wipo_by_name:571 - WIPO Crawler: Chrome driver quit successfully.
+2025-05-14 22:35:55,470 - root - INFO - wipo.crawl_wipo_by_name:581 - WIPO Crawler: Parsing HTML for 'RONALDO'...
+2025-05-14 22:35:55,478 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1995 00807
+2025-05-14 22:35:55,481 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1995 00807
+2025-05-14 22:35:55,482 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1975 01150
+2025-05-14 22:35:55,483 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1975 01150
+2025-05-14 22:35:55,484 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2015 00594
+2025-05-14 22:35:55,485 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2015 00594
+2025-05-14 22:35:55,489 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1995 01717
+2025-05-14 22:35:55,493 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1995 01717
+2025-05-14 22:35:55,494 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2015 00451
+2025-05-14 22:35:55,496 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2015 00451
+2025-05-14 22:35:55,497 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2015 00063
+2025-05-14 22:35:55,498 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2015 00063
+2025-05-14 22:35:55,499 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1975 01102
+2025-05-14 22:35:55,500 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1975 01102
+2025-05-14 22:35:55,501 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2014 02662
+2025-05-14 22:35:55,502 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2014 02662
+2025-05-14 22:35:55,503 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1964 03456
+2025-05-14 22:35:55,504 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1964 03456
+2025-05-14 22:35:55,505 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2005 00597
+2025-05-14 22:35:55,506 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2005 00597
+2025-05-14 22:35:55,507 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1994 07877
+2025-05-14 22:35:55,508 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1994 07877
+2025-05-14 22:35:55,508 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1965 00381
+2025-05-14 22:35:55,509 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1965 00381
+2025-05-14 22:35:55,510 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1975 00532
+2025-05-14 22:35:55,511 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1975 00532
+2025-05-14 22:35:55,511 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2015 00167
+2025-05-14 22:35:55,512 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2015 00167
+2025-05-14 22:35:55,513 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2015 00168
+2025-05-14 22:35:55,514 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2015 00168
+2025-05-14 22:35:55,515 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2014 02150
+2025-05-14 22:35:55,516 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2014 02150
+2025-05-14 22:35:55,516 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2005 01030
+2025-05-14 22:35:55,517 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2005 01030
+2025-05-14 22:35:55,519 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2005 01292
+2025-05-14 22:35:55,520 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2005 01292
+2025-05-14 22:35:55,521 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1994 07917
+2025-05-14 22:35:55,522 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1994 07917
+2025-05-14 22:35:55,523 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2015 00472
+2025-05-14 22:35:55,524 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2015 00472
+2025-05-14 22:35:55,525 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1974 03241
+2025-05-14 22:35:55,527 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1974 03241
+2025-05-14 22:35:55,527 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2014 02740
+2025-05-14 22:35:55,528 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2014 02740
+2025-05-14 22:35:55,529 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1994 06606
+2025-05-14 22:35:55,530 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1994 06606
+2025-05-14 22:35:55,531 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1995 02545
+2025-05-14 22:35:55,532 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1995 02545
+2025-05-14 22:35:55,533 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1984 04300
+2025-05-14 22:35:55,534 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1984 04300
+2025-05-14 22:35:55,534 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1974 03942
+2025-05-14 22:35:55,535 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1974 03942
+2025-05-14 22:35:55,536 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 1974 03947
+2025-05-14 22:35:55,538 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 1974 03947
+2025-05-14 22:35:55,539 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2005 00877
+2025-05-14 22:35:55,541 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2005 00877
+2025-05-14 22:35:55,541 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2015 00714
+2025-05-14 22:35:55,543 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2015 00714
+2025-05-14 22:35:55,543 - root - INFO - wipo._save_wipo_items_to_db:139 - DB Save (WIPO_Search_RONALDO): Adding new record for ID: VR 2015 00271
+2025-05-14 22:35:55,545 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_Search_RONALDO): Successfully saved item VR 2015 00271
+2025-05-14 22:35:55,545 - root - INFO - wipo._save_wipo_items_to_db:168 - DB Save (WIPO_Search_RONALDO): Processing complete. Processed: 30, Saved: 30, Skipped: 0, Errors: 0
+2025-05-14 22:35:55,545 - root - INFO - wipo.crawl_wipo_by_name:593 - WIPO Crawler: Successfully saved 30 items to database
+2025-05-14 22:35:55,545 - root - INFO - wipo.crawl_wipo_by_name:599 - WIPO Crawler: Database session closed.
+2025-05-14 22:35:55,545 - __main__ - INFO - test_manual.<module>:44 - WIPO crawl application finished for brand: 'RONALDO'
+2025-05-14 22:35:55,545 - __main__ - INFO - test_manual.<module>:49 - WIPO crawl application is shutting down.
