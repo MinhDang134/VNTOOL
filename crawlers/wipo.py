@@ -21,6 +21,7 @@ from database.connection import Session, engine  # engine và session để tư�
 from database.models import get_brand_model, Base  # Giả định các hàm này tồn tại
 # from database.save import save_to_db # BỎ IMPORT NÀY, sử dụng hàm _save_wipo_items_to_db
 from database.partition import create_partition_table  # Giả định hàm này tồn tại
+import urllib.parse # For URL encoding
 
 # request_log nên được quản lý cẩn thận hơn nếu có nhiều instance crawler
 request_log_wipo = []  # danh sách lưu lại những thứ khi gửi request
@@ -601,6 +602,342 @@ def crawl_wipo_by_name(brand_name_to_search: str, force_refresh: bool = False):
     return valid_items
 
 
+@retry_on_failure(max_retries=3)
+def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refresh: bool = False):
+    """
+    Crawls WIPO for trademarks registered within a specific date range.
+    The process runs in headless mode.
+    """
+    logging.info(f"WIPO Crawler: Starting crawl for date range: {start_date_str} to {end_date_str}")
+
+    # Validate date format (YYYY-MM-DD)
+    try:
+        datetime.strptime(start_date_str, "%Y-%m-%d")
+        datetime.strptime(end_date_str, "%Y-%m-%d")
+    except ValueError:
+        logging.error(f"Invalid date format. Expected YYYY-MM-DD. Received: {start_date_str}, {end_date_str}")
+        return None
+
+    # Cache key based on date range
+    cache_key = f"daterange_{start_date_str}_{end_date_str}"
+    if not force_refresh:
+        cached_data = load_from_cache(cache_key)
+        if cached_data:
+            logging.info(f"WIPO Crawler: Using cached data for date range '{start_date_str} - {end_date_str}'")
+            return cached_data
+
+    db_session = None
+    driver = None
+    all_results = []
+
+    try:
+        # Construct the URL
+        base_url = "https://branddb.wipo.int/en/advancedsearch/results"
+        as_structure_template = {
+            "_id": "460a",  # This ID might change or be dynamic, assuming it's stable for now
+            "boolean": "AND",
+            "bricks": [{
+                "_id": "460a", # This ID might also change
+                "key": "appDate",
+                "strategy": "Range",
+                "value": [start_date_str, end_date_str]
+            }]
+        }
+        
+        params = {
+            "sort": "score desc",
+            "strategy": "concept",
+            "rows": "30", # The crawler will scroll for more if needed
+            "asStructure": json.dumps(as_structure_template),
+            "_": int(time.time() * 1000), # Timestamp for cache busting
+            "fg": "_void_"
+        }
+        
+        query_string = urllib.parse.urlencode(params)
+        target_url = f"{base_url}?{query_string}"
+        logging.info(f"WIPO Crawler: Constructed URL: {target_url}")
+
+        db_session = Session()
+        table_name_for_brand = "trademark" # Assuming the same table
+        create_partition_table(table_name_for_brand, engine)
+        ConcreteBrandModel = get_brand_model(table_name_for_brand)
+
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--disable-dev-shm-usage')
+        chrome_options.add_argument('--start-maximized')
+        chrome_options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36')
+
+        driver = webdriver.Chrome(options=chrome_options)
+        driver.set_page_load_timeout(120) # Increased timeout
+
+        logging.info(f"WIPO Crawler: Navigating to URL (headless): {target_url}")
+        driver.get(target_url)
+        
+        # Wait for page to indicate it has loaded, e.g. by checking for a known element or document.readyState
+        try:
+            WebDriverWait(driver, 30).until( # Increased wait time
+                lambda d: d.execute_script('return document.readyState') == 'complete'
+            )
+            logging.info("WIPO Crawler: Page 'document.readyState' is 'complete'.")
+        except TimeoutException:
+            logging.warning("WIPO Crawler: Page load timeout (readyState), but continuing detection...")
+
+        # Check for no results (important to do this early)
+        if check_no_results(driver):
+            logging.info(f"WIPO Crawler: No results found for date range {start_date_str} - {end_date_str} at {driver.current_url}")
+            return None # Return empty list or None, consistent with other functions
+
+        # --- ADAPTED SCROLLING AND PARSING LOGIC from crawl_wipo_by_name ---
+        # This selector might be different for advanced search results, adjust if necessary
+        results_selector = "ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted"
+        # Fallback selectors if the primary one fails, WIPO's structure can be inconsistent.
+        # These are examples, might need inspection of actual advanced search result page structure.
+        fallback_results_selectors = [
+            "ul.results > li.result", # Simpler selector
+            "div.search-results-list > ul > li" 
+        ]
+
+        parsed_items_collector = []
+        processed_item_ids = set() # To avoid duplicates if items reappear during scroll
+        # target_item_count can be very large for a date range, so we might rely more on fruitless scrolls
+        # For now, let's keep a high target or remove it and rely on scroll_attempts.
+        # Let's make target_item_count configurable or remove it for date range search if it implies fetching ALL.
+        # For now, let's aim for a significant number, but fruitless scrolls will be the primary stop condition.
+        # target_item_count = 1000 # Example, adjust as needed or make it dynamic
+        scroll_attempts_without_new_items = 0
+        max_fruitless_scrolls = 5 # Increased fruitless scrolls
+        
+        current_results_selector = None
+
+        logging.info("WIPO Crawler: Starting incremental scroll and parse for date range.")
+
+        # Try to find which selector works
+        for sel_idx, r_selector in enumerate([results_selector] + fallback_results_selectors):
+            try:
+                WebDriverWait(driver, 15).until( # Wait a bit for elements with this selector
+                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, r_selector))
+                )
+                # Check if elements are actually found and visible
+                test_elements = driver.find_elements(By.CSS_SELECTOR, r_selector)
+                if test_elements and any(el.is_displayed() for el in test_elements):
+                    current_results_selector = r_selector
+                    logging.info(f"WIPO Crawler: Using results selector: '{current_results_selector}'")
+                    break
+                else:
+                    logging.debug(f"WIPO Crawler: Selector '{r_selector}' found elements but none visible or list empty.")
+            except TimeoutException:
+                logging.debug(f"WIPO Crawler: Selector '{r_selector}' not found on page after 15s wait (selector attempt {sel_idx+1}).")
+        
+        if not current_results_selector:
+            logging.error(f"WIPO Crawler: Could not find any valid results list selector on page {driver.current_url}. HTML snapshot might be needed for debugging.")
+            # Potentially save page source here for debugging
+            # with open(f"debug_wipo_daterange_no_selector_{start_date_str}_{end_date_str}.html", "w", encoding="utf-8") as f:
+            #    f.write(driver.page_source)
+            return None
+
+
+        while scroll_attempts_without_new_items < max_fruitless_scrolls:
+            initial_item_count_this_loop = len(parsed_items_collector)
+            new_items_found_this_scroll = False
+            
+            try:
+                # Ensure elements are present before trying to find them
+                WebDriverWait(driver, 20).until( # Increased wait for items to appear
+                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, current_results_selector))
+                )
+                current_blocks_on_page = driver.find_elements(By.CSS_SELECTOR, current_results_selector)
+                logging.info(f"WIPO Crawler: Found {len(current_blocks_on_page)} blocks on page using '{current_results_selector}'. Parsed so far: {len(parsed_items_collector)}")
+            except TimeoutException:
+                logging.info(f"WIPO Crawler: No result blocks found with selector '{current_results_selector}' after waiting. Current URL: {driver.current_url}")
+                current_blocks_on_page = [] # No blocks found this iteration
+
+            if not current_blocks_on_page and not parsed_items_collector: # No blocks ever found
+                 if check_no_results(driver): # Double check if "no results" appeared after some dynamic load
+                    logging.info(f"WIPO Crawler: Re-checked and confirmed no results found for date range {start_date_str} - {end_date_str}.")
+                    # No need to save empty cache or DB entries if truly no results
+                    return None 
+                 else: # No blocks, but no "no results" message either, could be an error page or unexpected structure
+                    logging.warning(f"WIPO Crawler: No result blocks found and no 'no results' message. Page might be incorrect. URL: {driver.current_url}")
+                    # Consider saving HTML for debugging
+                    # with open(f"debug_wipo_daterange_no_blocks_{start_date_str}_{end_date_str}.html", "w", encoding="utf-8") as f:
+                    #    f.write(driver.page_source)
+                    break # Exit scroll loop
+
+
+            for block_idx, block_element in enumerate(current_blocks_on_page):
+                # Using data-st13 as a unique ID from the page if available
+                item_st13_id = block_element.get_attribute('data-st13')
+                if not item_st13_id: # Fallback if data-st13 is not present
+                    # Try to generate a temporary ID based on content if possible, or use index
+                    # For now, if no st13, we might parse it and see if a DB ID can be extracted later
+                    logging.debug(f"Block at index {block_idx} on page has no data-st13. Parsing to find primary ID.")
+                
+                # If we have st13, check if already processed
+                if item_st13_id and item_st13_id in processed_item_ids:
+                    continue # Already processed this item, skip
+
+                # Scroll the element into view
+                try:
+                    driver.execute_script("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", block_element)
+                    time.sleep(0.3) # Small delay for content to potentially load after scroll
+                    # Wait for a key element within the block to be present (e.g., brand name)
+                    WebDriverWait(block_element, 10).until(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, ".brandName")) # Common selector
+                    )
+                except TimeoutException:
+                    logging.warning(f"Timeout waiting for .brandName in block (st13: {item_st13_id}, index: {block_idx}). Attempting parse anyway.")
+                except Exception as e_scroll:
+                    logging.warning(f"Error scrolling/waiting for block detail (st13: {item_st13_id}, index: {block_idx}): {e_scroll}")
+
+                # Parse the individual block
+                single_item_data = {}
+                try:
+                    # ID - Try st13 first, then from .number span.value, then potentially others
+                    # The main 'id' for the database should be the application/registration number
+                    id_el = block_element.find_elements(By.CSS_SELECTOR, ".number span.value") # International Registration Number
+                    if id_el:
+                        single_item_data['id'] = id_el[0].text.strip().replace(',', '')
+                    elif item_st13_id: # Use st13 if number isn't found, though number is preferred
+                         single_item_data['id'] = item_st13_id 
+                    # else: logging.warning(f"Could not find a primary ID for block (st13:{item_st13_id})")
+
+                    name_el = block_element.find_elements(By.CSS_SELECTOR, ".brandName")
+                    if name_el: single_item_data['name'] = name_el[0].text.strip()
+                    
+                    owner_elements = block_element.find_elements(By.CSS_SELECTOR, ".holderName span.value") # Adjusted selector based on common patterns
+                    if not owner_elements: # Fallback or alternative selector
+                        owner_elements = block_element.find_elements(By.CSS_SELECTOR, ".owner span.value")
+                    if owner_elements: single_item_data['owner'] = owner_elements[0].text.strip()
+
+                    status_elements = block_element.find_elements(By.CSS_SELECTOR, ".status span.value")
+                    if status_elements: single_item_data['status'] = status_elements[0].text.strip()
+                    
+                    # Add more fields as identified in `parse_wipo_html` or `crawl_wipo_by_name`
+                    # Example: product_group (Nice Classification) often in ".niceClassification span.value" or similar
+                    nice_class_elements = block_element.find_elements(By.CSS_SELECTOR, ".niceClassification span.value")
+                    if not nice_class_elements: # Fallback for class/product group
+                         nice_class_elements = block_element.find_elements(By.CSS_SELECTOR, ".class span.value") # from by_name
+                    if nice_class_elements: single_item_data['product_group'] = nice_class_elements[0].text.strip()
+                    
+                    # Registration Date / Application Date might be available directly
+                    # These might be trickier if not in a standard "label: value" format within each block
+                    # For now, we rely on the overall date range filter of the search
+                    # `original_number` might also be useful if different from `id`
+                    
+                    img_elements = block_element.find_elements(By.CSS_SELECTOR, "img.logo[src]") # More general image selector
+                    if img_elements: single_item_data['image_url'] = img_elements[0].get_attribute('src')
+
+                    # Crucial: Validate if we got essential data (ID and Name)
+                    if single_item_data.get('id') and single_item_data.get('name'):
+                        if item_st13_id: # Add st13 if we have it, useful for tracking processed items
+                            processed_item_ids.add(item_st13_id)
+                        # If item_st13_id was not found, we use the extracted 'id' for processed_item_ids,
+                        # assuming it's unique enough for the current page load.
+                        elif single_item_data.get('id'):
+                             processed_item_ids.add(single_item_data.get('id'))
+
+
+                        parsed_items_collector.append(single_item_data)
+                        new_items_found_this_scroll = True
+                        logging.info(f"Successfully parsed item: ID {single_item_data.get('id')}, Name '{single_item_data.get('name')}'. Total collected: {len(parsed_items_collector)}")
+                    else:
+                        logging.warning(f"Item (st13: {item_st13_id}, index: {block_idx}) - Missing critical data (ID or Name) after parsing. Data: {single_item_data}")
+
+                except NoSuchElementException:
+                    logging.warning(f"Could not find expected element within block (st13: {item_st13_id}, index: {block_idx}). Skipping this block.")
+                except Exception as e_parse_block:
+                    logging.error(f"Error parsing block (st13: {item_st13_id}, index: {block_idx}): {e_parse_block}", exc_info=True)
+            
+            # After processing all current blocks on page
+            if new_items_found_this_scroll:
+                scroll_attempts_without_new_items = 0 # Reset counter
+            else:
+                # Check if we are at the bottom of the page
+                # clientHeight: This is the inner height of an element in pixels. It includes padding but not the horizontal scrollbar height, border, or margin.
+                # scrollTop: This property gets or sets the number of pixels that an element's content is scrolled vertically.
+                # scrollHeight: This is the height of an element's content, including content not visible on the screen due to overflow.
+                at_bottom = driver.execute_script("return (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 100;") # 100px buffer
+
+                if at_bottom:
+                    logging.info("WIPO Crawler: Scrolled to the bottom of the page and no new items found.")
+                    break # Exit loop if at bottom and no new items
+
+                scroll_attempts_without_new_items += 1
+                logging.info(f"WIPO Crawler: No new items found on this scroll. Fruitless scroll attempts: {scroll_attempts_without_new_items}/{max_fruitless_scrolls}")
+
+            if scroll_attempts_without_new_items >= max_fruitless_scrolls:
+                logging.info("WIPO Crawler: Max fruitless scroll attempts reached. Stopping scroll.")
+                break
+
+            # Scroll down to load more items
+            logging.info("WIPO Crawler: Scrolling down to load more items...")
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(random.uniform(3,5)) # Increased sleep after scroll for content to load
+
+        all_results = parsed_items_collector
+        logging.info(f"WIPO Crawler: Finished scrolling. Total items parsed: {len(all_results)}")
+
+    except TimeoutException as e:
+        logging.error(f"WIPO Crawler: Timeout during operation for date range {start_date_str}-{end_date_str}. URL: {driver.current_url if driver else 'N/A'}", exc_info=True)
+        # Optionally save page source on timeout
+        if driver:
+            try:
+                debug_filename = f"debug_wipo_daterange_timeout_{start_date_str}_{end_date_str}.html"
+                with open(debug_filename, "w", encoding="utf-8") as f:
+                    f.write(driver.page_source)
+                logging.info(f"Saved page source to {debug_filename} on timeout.")
+            except Exception as ex_save:
+                logging.error(f"Failed to save page source on timeout: {ex_save}")
+        # Do not return partial results on timeout, as they might be incomplete. Indicate failure.
+        return None
+    except WebDriverException as e:
+        logging.error(f"WIPO Crawler: WebDriverException occurred for date range {start_date_str}-{end_date_str}: {e}", exc_info=True)
+        return None # Indicate failure
+    except Exception as e:
+        logging.error(f"WIPO Crawler: Unexpected error for date range {start_date_str}-{end_date_str}: {e}", exc_info=True)
+        return None # Indicate failure
+    finally:
+        if driver:
+            try:
+                driver.quit()
+                logging.info("WIPO Crawler: Chrome driver quit successfully for date range crawl.")
+            except Exception as e_quit:
+                logging.error(f"WIPO Crawler: Error quitting Chrome driver: {e_quit}", exc_info=True)
+        # db_session is closed outside if data is to be saved.
+
+    if not all_results:
+        logging.warning(f"WIPO Crawler: No items collected for date range '{start_date_str} - {end_date_str}'.")
+        if db_session: db_session.close()
+        return [] # Return empty list if no results parsed, after checks for "no results found" page
+
+    # Validate items before saving
+    valid_items = [item for item in all_results if validate_brand_data(item)]
+    if len(valid_items) != len(all_results):
+        logging.warning(f"WIPO Crawler: Filtered out {len(all_results) - len(valid_items)} invalid items (missing ID or Name).")
+
+    # Save to cache
+    save_to_cache(cache_key, valid_items)
+    logging.info(f"WIPO Crawler: Saved {len(valid_items)} items to cache for key '{cache_key}'.")
+
+    # Save to DB
+    if db_session and ConcreteBrandModel and valid_items:
+        saved_count = _save_wipo_items_to_db(db_session, ConcreteBrandModel, valid_items,
+                               source_name=f"WIPO_DateRange_{start_date_str}_{end_date_str}")
+        logging.info(f"WIPO Crawler: Attempted to save {len(valid_items)} items to database. Successfully saved: {saved_count}")
+    elif not valid_items:
+        logging.info(f"WIPO Crawler: No valid items to save to database for date range {start_date_str}-{end_date_str}.")
+    else:
+        logging.error(f"WIPO Crawler: Cannot save items for date range '{start_date_str} - {end_date_str}' due to missing db_session or ConcreteBrandModel.")
+
+    if db_session:
+        db_session.close()
+        logging.info(f"WIPO Crawler: Database session closed for date range crawl.")
+
+    return valid_items
+
+
 def fetch_status_from_site(brand_id: str) -> str | None:
     """
     Lấy trạng thái hiện tại của một thương hiệu từ trang WIPO dựa trên brand_id.
@@ -695,3 +1032,47 @@ def fetch_status_from_site(brand_id: str) -> str | None:
     finally:
         if driver:
             driver.quit()
+
+def get_real_search_url_by_date(driver, start_date, end_date):
+    """
+    Mở trang advanced search, nhập ngày bắt đầu/kết thúc, nhấn Search và lấy URL kết quả (có _id động).
+    """
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    import time
+
+    driver.get("https://branddb.wipo.int/en/advancedsearch")
+    # Đợi trang tải xong
+    WebDriverWait(driver, 30).until(
+        lambda d: d.execute_script('return document.readyState') == 'complete'
+    )
+    time.sleep(2)  # Đợi thêm cho chắc chắn các trường đã render
+
+    # Sử dụng selector đúng cho input ngày
+    date_inputs = driver.find_elements(By.CSS_SELECTOR, "input[placeholder='YYYY-MM-DD']")
+    if len(date_inputs) < 2:
+        raise Exception("Không tìm thấy đủ 2 trường nhập ngày!")
+
+    start_input = date_inputs[0]
+    end_input = date_inputs[1]
+    start_input.clear()
+    start_input.send_keys(start_date)
+    end_input.clear()
+    end_input.send_keys(end_date)
+
+    time.sleep(1)
+    # Nhấn nút Search
+    try:
+        search_btn = driver.find_element(By.XPATH, "//button[contains(., 'Search') or contains(@aria-label, 'Search')]")
+        search_btn.click()
+    except Exception as e:
+        logging.error(f"Không tìm thấy hoặc không click được nút Search. Cần kiểm tra lại selector. Lỗi: {e}")
+        raise
+
+    # Đợi trang kết quả tải xong
+    WebDriverWait(driver, 30).until(
+        lambda d: d.execute_script('return document.readyState') == 'complete'
+    )
+    time.sleep(2)
+    return driver.current_url

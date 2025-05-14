@@ -1,6 +1,6 @@
 # main.py
 import logging
-from crawlers.wipo import crawl_wipo_by_name  # Đảm bảo đường dẫn import đúng
+from crawlers.wipo import crawl_wipo_by_name, crawl_wipo_by_date_range # Đảm bảo đường dẫn import đúng
 from database.connection import engine  # Cần thiết nếu Base.metadata.create_all ở đây
 from database.models import Base
 
@@ -40,8 +40,25 @@ if __name__ == "__main__":
     # khai báo tên  để khi mà mà cho nó chạy
     logger.info(f"Starting WIPO crawl application for brand: '{brand_to_search}'") # thông báo logging ra thôi
     try:# trường hợp đúng nếu đúng thì chạy và đây
-        crawl_wipo_by_name(brand_to_search) # truyền name vào cho nó sử lý
-        logger.info(f"WIPO crawl application finished for brand: '{brand_to_search}'") # hiển thị ra finish thế thui
+        # crawl_wipo_by_name(brand_to_search) # truyền name vào cho nó sử lý
+        # logger.info(f"WIPO crawl application finished for brand: '{brand_to_search}'") # hiển thị ra finish thế thui
+
+        # --- Test crawl_wipo_by_date_range ---
+        start_date = "2024-03-01"  # Ví dụ: Ngày bắt đầu (YYYY-MM-DD)
+        end_date = "2024-03-05"    # Ví dụ: Ngày kết thúc (YYYY-MM-DD)
+        logger.info(f"Attempting to crawl WIPO data from {start_date} to {end_date}...")
+        # Đặt force_refresh=True để bỏ qua cache cho lần kiểm thử đầu tiên nếu cần
+        results = crawl_wipo_by_date_range(start_date, end_date, force_refresh=True)
+
+        if results is not None:
+            logger.info(f"Successfully crawled {len(results)} items for the date range {start_date} - {end_date}.")
+            # Ví dụ: In ra một vài thông tin cơ bản của các mục đã lấy được
+            # for i, item in enumerate(results[:3]): # In 3 mục đầu tiên
+            #     logger.info(f"Item {i+1}: ID={item.get('id')}, Name='{item.get('name')}', Owner='{item.get('owner')}'")
+        else:
+            logger.warning(f"Crawling failed or no results found for the date range {start_date} - {end_date}.")
+        # --- Kết thúc Test crawl_wipo_by_date_range ---
+
     except Exception as e:
         # Bắt các lỗi không mong muốn ở cấp độ cao nhất của ứng dụng
         logger.critical(f"An unhandled error occurred in main execution for '{brand_to_search}': {e}", exc_info=True)
