@@ -1,3 +1,7 @@
+"""
+Module chứa các hàm để crawl dữ liệu từ trang web WIPO
+"""
+
 import time # dùng chỉ thời gian
 import random # random một cái gì đó
 import logging # hiển thị thông báo

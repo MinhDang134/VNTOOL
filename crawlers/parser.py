@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup # là phường thức có thể bóc tách dữ liệu ra từ html
 import logging # dùng để hiện thông báo
 import re # cung cấp biểu thức chính quy để tương tác với html
-from typing import List, Dict, Any # là kiểu dữ liệu cũng cấp những kiểu dữ liệu dùng cho nhiều trường hợp
+from typing import List, Dict, Any, Optional # là kiểu dữ liệu cũng cấp những kiểu dữ liệu dùng cho nhiều trường hợp
 from selenium.webdriver.support.ui import WebDriverWait # cái này dùng cái này sẽ dùng để đợi một điều kiện cụ thể cho đến khi nó chạy xong thì sẽ đến cái khác
 from selenium.webdriver.support import expected_conditions as EC # cung cấp tập hợp các điều kiện trước khi chạy webDriverWait
 from selenium.webdriver.common.by import By # phương thức này sẽ dùng để chỉ định tìm kiếm những phần tử nào trên trang web
@@ -359,3 +359,90 @@ def get_brand_details_from_wipo_page(driver, item_id_st13: str) -> Dict[str, Any
     except Exception as e:
         logging.error(f"Error processing detail page for {formatted_id}: {e}")
         return None
+
+class WipoParser:
+    """
+    Class để parse dữ liệu từ trang web WIPO
+    """
+    
+    def __init__(self):
+        """
+        Khởi tạo WipoParser
+        """
+        pass
+        
+    def parse_trademark_details(self, html: str) -> Dict[str, Any]:
+        """
+        Parse thông tin chi tiết nhãn hiệu từ HTML
+        
+        Args:
+            html: Chuỗi HTML chứa thông tin nhãn hiệu
+            
+        Returns:
+            Dict chứa thông tin chi tiết nhãn hiệu
+        """
+        try:
+            soup = BeautifulSoup(html, 'html.parser')
+            
+            # Lấy thông tin cơ bản
+            trademark_id = self._get_text(soup, '.trademark-id')
+            name = self._get_text(soup, '.trademark-name')
+            owner = self._get_text(soup, '.trademark-owner')
+            status = self._get_text(soup, '.trademark-status')
+            
+            # Lấy ngày đăng ký và hết hạn
+            registration_date = self._get_text(soup, '.registration-date')
+            expiration_date = self._get_text(soup, '.expiration-date')
+            
+            # Lấy danh sách lớp sản phẩm/dịch vụ
+            classes = self._get_classes(soup)
+            
+            return {
+                "id": trademark_id,
+                "name": name,
+                "owner": owner,
+                "status": status,
+                "registration_date": registration_date,
+                "expiration_date": expiration_date,
+                "classes": classes
+            }
+            
+        except Exception as e:
+            print(f"Lỗi khi parse thông tin chi tiết: {str(e)}")
+            return {}
+            
+    def _get_text(self, soup: BeautifulSoup, selector: str) -> Optional[str]:
+        """
+        Lấy text từ element được chọn
+        
+        Args:
+            soup: BeautifulSoup object
+            selector: CSS selector để chọn element
+            
+        Returns:
+            Text của element hoặc None nếu không tìm thấy
+        """
+        element = soup.select_one(selector)
+        return element.text.strip() if element else None
+        
+    def _get_classes(self, soup: BeautifulSoup) -> List[Dict[str, str]]:
+        """
+        Lấy danh sách lớp sản phẩm/dịch vụ
+        
+        Args:
+            soup: BeautifulSoup object
+            
+        Returns:
+            List các dict chứa thông tin lớp
+        """
+        classes = []
+        class_elements = soup.select('.trademark-class')
+        
+        for element in class_elements:
+            class_info = {
+                "number": self._get_text(element, '.class-number'),
+                "description": self._get_text(element, '.class-description')
+            }
+            classes.append(class_info)
+            
+        return classes
