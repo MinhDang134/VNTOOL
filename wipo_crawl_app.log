@@ -5167,3 +5167,626 @@ Stacktrace:
 2025-05-15 09:34:09,568 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72110451f650>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/598e5ca0428926646bb06fa5afd2a0a3
 2025-05-15 09:34:09,569 - root - INFO - wipo.crawl_wipo_by_date_range:909 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
 2025-05-15 09:34:09,569 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 14:03:34,609 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:03:34,609 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:03:34,609 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 14:03:34,610 - root - INFO - wipo.crawl_wipo_by_date_range:659 - WIPO Crawler: Constructed URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score%20desc&strategy=concept&rows=30&asStructure=%7B%22_id%22:%22b7c2%22,%22boolean%22:%22AND%22,%22bricks%22:%5B%7B%22_id%22:%22b7c3%22,%22key%22:%22appDate%22,%22strategy%22:%22Range%22,%22value%22:%5B%222024-03-01%22,%222024-03-05%22%5D%7D%5D%7D&_=1747292464057&fg=_void_?sort=score+desc&strategy=concept&rows=30&asStructure=%22https%3A%2F%2Fbranddb.wipo.int%2Fen%2Fadvancedsearch%2Fresults%3Fsort%3Dscore%2520desc%26strategy%3Dconcept%26rows%3D30%26asStructure%3D%257B%2522_id%2522%3A%2522b7c2%2522%2C%2522boolean%2522%3A%2522AND%2522%2C%2522bricks%2522%3A%255B%257B%2522_id%2522%3A%2522b7c3%2522%2C%2522key%2522%3A%2522appDate%2522%2C%2522strategy%2522%3A%2522Range%2522%2C%2522value%2522%3A%255B%25222024-03-01%2522%2C%25222024-03-05%2522%255D%257D%255D%257D%26_%3D1747292464057%26fg%3D_void_%22&_=1747292614610&fg=_void_
+2025-05-15 14:03:35,527 - root - INFO - wipo.crawl_wipo_by_date_range:676 - WIPO Crawler: Navigating to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score%20desc&strategy=concept&rows=30&asStructure=%7B%22_id%22:%22b7c2%22,%22boolean%22:%22AND%22,%22bricks%22:%5B%7B%22_id%22:%22b7c3%22,%22key%22:%22appDate%22,%22strategy%22:%22Range%22,%22value%22:%5B%222024-03-01%22,%222024-03-05%22%5D%7D%5D%7D&_=1747292464057&fg=_void_?sort=score+desc&strategy=concept&rows=30&asStructure=%22https%3A%2F%2Fbranddb.wipo.int%2Fen%2Fadvancedsearch%2Fresults%3Fsort%3Dscore%2520desc%26strategy%3Dconcept%26rows%3D30%26asStructure%3D%257B%2522_id%2522%3A%2522b7c2%2522%2C%2522boolean%2522%3A%2522AND%2522%2C%2522bricks%2522%3A%255B%257B%2522_id%2522%3A%2522b7c3%2522%2C%2522key%2522%3A%2522appDate%2522%2C%2522strategy%2522%3A%2522Range%2522%2C%2522value%2522%3A%255B%25222024-03-01%2522%2C%25222024-03-05%2522%255D%257D%255D%257D%26_%3D1747292464057%26fg%3D_void_%22&_=1747292614610&fg=_void_
+2025-05-15 14:03:36,355 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Page 'document.readyState' is 'complete'.
+2025-05-15 14:03:36,412 - root - INFO - wipo.crawl_wipo_by_date_range:708 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 14:03:58,327 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Using results selector: 'ul.results > li.result'
+2025-05-15 14:04:00,387 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 14:04:11,100 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 14:04:20,334 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/1ddd351b0892ff819d43395f52e21880
+2025-05-15 14:04:20,335 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ad5fd107770>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1ddd351b0892ff819d43395f52e21880
+2025-05-15 14:04:20,335 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ad5fd1078f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1ddd351b0892ff819d43395f52e21880
+2025-05-15 14:04:20,335 - root - INFO - wipo.crawl_wipo_by_date_range:882 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 14:04:20,335 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 14:05:22,364 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:05:22,364 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:05:22,364 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 14:05:22,366 - root - INFO - wipo.crawl_wipo_by_date_range:659 - WIPO Crawler: Constructed URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A+%22b7c2%22%2C+%22boolean%22%3A+%22AND%22%2C+%22bricks%22%3A+%5B%7B%22_id%22%3A+%22b7c3%22%2C+%22key%22%3A+%22appDate%22%2C+%22strategy%22%3A+%22Range%22%2C+%22value%22%3A+%5B%222024-03-01%22%2C+%222024-03-05%22%5D%7D%5D%7D&_=1747292722366&fg=_void_
+2025-05-15 14:05:22,648 - root - INFO - wipo.crawl_wipo_by_date_range:676 - WIPO Crawler: Navigating to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A+%22b7c2%22%2C+%22boolean%22%3A+%22AND%22%2C+%22bricks%22%3A+%5B%7B%22_id%22%3A+%22b7c3%22%2C+%22key%22%3A+%22appDate%22%2C+%22strategy%22%3A+%22Range%22%2C+%22value%22%3A+%5B%222024-03-01%22%2C+%222024-03-05%22%5D%7D%5D%7D&_=1747292722366&fg=_void_
+2025-05-15 14:05:23,511 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Page 'document.readyState' is 'complete'.
+2025-05-15 14:05:23,550 - root - INFO - wipo.crawl_wipo_by_date_range:708 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 14:05:42,287 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Using results selector: 'ul.results > li.result'
+2025-05-15 14:05:43,108 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 14:05:53,767 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 14:06:07,998 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1994 00124, Name 'INTELLITOOL'. Total collected: 2
+2025-05-15 14:06:15,071 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/34ecd85346362bf7450239206382382f
+2025-05-15 14:06:15,071 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75e9b97a7710>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/34ecd85346362bf7450239206382382f
+2025-05-15 14:06:15,072 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75e9b97a7890>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/34ecd85346362bf7450239206382382f
+2025-05-15 14:06:15,072 - root - INFO - wipo.crawl_wipo_by_date_range:882 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 14:06:15,072 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 14:11:04,119 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:11:04,119 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:11:04,119 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 14:11:04,120 - root - INFO - wipo.crawl_wipo_by_date_range:659 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A+%22ea9e%22%2C+%22boolean%22%3A+%22AND%22%2C+%22bricks%22%3A+%5B%7B%22_id%22%3A+%22ea9f%22%2C+%22key%22%3A+%22appDate%22%2C+%22strategy%22%3A+%22Range%22%2C+%22value%22%3A+%5B%222024-03-01%22%2C+%222024-03-05%22%5D%7D%5D%7D&_=1747293064120&fg=_void_
+2025-05-15 14:11:04,367 - root - INFO - wipo.crawl_wipo_by_date_range:676 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A+%22ea9e%22%2C+%22boolean%22%3A+%22AND%22%2C+%22bricks%22%3A+%5B%7B%22_id%22%3A+%22ea9f%22%2C+%22key%22%3A+%22appDate%22%2C+%22strategy%22%3A+%22Range%22%2C+%22value%22%3A+%5B%222024-03-01%22%2C+%222024-03-05%22%5D%7D%5D%7D&_=1747293064120&fg=_void_
+2025-05-15 14:11:05,168 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Page 'document.readyState' is 'complete'.
+2025-05-15 14:11:05,204 - root - INFO - wipo.crawl_wipo_by_date_range:708 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 14:11:22,769 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Using results selector: 'ul.results > li.result'
+2025-05-15 14:11:23,588 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 14:11:34,017 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 14:11:47,983 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1994 00124, Name 'INTELLITOOL'. Total collected: 2
+2025-05-15 14:12:03,101 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1994 08737, Name 'funTEC'. Total collected: 3
+2025-05-15 14:12:17,873 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1982 02988, Name 'LETRAVISION'. Total collected: 4
+2025-05-15 14:12:33,157 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2022 01787, Name 'Aldente'. Total collected: 5
+2025-05-15 14:12:48,813 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1989 02881, Name 'RESTACORIN'. Total collected: 6
+2025-05-15 14:13:08,516 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1993 02679, Name 'MARATHON'. Total collected: 7
+2025-05-15 14:13:26,194 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1994 06121, Name 'BLUE CAP JEANS CLOTHING COMPANY'. Total collected: 8
+2025-05-15 14:13:42,504 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1999 04704, Name 'YZMA'. Total collected: 9
+2025-05-15 14:14:00,197 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1993 00367, Name 'NATIONAL INSTRUMENTS'. Total collected: 10
+2025-05-15 14:14:17,339 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2004 00420, Name 'BEMERK'. Total collected: 11
+2025-05-15 14:14:29,918 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/1a6c7ad4e9ac0d31f13e253ba2de3406
+2025-05-15 14:14:29,919 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f55225dc0e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1a6c7ad4e9ac0d31f13e253ba2de3406
+2025-05-15 14:14:29,919 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f55225dc3b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1a6c7ad4e9ac0d31f13e253ba2de3406
+2025-05-15 14:14:29,919 - root - INFO - wipo.crawl_wipo_by_date_range:882 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 14:14:29,919 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 14:14:31,614 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:14:31,614 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:14:31,614 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 14:14:31,616 - root - INFO - wipo.crawl_wipo_by_date_range:659 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747293271616&fg=_void_
+2025-05-15 14:14:32,160 - root - INFO - wipo.crawl_wipo_by_date_range:676 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747293271616&fg=_void_
+2025-05-15 14:14:32,910 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Page 'document.readyState' is 'complete'.
+2025-05-15 14:14:32,944 - root - INFO - wipo.crawl_wipo_by_date_range:708 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 14:14:54,830 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Using results selector: 'ul.results > li.result'
+2025-05-15 14:14:55,488 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 14:15:05,851 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 14:15:18,707 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1994 00124, Name 'INTELLITOOL'. Total collected: 2
+2025-05-15 14:15:33,753 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1994 08737, Name 'funTEC'. Total collected: 3
+2025-05-15 14:15:47,925 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1982 02988, Name 'LETRAVISION'. Total collected: 4
+2025-05-15 14:16:02,973 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2022 01787, Name 'Aldente'. Total collected: 5
+2025-05-15 14:16:18,367 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1989 02881, Name 'RESTACORIN'. Total collected: 6
+2025-05-15 14:16:34,510 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1993 02679, Name 'MARATHON'. Total collected: 7
+2025-05-15 14:16:56,458 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1994 06121, Name 'BLUE CAP JEANS CLOTHING COMPANY'. Total collected: 8
+2025-05-15 14:17:12,891 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1999 04704, Name 'YZMA'. Total collected: 9
+2025-05-15 14:17:30,535 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1993 00367, Name 'NATIONAL INSTRUMENTS'. Total collected: 10
+2025-05-15 14:17:48,164 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2004 00420, Name 'BEMERK'. Total collected: 11
+2025-05-15 14:18:07,920 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1962 02047, Name 'ORTHex-tra'. Total collected: 12
+2025-05-15 14:18:25,420 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1993 03607, Name 'GESKA'. Total collected: 13
+2025-05-15 14:18:42,196 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1999 02679, Name 'BIRMANE'. Total collected: 14
+2025-05-15 14:19:00,536 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1985 02791, Name 'Green'. Total collected: 15
+2025-05-15 14:19:19,367 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1942 00994, Name 'FLOWER MIST'. Total collected: 16
+2025-05-15 14:19:41,012 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2009 02329, Name 'Moccatime'. Total collected: 17
+2025-05-15 14:19:59,067 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1990 03081, Name 'DRIBECK'S LIGHT'. Total collected: 18
+2025-05-15 14:20:16,274 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1966 03631, Name 'MÅ'. Total collected: 19
+2025-05-15 14:20:35,670 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1951 00918, Name 'AMBASSADEUR'. Total collected: 20
+2025-05-15 14:20:54,560 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1994 02587, Name 'BIG BERTHA'. Total collected: 21
+2025-05-15 14:21:14,706 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2023 01064, Name 'RejseBillet'. Total collected: 22
+2025-05-15 14:21:34,497 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2023 00240, Name 'GPV'. Total collected: 23
+2025-05-15 14:21:52,896 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1989 02884, Name 'KLONDYKE'. Total collected: 24
+2025-05-15 14:22:11,993 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 2018 00962, Name 'Askesmykke'. Total collected: 25
+2025-05-15 14:22:32,123 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2000 00225, Name 'OASIS'. Total collected: 26
+2025-05-15 14:22:51,777 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2000 00494, Name 'DEN SWINGENDE ORGANISATION'. Total collected: 27
+2025-05-15 14:23:11,831 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1992 06570, Name 'GAD Juri-disc'. Total collected: 28
+2025-05-15 14:23:30,056 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2018 01177, Name 'COMM2IG'. Total collected: 29
+2025-05-15 14:23:48,661 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1999 01204, Name 'PIXY CO'. Total collected: 30
+2025-05-15 14:23:48,661 - root - INFO - wipo.crawl_wipo_by_date_range:852 - WIPO Crawler: Scrolling down to load more items...
+2025-05-15 14:23:54,300 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 30
+2025-05-15 14:24:28,827 - root - INFO - wipo.crawl_wipo_by_date_range:841 - WIPO Crawler: Scrolled to the bottom of the page and no new items found.
+2025-05-15 14:24:28,827 - root - INFO - wipo.crawl_wipo_by_date_range:857 - WIPO Crawler: Finished scrolling. Total items parsed: 30
+2025-05-15 14:24:28,902 - root - INFO - wipo.crawl_wipo_by_date_range:882 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 14:24:28,905 - root - INFO - wipo.crawl_wipo_by_date_range:899 - WIPO Crawler: Saved 30 items to cache for key 'daterange_2024-03-01_2024-03-05'.
+2025-05-15 14:24:28,909 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 2018 01379
+2025-05-15 14:24:28,910 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 2018 01379
+2025-05-15 14:24:28,911 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VA 1994 00124
+2025-05-15 14:24:28,912 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VA 1994 00124
+2025-05-15 14:24:28,913 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1994 08737
+2025-05-15 14:24:28,913 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1994 08737
+2025-05-15 14:24:28,914 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VA 1982 02988
+2025-05-15 14:24:28,914 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VA 1982 02988
+2025-05-15 14:24:28,915 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 2022 01787
+2025-05-15 14:24:28,915 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 2022 01787
+2025-05-15 14:24:28,916 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1989 02881
+2025-05-15 14:24:28,916 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1989 02881
+2025-05-15 14:24:28,917 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1993 02679
+2025-05-15 14:24:28,917 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1993 02679
+2025-05-15 14:24:28,918 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1994 06121
+2025-05-15 14:24:28,918 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1994 06121
+2025-05-15 14:24:28,919 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1999 04704
+2025-05-15 14:24:28,919 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1999 04704
+2025-05-15 14:24:28,920 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1993 00367
+2025-05-15 14:24:28,920 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1993 00367
+2025-05-15 14:24:28,921 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 2004 00420
+2025-05-15 14:24:28,921 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 2004 00420
+2025-05-15 14:24:28,921 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1962 02047
+2025-05-15 14:24:28,922 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1962 02047
+2025-05-15 14:24:28,922 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1993 03607
+2025-05-15 14:24:28,922 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1993 03607
+2025-05-15 14:24:28,923 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1999 02679
+2025-05-15 14:24:28,923 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1999 02679
+2025-05-15 14:24:28,924 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1985 02791
+2025-05-15 14:24:28,924 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1985 02791
+2025-05-15 14:24:28,925 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VA 1942 00994
+2025-05-15 14:24:28,925 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VA 1942 00994
+2025-05-15 14:24:28,925 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 2009 02329
+2025-05-15 14:24:28,926 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 2009 02329
+2025-05-15 14:24:28,926 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1990 03081
+2025-05-15 14:24:28,927 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1990 03081
+2025-05-15 14:24:28,927 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VA 1966 03631
+2025-05-15 14:24:28,927 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VA 1966 03631
+2025-05-15 14:24:28,928 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VA 1951 00918
+2025-05-15 14:24:28,928 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VA 1951 00918
+2025-05-15 14:24:28,929 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1994 02587
+2025-05-15 14:24:28,929 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1994 02587
+2025-05-15 14:24:28,929 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 2023 01064
+2025-05-15 14:24:28,929 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 2023 01064
+2025-05-15 14:24:28,930 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 2023 00240
+2025-05-15 14:24:28,930 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 2023 00240
+2025-05-15 14:24:28,931 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1989 02884
+2025-05-15 14:24:28,931 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1989 02884
+2025-05-15 14:24:28,932 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VA 2018 00962
+2025-05-15 14:24:28,932 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VA 2018 00962
+2025-05-15 14:24:28,933 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 2000 00225
+2025-05-15 14:24:28,933 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 2000 00225
+2025-05-15 14:24:28,934 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 2000 00494
+2025-05-15 14:24:28,934 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 2000 00494
+2025-05-15 14:24:28,934 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VA 1992 06570
+2025-05-15 14:24:28,935 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VA 1992 06570
+2025-05-15 14:24:28,935 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 2018 01177
+2025-05-15 14:24:28,935 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 2018 01177
+2025-05-15 14:24:28,936 - root - INFO - wipo._save_wipo_items_to_db:134 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Updating existing record for ID: VR 1999 01204
+2025-05-15 14:24:28,937 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item VR 1999 01204
+2025-05-15 14:24:28,937 - root - INFO - wipo._save_wipo_items_to_db:173 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Processing complete. Processed: 30, Saved: 30, Skipped: 0, Errors: 0
+2025-05-15 14:24:28,937 - root - INFO - wipo.crawl_wipo_by_date_range:905 - WIPO Crawler: Attempted to save 30 items to database. Successfully saved: 30
+2025-05-15 14:24:28,937 - root - INFO - wipo.crawl_wipo_by_date_range:913 - WIPO Crawler: Database session closed for date range crawl.
+2025-05-15 14:24:28,937 - __main__ - INFO - test_manual.<module>:54 - Successfully crawled 30 items for the date range 2024-03-01 - 2024-03-05.
+2025-05-15 14:24:28,937 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 14:31:08,147 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:31:08,147 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:31:08,147 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 14:31:08,148 - root - INFO - wipo.crawl_wipo_by_date_range:659 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747294268148&fg=_void_
+2025-05-15 14:31:08,422 - root - INFO - wipo.crawl_wipo_by_date_range:676 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747294268148&fg=_void_
+2025-05-15 14:31:09,200 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Page 'document.readyState' is 'complete'.
+2025-05-15 14:31:09,236 - root - INFO - wipo.crawl_wipo_by_date_range:708 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 14:31:25,966 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Using results selector: 'ul.results > li.result'
+2025-05-15 14:31:26,715 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 14:31:38,328 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 14:31:41,730 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/c4adbf6ae4aedab94faa04d1a4d19a6f
+2025-05-15 14:31:41,730 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7355ddfa0470>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c4adbf6ae4aedab94faa04d1a4d19a6f
+2025-05-15 14:31:41,730 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7355ddfa05f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c4adbf6ae4aedab94faa04d1a4d19a6f
+2025-05-15 14:31:41,731 - root - INFO - wipo.crawl_wipo_by_date_range:882 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 14:31:41,731 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 14:33:45,445 - __main__ - INFO - test_manual.<module>:43 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:33:45,445 - __main__ - INFO - test_manual.<module>:51 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:33:45,446 - __main__ - CRITICAL - test_manual.<module>:66 - An unhandled error occurred in main execution for 'RONALDO': fetch_wipo_data() got an unexpected keyword argument 'force_refresh'
+Traceback (most recent call last):
+  File "/home/minhdangpy134/DuAnWipoVNmark/test_manual.py", line 53, in <module>
+    results = fetch_wipo_data(start_date, end_date, force_refresh=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: fetch_wipo_data() got an unexpected keyword argument 'force_refresh'
+2025-05-15 14:33:45,446 - __main__ - INFO - test_manual.<module>:68 - WIPO crawl application is shutting down.
+2025-05-15 14:34:26,286 - __main__ - INFO - test_manual.<module>:43 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:34:26,286 - __main__ - INFO - test_manual.<module>:51 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:34:26,843 - root - ERROR - parser.fetch_wipo_data:506 - Error fetching data from WIPO API: Expecting value: line 1 column 1 (char 0)
+2025-05-15 14:34:26,843 - __main__ - INFO - test_manual.<module>:57 - Successfully crawled 0 items for the date range 2024-03-01 - 2024-03-05.
+2025-05-15 14:34:26,843 - __main__ - INFO - test_manual.<module>:69 - WIPO crawl application is shutting down.
+2025-05-15 14:34:39,176 - __main__ - INFO - test_manual.<module>:43 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:34:39,176 - __main__ - INFO - test_manual.<module>:51 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:34:39,692 - root - ERROR - parser.fetch_wipo_data:506 - Error fetching data from WIPO API: Expecting value: line 1 column 1 (char 0)
+2025-05-15 14:34:39,692 - __main__ - INFO - test_manual.<module>:57 - Successfully crawled 0 items for the date range 2024-03-01 - 2024-03-05.
+2025-05-15 14:34:39,692 - __main__ - INFO - test_manual.<module>:69 - WIPO crawl application is shutting down.
+2025-05-15 14:34:52,980 - __main__ - INFO - test_manual.<module>:43 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:34:52,980 - __main__ - INFO - test_manual.<module>:51 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:34:53,508 - root - ERROR - parser.fetch_wipo_data:506 - Error fetching data from WIPO API: Expecting value: line 1 column 1 (char 0)
+2025-05-15 14:34:53,508 - __main__ - INFO - test_manual.<module>:57 - Successfully crawled 0 items for the date range 2024-03-01 - 2024-03-05.
+2025-05-15 14:34:53,508 - __main__ - INFO - test_manual.<module>:69 - WIPO crawl application is shutting down.
+2025-05-15 14:40:10,697 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:40:10,697 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:40:10,697 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 14:40:10,698 - root - INFO - wipo.crawl_wipo_by_date_range:628 - WIPO Crawler: Fetching data using direct API call
+2025-05-15 14:40:11,223 - root - ERROR - parser.fetch_wipo_data:492 - Error fetching data from WIPO API: Expecting value: line 1 column 1 (char 0)
+2025-05-15 14:40:11,223 - root - WARNING - wipo.crawl_wipo_by_date_range:641 - WIPO Crawler: No items collected for date range '2024-03-01 - 2024-03-05'.
+2025-05-15 14:40:11,223 - __main__ - INFO - test_manual.<module>:54 - Successfully crawled 0 items for the date range 2024-03-01 - 2024-03-05.
+2025-05-15 14:40:11,223 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 14:40:43,810 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:40:43,811 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:40:43,811 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 14:40:43,812 - root - INFO - wipo.crawl_wipo_by_date_range:659 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747294843812&fg=_void_
+2025-05-15 14:40:44,060 - root - INFO - wipo.crawl_wipo_by_date_range:676 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747294843812&fg=_void_
+2025-05-15 14:40:44,876 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Page 'document.readyState' is 'complete'.
+2025-05-15 14:40:44,911 - root - INFO - wipo.crawl_wipo_by_date_range:708 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 14:41:04,675 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Using results selector: 'ul.results > li.result'
+2025-05-15 14:41:05,333 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 14:41:12,697 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/b502de24c28d577db14e35c65e248796
+2025-05-15 14:41:12,697 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70d1165405c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b502de24c28d577db14e35c65e248796
+2025-05-15 14:41:12,697 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x70d116540710>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b502de24c28d577db14e35c65e248796
+2025-05-15 14:41:12,698 - root - INFO - wipo.crawl_wipo_by_date_range:882 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 14:41:12,698 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 14:45:30,057 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:45:30,058 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:45:30,058 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 14:45:30,059 - root - INFO - wipo.crawl_wipo_by_date_range:659 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747295130059&fg=_void_
+2025-05-15 14:45:30,310 - root - INFO - wipo.crawl_wipo_by_date_range:676 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747295130059&fg=_void_
+2025-05-15 14:45:32,399 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Page 'document.readyState' is 'complete'.
+2025-05-15 14:45:32,434 - root - INFO - wipo.crawl_wipo_by_date_range:708 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 14:46:00,911 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Using results selector: 'ul.results > li.result'
+2025-05-15 14:46:01,530 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 14:46:11,107 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 14:46:13,932 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/2c10b24858b0ad0282e05c36bb334c8a
+2025-05-15 14:46:13,933 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79226ff98410>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2c10b24858b0ad0282e05c36bb334c8a
+2025-05-15 14:46:13,933 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79226ff98590>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/2c10b24858b0ad0282e05c36bb334c8a
+2025-05-15 14:46:13,933 - root - INFO - wipo.crawl_wipo_by_date_range:882 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 14:46:13,933 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 14:51:51,282 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:51:51,282 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:51:51,282 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 14:51:51,283 - root - INFO - wipo.crawl_wipo_by_date_range:659 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A+%22ea9e%22%2C+%22boolean%22%3A+%22AND%22%2C+%22bricks%22%3A+%5B%7B%22_id%22%3A+%22ea9f%22%2C+%22key%22%3A+%22appDate%22%2C+%22strategy%22%3A+%22Range%22%2C+%22value%22%3A+%5B%222024-03-01%22%2C+%222024-03-05%22%5D%7D%5D%7D&_=1747295511283&fg=_void_
+2025-05-15 14:51:51,536 - root - INFO - wipo.crawl_wipo_by_date_range:676 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A+%22ea9e%22%2C+%22boolean%22%3A+%22AND%22%2C+%22bricks%22%3A+%5B%7B%22_id%22%3A+%22ea9f%22%2C+%22key%22%3A+%22appDate%22%2C+%22strategy%22%3A+%22Range%22%2C+%22value%22%3A+%5B%222024-03-01%22%2C+%222024-03-05%22%5D%7D%5D%7D&_=1747295511283&fg=_void_
+2025-05-15 14:51:52,364 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Page 'document.readyState' is 'complete'.
+2025-05-15 14:51:52,397 - root - INFO - wipo.crawl_wipo_by_date_range:708 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 14:52:11,344 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Using results selector: 'ul.results > li.result'
+2025-05-15 14:52:12,071 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 14:52:21,473 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 14:52:34,515 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/4923a51ef2d33a6e3b42bd25df2445d6
+2025-05-15 14:52:34,516 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d6154f40530>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/4923a51ef2d33a6e3b42bd25df2445d6
+2025-05-15 14:52:34,516 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d6154f406b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/4923a51ef2d33a6e3b42bd25df2445d6
+2025-05-15 14:52:34,516 - root - INFO - wipo.crawl_wipo_by_date_range:882 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 14:52:34,517 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 14:53:26,236 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:53:26,236 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:53:26,236 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 14:53:26,237 - root - INFO - wipo.crawl_wipo_by_date_range:659 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747295606237&fg=_void_
+2025-05-15 14:53:26,503 - root - INFO - wipo.crawl_wipo_by_date_range:676 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747295606237&fg=_void_
+2025-05-15 14:53:27,331 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Page 'document.readyState' is 'complete'.
+2025-05-15 14:53:27,364 - root - INFO - wipo.crawl_wipo_by_date_range:708 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 14:53:45,005 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Using results selector: 'ul.results > li.result'
+2025-05-15 14:53:45,763 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 14:53:56,122 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 14:53:59,353 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/80e70f1d728ed80a1fe590724db567c6
+2025-05-15 14:53:59,354 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ee4c9b04650>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/80e70f1d728ed80a1fe590724db567c6
+2025-05-15 14:53:59,354 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ee4c9b047d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/80e70f1d728ed80a1fe590724db567c6
+2025-05-15 14:53:59,355 - root - INFO - wipo.crawl_wipo_by_date_range:882 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 14:53:59,355 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 14:58:31,062 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 14:58:31,062 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 14:58:31,062 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 14:58:31,301 - root - INFO - wipo.crawl_wipo_by_date_range:675 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747295911063&fg=_void_
+2025-05-15 14:58:31,301 - root - INFO - wipo.crawl_wipo_by_date_range:676 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747295911063&fg=_void_
+2025-05-15 14:58:32,144 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Page 'document.readyState' is 'complete'.
+2025-05-15 14:58:32,178 - root - INFO - wipo.crawl_wipo_by_date_range:708 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 14:58:54,508 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Using results selector: 'ul.results > li.result'
+2025-05-15 14:58:55,267 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 14:59:05,551 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 14:59:19,304 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1994 00124, Name 'INTELLITOOL'. Total collected: 2
+2025-05-15 14:59:19,625 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/cca69647dddbfba35fe293deaea7e4fb
+2025-05-15 14:59:19,625 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d875594c4a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/cca69647dddbfba35fe293deaea7e4fb
+2025-05-15 14:59:19,625 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d875594c620>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/cca69647dddbfba35fe293deaea7e4fb
+2025-05-15 14:59:19,626 - root - INFO - wipo.crawl_wipo_by_date_range:882 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 14:59:19,626 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 15:03:50,000 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 15:03:50,000 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 15:03:50,000 - root - INFO - wipo.crawl_wipo_by_date_range:612 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 15:03:51,101 - root - INFO - wipo.crawl_wipo_by_date_range:675 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747296230002&fg=_void_
+2025-05-15 15:03:51,101 - root - INFO - wipo.crawl_wipo_by_date_range:676 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747296230002&fg=_void_
+2025-05-15 15:03:51,917 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Page 'document.readyState' is 'complete'.
+2025-05-15 15:03:51,984 - root - INFO - wipo.crawl_wipo_by_date_range:708 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 15:04:10,797 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Using results selector: 'ul.results > li.result'
+2025-05-15 15:04:11,667 - root - INFO - wipo.crawl_wipo_by_date_range:742 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 15:04:22,143 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 15:04:36,383 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1994 00124, Name 'INTELLITOOL'. Total collected: 2
+2025-05-15 15:04:51,838 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VR 1994 08737, Name 'funTEC'. Total collected: 3
+2025-05-15 15:05:07,678 - root - INFO - wipo.crawl_wipo_by_date_range:825 - Successfully parsed item: ID VA 1982 02988, Name 'LETRAVISION'. Total collected: 4
+2025-05-15 15:05:12,483 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/064ff5d601e4dcffb74c4eb2d530e213
+2025-05-15 15:05:12,484 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71dc4b594c20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/064ff5d601e4dcffb74c4eb2d530e213
+2025-05-15 15:05:12,484 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71dc4b594dd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/064ff5d601e4dcffb74c4eb2d530e213
+2025-05-15 15:05:12,485 - root - INFO - wipo.crawl_wipo_by_date_range:882 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 15:05:12,485 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 15:11:37,720 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 15:11:37,720 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 15:11:37,720 - root - INFO - wipo.crawl_wipo_by_date_range:585 - WIPO Crawler: Starting crawl for date range: 2024-03-01 to 2024-03-05
+2025-05-15 15:11:37,969 - root - INFO - wipo.crawl_wipo_by_date_range:648 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747296697721&fg=_void_
+2025-05-15 15:11:37,969 - root - INFO - wipo.crawl_wipo_by_date_range:649 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747296697721&fg=_void_
+2025-05-15 15:11:38,769 - root - INFO - wipo.crawl_wipo_by_date_range:657 - WIPO Crawler: Page 'thành công 
+2025-05-15 15:11:38,803 - root - INFO - wipo.crawl_wipo_by_date_range:681 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 15:11:58,064 - root - INFO - wipo.crawl_wipo_by_date_range:693 - WIPO Crawler: dùng  selector: 'ul.results > li.result'
+2025-05-15 15:11:58,720 - root - INFO - wipo.crawl_wipo_by_date_range:715 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 15:12:08,640 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 15:12:22,363 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VA 1994 00124, Name 'INTELLITOOL'. Total collected: 2
+2025-05-15 15:12:39,268 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 1994 08737, Name 'funTEC'. Total collected: 3
+2025-05-15 15:12:55,886 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VA 1982 02988, Name 'LETRAVISION'. Total collected: 4
+2025-05-15 15:13:13,033 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 2022 01787, Name 'Aldente'. Total collected: 5
+2025-05-15 15:13:27,760 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 1989 02881, Name 'RESTACORIN'. Total collected: 6
+2025-05-15 15:13:43,270 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 1993 02679, Name 'MARATHON'. Total collected: 7
+2025-05-15 15:14:01,005 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 1994 06121, Name 'BLUE CAP JEANS CLOTHING COMPANY'. Total collected: 8
+2025-05-15 15:14:16,918 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 1999 04704, Name 'YZMA'. Total collected: 9
+2025-05-15 15:14:33,752 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 1993 00367, Name 'NATIONAL INSTRUMENTS'. Total collected: 10
+2025-05-15 15:14:54,816 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 2004 00420, Name 'BEMERK'. Total collected: 11
+2025-05-15 15:15:14,139 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 1962 02047, Name 'ORTHex-tra'. Total collected: 12
+2025-05-15 15:15:30,999 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 1993 03607, Name 'GESKA'. Total collected: 13
+2025-05-15 15:15:47,546 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 1999 02679, Name 'BIRMANE'. Total collected: 14
+2025-05-15 15:16:05,431 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 1985 02791, Name 'Green'. Total collected: 15
+2025-05-15 15:16:22,447 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VA 1942 00994, Name 'FLOWER MIST'. Total collected: 16
+2025-05-15 15:16:38,709 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 2009 02329, Name 'Moccatime'. Total collected: 17
+2025-05-15 15:16:56,710 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VR 1990 03081, Name 'DRIBECK'S LIGHT'. Total collected: 18
+2025-05-15 15:17:14,740 - root - INFO - wipo.crawl_wipo_by_date_range:798 - Successfully parsed item: ID VA 1966 03631, Name 'MÅ'. Total collected: 19
+2025-05-15 15:17:29,441 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/fc32f89d264feefb69d0261ba58adfbb
+2025-05-15 15:17:29,442 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f216a3d9af0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/fc32f89d264feefb69d0261ba58adfbb
+2025-05-15 15:17:29,442 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f216a3d9d90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/fc32f89d264feefb69d0261ba58adfbb
+2025-05-15 15:17:29,442 - root - INFO - wipo.crawl_wipo_by_date_range:855 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 15:17:29,442 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 15:54:55,818 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 15:54:55,818 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 15:54:55,818 - root - INFO - wipo.crawl_wipo_by_date_range:585 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-15 15:54:57,690 - root - INFO - wipo.crawl_wipo_by_date_range:651 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747299295819&fg=_void_
+2025-05-15 15:54:57,690 - root - INFO - wipo.crawl_wipo_by_date_range:652 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747299295819&fg=_void_
+2025-05-15 15:54:58,021 - root - INFO - wipo.crawl_wipo_by_date_range:660 - WIPO Crawler: Page 'thành công 
+2025-05-15 15:54:58,059 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 15:55:23,948 - root - INFO - wipo.crawl_wipo_by_date_range:696 - WIPO Crawler: dùng  selector: 'ul.results > li.result'
+2025-05-15 15:55:24,917 - root - INFO - wipo.crawl_wipo_by_date_range:718 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 15:55:36,719 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 15:55:43,759 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/fcf40cffc22a1a8deb01b937e7e8393d
+2025-05-15 15:55:43,759 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x769ae057c590>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/fcf40cffc22a1a8deb01b937e7e8393d
+2025-05-15 15:55:43,759 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x769ae057c6e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/fcf40cffc22a1a8deb01b937e7e8393d
+2025-05-15 15:55:43,760 - root - INFO - wipo.crawl_wipo_by_date_range:858 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 15:55:43,760 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 15:55:45,946 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 15:55:45,946 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 15:55:45,946 - root - INFO - wipo.crawl_wipo_by_date_range:585 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-15 15:55:47,041 - root - INFO - wipo.crawl_wipo_by_date_range:651 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747299345947&fg=_void_
+2025-05-15 15:55:47,041 - root - INFO - wipo.crawl_wipo_by_date_range:652 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747299345947&fg=_void_
+2025-05-15 15:55:47,224 - root - INFO - wipo.crawl_wipo_by_date_range:660 - WIPO Crawler: Page 'thành công 
+2025-05-15 15:55:47,260 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 15:56:07,288 - root - INFO - wipo.crawl_wipo_by_date_range:696 - WIPO Crawler: dùng  selector: 'ul.results > li.result'
+2025-05-15 15:56:08,735 - root - INFO - wipo.crawl_wipo_by_date_range:718 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 15:56:21,231 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 15:56:26,509 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/901abb63206ed450b7d201fe1c30f408
+2025-05-15 15:56:26,510 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b332d3e40e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/901abb63206ed450b7d201fe1c30f408
+2025-05-15 15:56:26,510 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b332d3e4230>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/901abb63206ed450b7d201fe1c30f408
+2025-05-15 15:56:26,511 - root - INFO - wipo.crawl_wipo_by_date_range:858 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 15:56:26,511 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 15:56:28,698 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 15:56:28,698 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 15:56:28,698 - root - INFO - wipo.crawl_wipo_by_date_range:585 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-15 15:56:29,798 - root - INFO - wipo.crawl_wipo_by_date_range:651 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747299388699&fg=_void_
+2025-05-15 15:56:29,798 - root - INFO - wipo.crawl_wipo_by_date_range:652 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747299388699&fg=_void_
+2025-05-15 15:56:29,986 - root - INFO - wipo.crawl_wipo_by_date_range:660 - WIPO Crawler: Page 'thành công 
+2025-05-15 15:56:30,028 - root - INFO - wipo.crawl_wipo_by_date_range:684 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 15:56:51,618 - root - INFO - wipo.crawl_wipo_by_date_range:696 - WIPO Crawler: dùng  selector: 'ul.results > li.result'
+2025-05-15 15:56:52,556 - root - INFO - wipo.crawl_wipo_by_date_range:718 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 15:57:04,415 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 15:57:19,144 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VA 1994 00124, Name 'INTELLITOOL'. Total collected: 2
+2025-05-15 15:57:36,588 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VR 1994 08737, Name 'funTEC'. Total collected: 3
+2025-05-15 15:57:52,319 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VA 1982 02988, Name 'LETRAVISION'. Total collected: 4
+2025-05-15 15:58:08,261 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VR 2022 01787, Name 'Aldente'. Total collected: 5
+2025-05-15 15:58:25,780 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VR 1989 02881, Name 'RESTACORIN'. Total collected: 6
+2025-05-15 15:58:48,588 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VR 1993 02679, Name 'MARATHON'. Total collected: 7
+2025-05-15 15:59:07,032 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VR 1994 06121, Name 'BLUE CAP JEANS CLOTHING COMPANY'. Total collected: 8
+2025-05-15 15:59:24,869 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VR 1999 04704, Name 'YZMA'. Total collected: 9
+2025-05-15 15:59:44,817 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VR 1993 00367, Name 'NATIONAL INSTRUMENTS'. Total collected: 10
+2025-05-15 16:00:03,971 - root - INFO - wipo.crawl_wipo_by_date_range:801 - Successfully parsed item: ID VR 2004 00420, Name 'BEMERK'. Total collected: 11
+2025-05-15 16:00:20,281 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/3c507dedab858e2e0b8f43955533377c
+2025-05-15 16:00:20,282 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75ba171c9700>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/3c507dedab858e2e0b8f43955533377c
+2025-05-15 16:00:20,282 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x75ba171c9880>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/3c507dedab858e2e0b8f43955533377c
+2025-05-15 16:00:20,283 - root - INFO - wipo.crawl_wipo_by_date_range:858 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 16:00:20,283 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 16:00:22,419 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 16:00:22,420 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 16:00:22,420 - root - INFO - wipo.crawl_wipo_by_date_range:585 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-15 16:00:25,354 - root - INFO - wipo.crawl_wipo_by_date_range:657 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747299622422&fg=_void_
+2025-05-15 16:00:25,354 - root - INFO - wipo.crawl_wipo_by_date_range:658 - WIPO Crawler: điều hướng tới  to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747299622422&fg=_void_
+2025-05-15 16:00:25,557 - root - INFO - wipo.crawl_wipo_by_date_range:667 - WIPO Crawler: Page 'thành công 
+2025-05-15 16:00:25,594 - root - INFO - wipo.crawl_wipo_by_date_range:691 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 16:00:49,197 - root - INFO - wipo.crawl_wipo_by_date_range:703 - WIPO Crawler: dùng  selector: 'ul.results > li.result'
+2025-05-15 16:00:50,242 - root - INFO - wipo.crawl_wipo_by_date_range:725 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 16:00:59,997 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/7d464d78f1df7a621dc92781807e31dd
+2025-05-15 16:00:59,998 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x792e4ffb8620>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/7d464d78f1df7a621dc92781807e31dd
+2025-05-15 16:00:59,998 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x792e4ffb87a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/7d464d78f1df7a621dc92781807e31dd
+2025-05-15 16:00:59,999 - root - INFO - wipo.crawl_wipo_by_date_range:865 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 16:00:59,999 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 16:06:08,064 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 16:06:08,064 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 16:06:08,064 - root - INFO - wipo.crawl_wipo_by_date_range:585 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-15 16:06:09,788 - root - INFO - wipo.crawl_wipo_by_date_range:653 - WIPO Crawler: kế nối với URL: https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747299968065&fg=_void_
+2025-05-15 16:06:09,789 - root - INFO - wipo.crawl_wipo_by_date_range:654 - WIPO Crawler: điều hướng tới to URL (headless): https://branddb.wipo.int/en/advancedsearch/results?sort=score+desc&strategy=concept&rows=30&asStructure=%7B%22_id%22%3A%22ea9e%22%2C%22boolean%22%3A%22AND%22%2C%22bricks%22%3A%5B%7B%22_id%22%3A%22ea9f%22%2C%22key%22%3A%22appDate%22%2C%22strategy%22%3A%22Range%22%2C%22value%22%3A%5B%222024-03-01%22%2C%222024-03-05%22%5D%7D%5D%7D&_=1747299968065&fg=_void_
+2025-05-15 16:06:09,966 - root - INFO - wipo.crawl_wipo_by_date_range:662 - WIPO Crawler: Page 'thành công 
+2025-05-15 16:06:10,003 - root - INFO - wipo.crawl_wipo_by_date_range:686 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 16:06:28,473 - root - INFO - wipo.crawl_wipo_by_date_range:698 - WIPO Crawler: dùng  selector: 'ul.results > li.result'
+2025-05-15 16:06:29,285 - root - INFO - wipo.crawl_wipo_by_date_range:720 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 16:06:42,530 - root - INFO - wipo.crawl_wipo_by_date_range:803 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 16:06:57,248 - root - INFO - wipo.crawl_wipo_by_date_range:803 - Successfully parsed item: ID VA 1994 00124, Name 'INTELLITOOL'. Total collected: 2
+2025-05-15 16:07:14,047 - root - INFO - wipo.crawl_wipo_by_date_range:803 - Successfully parsed item: ID VR 1994 08737, Name 'funTEC'. Total collected: 3
+2025-05-15 16:07:30,688 - root - INFO - wipo.crawl_wipo_by_date_range:803 - Successfully parsed item: ID VA 1982 02988, Name 'LETRAVISION'. Total collected: 4
+2025-05-15 16:07:46,682 - root - INFO - wipo.crawl_wipo_by_date_range:803 - Successfully parsed item: ID VR 2022 01787, Name 'Aldente'. Total collected: 5
+2025-05-15 16:08:03,420 - root - INFO - wipo.crawl_wipo_by_date_range:803 - Successfully parsed item: ID VR 1989 02881, Name 'RESTACORIN'. Total collected: 6
+2025-05-15 16:08:24,526 - root - INFO - wipo.crawl_wipo_by_date_range:803 - Successfully parsed item: ID VR 1993 02679, Name 'MARATHON'. Total collected: 7
+2025-05-15 16:08:28,309 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/e04ef03aa6e14611f7a309a63c6eb85e
+2025-05-15 16:08:28,309 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a76e7d1d0d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e04ef03aa6e14611f7a309a63c6eb85e
+2025-05-15 16:08:28,309 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a76e7d1d250>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e04ef03aa6e14611f7a309a63c6eb85e
+2025-05-15 16:08:28,310 - root - INFO - wipo.crawl_wipo_by_date_range:860 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 16:08:28,310 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 16:08:30,200 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 16:08:30,201 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 16:08:30,201 - root - INFO - wipo.crawl_wipo_by_date_range:585 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-15 16:08:33,378 - root - INFO - wipo.crawl_wipo_by_date_range:670 - WIPO Crawler: Page 'thành công 
+2025-05-15 16:08:33,425 - root - INFO - wipo.crawl_wipo_by_date_range:694 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 16:08:59,766 - root - INFO - wipo.crawl_wipo_by_date_range:706 - WIPO Crawler: dùng  selector: 'ul.results > li.result'
+2025-05-15 16:09:02,150 - root - INFO - wipo.crawl_wipo_by_date_range:728 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 16:09:11,982 - root - INFO - wipo.crawl_wipo_by_date_range:811 - Successfully parsed item: ID VR 2018 01379, Name 'ARTY'. Total collected: 1
+2025-05-15 16:09:25,525 - root - INFO - wipo.crawl_wipo_by_date_range:811 - Successfully parsed item: ID VA 1994 00124, Name 'INTELLITOOL'. Total collected: 2
+2025-05-15 16:09:30,052 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/662645c4d9e53b86ad1cd45fbf3ab636
+2025-05-15 16:09:30,053 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x739ac53988c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/662645c4d9e53b86ad1cd45fbf3ab636
+2025-05-15 16:09:30,053 - urllib3.connectionpool - WARNING - connectionpool.urlopen:868 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x739ac5398a40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/662645c4d9e53b86ad1cd45fbf3ab636
+2025-05-15 16:09:30,054 - root - INFO - wipo.crawl_wipo_by_date_range:868 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 16:09:30,054 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 16:12:24,503 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 16:12:24,503 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 16:12:24,503 - root - INFO - wipo.crawl_wipo_by_date_range:585 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-15 16:12:25,764 - root - INFO - wipo.crawl_wipo_by_date_range:658 - WIPO Crawler: Loaded Advanced Search UI
+2025-05-15 16:12:56,226 - root - ERROR - wipo.crawl_wipo_by_date_range:870 - WIPO Crawler: Timeout during operation for date range 2024-03-01-2024-03-05. URL: https://branddb.wipo.int/en/advancedsearch?sort=score%20desc&strategy=concept&rows=30&asStructure=%7B%22_id%22:%22028b%22,%22boolean%22:%22AND%22,%22bricks%22:%5B%7B%22_id%22:%22028c%22,%22key%22:%22brandName%22,%22strategy%22:%22Simple%22,%22value%22:%22%22%7D%5D%7D&_=1747300352424
+Traceback (most recent call last):
+  File "/home/minhdangpy134/DuAnWipoVNmark/crawlers/wipo.py", line 661, in crawl_wipo_by_date_range
+    WebDriverWait(driver, 30).until(
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2025-05-15 16:12:56,231 - root - INFO - wipo.crawl_wipo_by_date_range:877 - Saved page source to debug_wipo_daterange_timeout_2024-03-01_2024-03-05.html on timeout.
+2025-05-15 16:12:56,303 - root - INFO - wipo.crawl_wipo_by_date_range:892 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 16:12:56,303 - __main__ - WARNING - test_manual.<module>:59 - Crawling failed or no results found for the date range 2024-03-01 - 2024-03-05.
+2025-05-15 16:12:56,303 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 16:15:00,035 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 16:15:00,035 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 16:15:00,035 - root - INFO - wipo.crawl_wipo_by_date_range:585 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-15 16:15:31,306 - root - ERROR - wipo.crawl_wipo_by_date_range:870 - WIPO Crawler: Timeout during operation for date range 2024-03-01-2024-03-05. URL: https://branddb.wipo.int/en/advancedsearch?sort=score%20desc&strategy=concept&rows=30&asStructure=%7B%22_id%22:%223c1e%22,%22boolean%22:%22AND%22,%22bricks%22:%5B%7B%22_id%22:%223c1f%22,%22key%22:%22brandName%22,%22strategy%22:%22Simple%22,%22value%22:%22%22%7D%5D%7D&_=1747300507958
+Traceback (most recent call last):
+  File "/home/minhdangpy134/DuAnWipoVNmark/crawlers/wipo.py", line 658, in crawl_wipo_by_date_range
+    date_inputs = WebDriverWait(driver, 30).until(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2025-05-15 16:15:31,310 - root - INFO - wipo.crawl_wipo_by_date_range:877 - Saved page source to debug_wipo_daterange_timeout_2024-03-01_2024-03-05.html on timeout.
+2025-05-15 16:15:31,382 - root - INFO - wipo.crawl_wipo_by_date_range:892 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 16:15:31,382 - __main__ - WARNING - test_manual.<module>:59 - Crawling failed or no results found for the date range 2024-03-01 - 2024-03-05.
+2025-05-15 16:15:31,382 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 16:16:55,951 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 16:16:55,951 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 16:16:55,952 - root - INFO - wipo.crawl_wipo_by_date_range:585 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-15 16:16:57,214 - root - INFO - wipo.crawl_wipo_by_date_range:656 - WIPO Crawler: Loaded Advanced Search UI
+2025-05-15 16:17:05,096 - root - ERROR - wipo.crawl_wipo_by_date_range:893 - WIPO Crawler: Unexpected error for date range 2024-03-01-2024-03-05: name 'Select' is not defined
+Traceback (most recent call last):
+  File "/home/minhdangpy134/DuAnWipoVNmark/crawlers/wipo.py", line 668, in crawl_wipo_by_date_range
+    Select(select_elements[0]).select_by_visible_text("  Application date")
+    ^^^^^^
+NameError: name 'Select' is not defined
+2025-05-15 16:17:05,174 - root - INFO - wipo.crawl_wipo_by_date_range:899 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 16:17:05,174 - __main__ - WARNING - test_manual.<module>:59 - Crawling failed or no results found for the date range 2024-03-01 - 2024-03-05.
+2025-05-15 16:17:05,174 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 16:17:13,857 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 16:17:13,858 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 16:17:13,858 - root - INFO - wipo.crawl_wipo_by_date_range:587 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-15 16:17:15,080 - root - INFO - wipo.crawl_wipo_by_date_range:658 - WIPO Crawler: Loaded Advanced Search UI
+2025-05-15 16:17:21,909 - root - ERROR - wipo.crawl_wipo_by_date_range:895 - WIPO Crawler: Unexpected error for date range 2024-03-01-2024-03-05: Column expression, FROM clause, or other columns clause element expected, got <selenium.webdriver.remote.webelement.WebElement (session="1da451f2b2ccb83fac3bf0cb5e5178f1", element="f.34D697B9E2159CC254C292D17F5044E4.d.98B625E45EB7A94F1FE8DD571E320614.e.9")>.
+Traceback (most recent call last):
+  File "/home/minhdangpy134/DuAnWipoVNmark/crawlers/wipo.py", line 670, in crawl_wipo_by_date_range
+    Select(select_elements[0]).select_by_visible_text("  Application date")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/sqlalchemy/sql/selectable.py", line 5341, in __init__
+    coercions.expect(
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 634, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 1132, in _raise_for_expected
+    return super()._raise_for_expected(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 695, in _raise_for_expected
+    super()._raise_for_expected(
+  File "/home/minhdangpy134/DuAnWipoVNmark/.crawl_env/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: Column expression, FROM clause, or other columns clause element expected, got <selenium.webdriver.remote.webelement.WebElement (session="1da451f2b2ccb83fac3bf0cb5e5178f1", element="f.34D697B9E2159CC254C292D17F5044E4.d.98B625E45EB7A94F1FE8DD571E320614.e.9")>.
+2025-05-15 16:17:21,991 - root - INFO - wipo.crawl_wipo_by_date_range:901 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 16:17:21,991 - __main__ - WARNING - test_manual.<module>:59 - Crawling failed or no results found for the date range 2024-03-01 - 2024-03-05.
+2025-05-15 16:17:21,991 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-15 16:18:54,879 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-15 16:18:54,879 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-15 16:18:54,879 - root - INFO - wipo.crawl_wipo_by_date_range:585 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-15 16:19:03,730 - root - INFO - wipo.crawl_wipo_by_date_range:675 - WIPO Crawler: Page 'thành công 
+2025-05-15 16:19:03,774 - root - INFO - wipo.crawl_wipo_by_date_range:699 - WIPO Crawler: Starting incremental scroll and parse for date range.
+2025-05-15 16:19:19,034 - root - INFO - wipo.crawl_wipo_by_date_range:711 - WIPO Crawler: dùng  selector: 'ul.results > li.result'
+2025-05-15 16:19:19,045 - root - INFO - wipo.crawl_wipo_by_date_range:733 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 0
+2025-05-15 16:19:19,451 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 811128, Name 'TAILWHEEL'. Total collected: 1
+2025-05-15 16:19:19,831 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID OM/T/1/173752, Name 'جود'. Total collected: 2
+2025-05-15 16:19:20,208 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID OM/T/1/173773, Name 'Metlux by ASPIRELI'. Total collected: 3
+2025-05-15 16:19:20,593 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID OM/T/1/173738, Name 'محاشي النور'. Total collected: 4
+2025-05-15 16:19:20,979 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID OM/T/1/173759, Name 'برينتي'. Total collected: 5
+2025-05-15 16:19:21,367 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID OM/T/1/173745, Name 'DESIGNX'. Total collected: 6
+2025-05-15 16:19:21,758 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID OM/T/1/173766, Name 'تاكا وي'. Total collected: 7
+2025-05-15 16:19:22,135 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 1258661, Name 'GREEN GORILLA'. Total collected: 8
+2025-05-15 16:19:22,525 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID OM/T/1/173731, Name 'بنك البرياني'. Total collected: 9
+2025-05-15 16:19:22,923 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID OM/T/1/173717, Name 'ام ار سي'. Total collected: 10
+2025-05-15 16:19:23,335 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID OM/T/1/173703, Name 'GIG'. Total collected: 11
+2025-05-15 16:19:23,738 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID OM/T/1/173724, Name 'HAYATEA'. Total collected: 12
+2025-05-15 16:19:24,217 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID OM/T/1/173710, Name 'AL COACH'. Total collected: 13
+2025-05-15 16:19:24,635 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 1258731, Name 'OPITO BAY SALT CO.'. Total collected: 14
+2025-05-15 16:19:25,044 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119037, Name 'XULUZ'. Total collected: 15
+2025-05-15 16:19:25,459 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119835, Name 'SOCIACADEMY'. Total collected: 16
+2025-05-15 16:19:25,881 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119926, Name 'CHUCHO PRODUCE LLC'. Total collected: 17
+2025-05-15 16:19:26,291 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119282, Name 'PEEK NUTRITION ; NATURAL TREATS'. Total collected: 18
+2025-05-15 16:19:26,843 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119086, Name 'REAL CAPITAL'. Total collected: 19
+2025-05-15 16:19:27,628 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119240, Name '18.5'. Total collected: 20
+2025-05-15 16:19:28,231 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119002, Name 'CHARTER FOODS'. Total collected: 21
+2025-05-15 16:19:28,664 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119842, Name 'MAGIA'. Total collected: 22
+2025-05-15 16:19:29,109 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119968, Name 'SMART CLEAN INTELLIGENCE'. Total collected: 23
+2025-05-15 16:19:29,548 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853120003, Name 'SINALOA RESTAURANT'. Total collected: 24
+2025-05-15 16:19:30,061 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119891, Name 'HEMOVITA'. Total collected: 25
+2025-05-15 16:19:30,540 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119856, Name 'LUXURY STEPS'. Total collected: 26
+2025-05-15 16:19:31,018 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119065, Name 'MOON MUSIC'. Total collected: 27
+2025-05-15 16:19:31,478 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119268, Name 'WOOD OFFICE WORKING SPACES'. Total collected: 28
+2025-05-15 16:19:31,940 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119149, Name 'DPDIRECTO'. Total collected: 29
+2025-05-15 16:19:32,388 - root - INFO - wipo.crawl_wipo_by_date_range:816 - Successfully parsed item: ID 0119853119198, Name 'ECOSISTEMA STEM'. Total collected: 30
+2025-05-15 16:19:32,388 - root - INFO - wipo.crawl_wipo_by_date_range:843 - WIPO Crawler: Scrolling down to load more items...
+2025-05-15 16:19:37,169 - root - INFO - wipo.crawl_wipo_by_date_range:733 - WIPO Crawler: Found 30 blocks on page using 'ul.results > li.result'. Parsed so far: 30
+2025-05-15 16:19:37,387 - root - INFO - wipo.crawl_wipo_by_date_range:832 - WIPO Crawler: Scrolled to the bottom of the page and no new items found.
+2025-05-15 16:19:37,387 - root - INFO - wipo.crawl_wipo_by_date_range:848 - WIPO Crawler: Finished scrolling. Total items parsed: 30
+2025-05-15 16:19:37,459 - root - INFO - wipo.crawl_wipo_by_date_range:873 - WIPO Crawler: Chrome driver quit successfully for date range crawl.
+2025-05-15 16:19:37,463 - root - INFO - wipo.crawl_wipo_by_date_range:890 - WIPO Crawler: Saved 30 items to cache for key 'daterange_2024-03-01_2024-03-05'.
+2025-05-15 16:19:37,467 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 811128
+2025-05-15 16:19:37,471 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 811128
+2025-05-15 16:19:37,474 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM/T/1/173752
+2025-05-15 16:19:37,477 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM/T/1/173752
+2025-05-15 16:19:37,477 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM/T/1/173773
+2025-05-15 16:19:37,479 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM/T/1/173773
+2025-05-15 16:19:37,479 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM/T/1/173738
+2025-05-15 16:19:37,481 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM/T/1/173738
+2025-05-15 16:19:37,482 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM/T/1/173759
+2025-05-15 16:19:37,484 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM/T/1/173759
+2025-05-15 16:19:37,484 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM/T/1/173745
+2025-05-15 16:19:37,486 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM/T/1/173745
+2025-05-15 16:19:37,486 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM/T/1/173766
+2025-05-15 16:19:37,488 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM/T/1/173766
+2025-05-15 16:19:37,489 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 1258661
+2025-05-15 16:19:37,490 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 1258661
+2025-05-15 16:19:37,491 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM/T/1/173731
+2025-05-15 16:19:37,492 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM/T/1/173731
+2025-05-15 16:19:37,492 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM/T/1/173717
+2025-05-15 16:19:37,494 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM/T/1/173717
+2025-05-15 16:19:37,495 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM/T/1/173703
+2025-05-15 16:19:37,497 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM/T/1/173703
+2025-05-15 16:19:37,498 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM/T/1/173724
+2025-05-15 16:19:37,499 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM/T/1/173724
+2025-05-15 16:19:37,500 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM/T/1/173710
+2025-05-15 16:19:37,501 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM/T/1/173710
+2025-05-15 16:19:37,502 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 1258731
+2025-05-15 16:19:37,502 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 1258731
+2025-05-15 16:19:37,503 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119037
+2025-05-15 16:19:37,504 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119037
+2025-05-15 16:19:37,505 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119835
+2025-05-15 16:19:37,507 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119835
+2025-05-15 16:19:37,507 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119926
+2025-05-15 16:19:37,509 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119926
+2025-05-15 16:19:37,510 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119282
+2025-05-15 16:19:37,513 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119282
+2025-05-15 16:19:37,513 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119086
+2025-05-15 16:19:37,515 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119086
+2025-05-15 16:19:37,515 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119240
+2025-05-15 16:19:37,518 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119240
+2025-05-15 16:19:37,518 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119002
+2025-05-15 16:19:37,519 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119002
+2025-05-15 16:19:37,520 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119842
+2025-05-15 16:19:37,521 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119842
+2025-05-15 16:19:37,521 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119968
+2025-05-15 16:19:37,523 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119968
+2025-05-15 16:19:37,523 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853120003
+2025-05-15 16:19:37,524 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853120003
+2025-05-15 16:19:37,525 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119891
+2025-05-15 16:19:37,526 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119891
+2025-05-15 16:19:37,526 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119856
+2025-05-15 16:19:37,528 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119856
+2025-05-15 16:19:37,528 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119065
+2025-05-15 16:19:37,530 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119065
+2025-05-15 16:19:37,531 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119268
+2025-05-15 16:19:37,533 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119268
+2025-05-15 16:19:37,534 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119149
+2025-05-15 16:19:37,535 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119149
+2025-05-15 16:19:37,536 - root - INFO - wipo._save_wipo_items_to_db:144 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: 0119853119198
+2025-05-15 16:19:37,538 - root - INFO - wipo._save_wipo_items_to_db:164 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item 0119853119198
+2025-05-15 16:19:37,538 - root - INFO - wipo._save_wipo_items_to_db:173 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Processing complete. Processed: 30, Saved: 30, Skipped: 0, Errors: 0
+2025-05-15 16:19:37,538 - root - INFO - wipo.crawl_wipo_by_date_range:896 - WIPO Crawler: Attempted to save 30 items to database. Successfully saved: 30
+2025-05-15 16:19:37,538 - root - INFO - wipo.crawl_wipo_by_date_range:904 - WIPO Crawler: Database session closed for date range crawl.
+2025-05-15 16:19:37,539 - __main__ - INFO - test_manual.<module>:54 - Successfully crawled 30 items for the date range 2024-03-01 - 2024-03-05.
+2025-05-15 16:19:37,539 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
