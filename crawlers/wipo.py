@@ -733,7 +733,16 @@ def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refre
 
                 if not result_elements:
                     logging.error("Không tìm thấy kết quả với bất kỳ selector nào")
-                    break
+                    # Thử tải lại trang trước khi dừng
+                    try:
+                        driver.refresh()
+                        time.sleep(5)
+                        result_elements = driver.find_elements(By.CSS_SELECTOR, "ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted")
+                        if not result_elements:
+                            break
+                    except Exception as e:
+                        logging.error(f"Lỗi khi tải lại trang: {e}")
+                        break
 
                 # Lưu HTML để debug nếu cần
                 debug_filename = f"debug_wipo_results_{start_date_str}_{end_date_str}_page_{current_page + 1}.html"
@@ -802,21 +811,53 @@ def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refre
                     all_results.extend(valid_items)
 
                 # Kiểm tra xem có trang tiếp theo không
-                if len(result_elements) < 30:
-                    has_more_pages = False
-                else:
-                    # Tạo URL cho trang tiếp theo
-                    next_start = (current_page + 1) * 30
-                    current_url = get_next_page_url(current_url, next_start)
-                    if not current_url:
+                try:
+                    # Kiểm tra số lượng kết quả thực tế đã lấy được
+                    actual_results = len(parsed_items_collector)
+                    logging.info(f"Trang {current_page + 1}: Số kết quả thực tế: {actual_results}")
+
+                    if actual_results == 0:
+                        logging.warning(f"Không lấy được kết quả nào từ trang {current_page + 1}, thử tải lại trang...")
+                        driver.refresh()
+                        time.sleep(5)
+                        continue
+
+                    if actual_results < 30:
+                        logging.info(f"Đã đến trang cuối (chỉ có {actual_results} kết quả)")
                         has_more_pages = False
                     else:
-                        current_page += 1
-                        time.sleep(2)  # Đợi một chút trước khi chuyển trang
+                        # Tạo URL cho trang tiếp theo
+                        next_start = (current_page + 1) * 30
+                        next_url = get_next_page_url(current_url, next_start)
+                        if next_url:
+                            current_url = next_url
+                            current_page += 1
+                            logging.info(f"Chuyển sang trang {current_page + 1}")
+                            time.sleep(3)  # Tăng thời gian chờ giữa các trang
+                        else:
+                            logging.error("Không thể tạo URL cho trang tiếp theo")
+                            has_more_pages = False
+
+                except Exception as e:
+                    logging.error(f"Lỗi khi xử lý phân trang: {e}")
+                    # Thử tải lại trang hiện tại
+                    try:
+                        driver.refresh()
+                        time.sleep(5)
+                        continue
+                    except:
+                        has_more_pages = False
+                        break
 
             except Exception as e:
                 logging.error(f"Lỗi khi xử lý trang {current_page + 1}: {e}")
-                break
+                # Thử tải lại trang trước khi dừng
+                try:
+                    driver.refresh()
+                    time.sleep(5)
+                    continue
+                except:
+                    break
 
         logging.info(f"Đã hoàn thành crawl {current_page + 1} trang, tổng số kết quả: {len(all_results)}")
 

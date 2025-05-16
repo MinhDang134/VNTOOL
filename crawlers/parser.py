@@ -10,7 +10,7 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException
 # TimeoutException : nó có chức năng là hiển thị lỗi nếu mà trong thời gian quy định chưa lấy được dữ liệu
 import requests
 import json
-
+#chilll
 
 # Cấu hình logging nếu chưa có ở đâu khác (ví dụ: trong main.py)
 # logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
