@@ -101,82 +101,76 @@ def throttle_wipo(min_delay=0.1, max_delay=0.2, max_req_per_min=500, sleep_on_ex
 
 
 def _save_wipo_items_to_db(db_session, BrandModel, items_to_save, source_name="WIPO_Search"):
-    # db tượng trưng cho db_session
-    # concemodel tượng chưng cho brandModel
-    # item_to_save thì tượng chưng cho valid item là những thông tin trả về từ result
-    # thì sẽ truyền toàn bộ thông tin vào bảng này
-    saved_count = 0 # cho mọi giá trị bằng 0 hêt lưu count
-    processed_count = 0 # count đếm gì đó quyên mia hết rồi
-    skipped_count = 0 # cho cout bằng 0 hết
-    error_count = 0 # đếm lỗi bằng 0
+    saved_count = 0
+    processed_count = 0
+    skipped_count = 0
+    error_count = 0
 
-    if not items_to_save: # nếu mà items_to_save mà éo có dữ liệu thì in như bên dưới
+    if not items_to_save:
         logging.info(f"DB Save ({source_name}): No items to save.")
-        return
+        return saved_count
 
-    for item_detail in items_to_save: # nếu có dữ liệu thì duyêt từng cái in vào item_detail
-        processed_count += 1 # tăng cái biến đếm xử lý lên 1
-        item_id = item_detail.get("id") # thông qua cái item_detail lấy thông tin id ra lưu vào item_id
+    for item_detail in items_to_save:
+        processed_count += 1
+        item_id = item_detail.get("id")
         
-        # Kiểm tra ID
-        if not item_id: # nếu mà item_id không có thì in ra cái này bỏ qua mọi thức bên dưới còn không thì tiếp tục
+        if not item_id:
             logging.error(f"DB Save ({source_name}): Item skipped due to missing ID: {item_detail.get('name', 'N/A')}")
             skipped_count += 1
             continue
 
         try:
             # Kiểm tra xem record đã tồn tại chưa
-            # nếu mà có dữ liệu thì chạy và đây
-            # db lấy dữ liệu bảng và id
-            existing_item = db_session.get(BrandModel, item_id)
+            existing_item = db_session.query(BrandModel).filter_by(id=item_id).first()
             
-            if existing_item: # nếu mà cả hai dữ liệu đều có thì
+            if existing_item:
                 logging.info(f"DB Save ({source_name}): Updating existing record for ID: {item_id}")
                 # Cập nhật các trường từ dữ liệu mới
-                for key, value in item_detail.items():  # bâ giờ thì sẽ duyệt từng phần từ lấy từ result cho ra key và , value
-                    # cái này thì nó sẽ lấy ra thông tin cũ và ket của nó rồi nó sẽ set thông tin mới vào thay thế thông tincũ
+                for key, value in item_detail.items():
                     if hasattr(existing_item, key) and value is not None:
                         setattr(existing_item, key, value)
                 # Cập nhật source và last_updated
-                existing_item.source = source_name # dữ liệu này nó sẽ gán để cho biết cái này được thay thế từ nguồn nào
-                existing_item.last_updated = datetime.utcnow() # cũng như là thời gian được thay thế
+                existing_item.source = source_name
+                existing_item.last_updated = datetime.utcnow()
             else:
                 logging.info(f"DB Save ({source_name}): Adding new record for ID: {item_id}")
                 # Tạo instance mới với dữ liệu từ parser
-                # tạo một bảng dữ liệu khác từ parse hả
-                brand_instance_data = { # tạo from bảng nè
-                    "id": item_id, # thông qua item_id , và valid_iitems được truyền vào để lấy từng giá trị ,
+                brand_instance_data = {
+                    "id": item_id,
                     "name": item_detail.get("name"),
                     "product_group": item_detail.get("product_group"),
                     "status": item_detail.get("status"),
-                    "registration_date": item_detail.get("registration_date"),
-                    "image_url": item_detail.get("image_url"),
+                    "country": item_detail.get("country"),  # Note: Capital C in Country
                     "source": source_name,
                     "owner": item_detail.get("owner"),
-                    "original_number": item_detail.get("original_number")
+                    "number": item_detail.get("number"),  # Note: Capital N in Number
+                    "ipr": item_detail.get("ipr"),
+                    "image_url": item_detail.get("image_url"),
+                    "created_at": datetime.utcnow(),
+                    "last_updated": datetime.utcnow()
                 }
-                brand_instance = BrandModel(**brand_instance_data) # lưu toàn bộ cái thông tin vào brandModels
-                db_session.add(brand_instance) # thêm cái bảng nagy vào database
+                brand_instance = BrandModel(**brand_instance_data)
+                db_session.add(brand_instance)
 
             # Commit sau mỗi item để tránh lỗi ảnh hưởng đến toàn bộ batch
-            db_session.commit() # commit lên
-            saved_count += 1 # lưu counnt save count lên 10
-            logging.info(f"DB Save ({source_name}): Successfully saved item {item_id}") # hiển thị thông tin source ra
+            db_session.commit()
+            saved_count += 1
+            logging.info(f"DB Save ({source_name}): Successfully saved item {item_id}")
 
         except Exception as e:
-            db_session.rollback() # nếu mà lỗi thì nó gủi rolll back
-            error_count += 1 # tăng lỗi lên 1
+            db_session.rollback()
+            error_count += 1
             logging.error(f"DB Save ({source_name}): Error processing/merging item (ID: {item_id}, Name: {item_detail.get('name')}). Rolled back for this item. Error: {str(e)}")
             continue
 
     # Log tổng kết
-    logging.info(f"DB Save ({source_name}): Processing complete. " # hiển thị toàn bộ ra cái hóa quá trình thành công hay gì đó 
+    logging.info(f"DB Save ({source_name}): Processing complete. "
                 f"Processed: {processed_count}, "
                 f"Saved: {saved_count}, "
                 f"Skipped: {skipped_count}, "
                 f"Errors: {error_count}")
 
-    return saved_count # return ra saved_count  là số lần thành công hay không
+    return saved_count
 
 
 def crawl_wipo(month: str):
@@ -781,6 +775,15 @@ def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refre
 
                     name_el = block_element.find_elements(By.CSS_SELECTOR, ".brandName")
                     if name_el: single_item_data['name'] = name_el[0].text.strip()
+
+                    country_el = block_element.find_elements(By.CSS_SELECTOR, ".designation span.value")
+                    if country_el : single_item_data['country'] = country_el[0].text.strip()
+
+                    ipr_el = block_element.find_elements(By.CSS_SELECTOR,".ipr span.value")
+                    if ipr_el : single_item_data['ipr'] = ipr_el[0].text.strip()
+
+                    number_el = block_element.find_elements(By.CSS_SELECTOR, ".number span.value")
+                    if number_el : single_item_data['number'] = number_el[0].text.strip()
 
                     owner_elements = block_element.find_elements(By.CSS_SELECTOR, ".holderName span.value") # Adjusted selector based on common patterns
                     if not owner_elements: # Fallback or alternative selector

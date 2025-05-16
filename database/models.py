@@ -25,12 +25,13 @@ def get_brand_model(table_name: str):  # Thêm type hint cho rõ ràng
         'name': Column(String(255), index=True, nullable=True),
         'product_group': Column(String(255), nullable=True),
         'status': Column(String(255), nullable=True),
-        'registration_date': Column(Date, nullable=True),
-        'image_url': Column(String(1024), nullable=True),  # Longer for URLs
+        'country': Column(String(255), nullable=True),  # Changed to lowercase to match DB schema
         'source': Column(String(255), nullable=True),
-        'created_at': Column(DateTime, server_default=func.now(), nullable=False),
-        # Thêm các cột khác nếu cần, ví dụ:
         'owner': Column(String(255), nullable=True),
-        'original_number': Column(String(255), nullable=True)
+        'number': Column(String(255), nullable=True),  # Changed to lowercase to match DB schema
+        'ipr': Column(String(255), nullable=True),
+        'created_at': Column(DateTime, server_default=func.now(), nullable=False),
+        'last_updated': Column(DateTime, server_default=func.now(), nullable=False),
+        'image_url': Column(String(1024), nullable=True)
     })
     return BrandClass

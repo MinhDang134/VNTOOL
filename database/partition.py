@@ -11,11 +11,12 @@ def create_partition_table(month: str, engine):
             name TEXT,
             product_group TEXT,
             status TEXT,
-            registration_date DATE,
-            image_url TEXT,
+            country TEXT,
             source TEXT,
+            owner TEXT,
+            number TEXT,
+            ipr TEXT,
+            image_url TEXT,
             created_at TIMESTAMP DEFAULT NOW()
         );
         """))
-        conn.execute(text(f"CREATE INDEX IF NOT EXISTS idx_status_{month} ON {table}(status);")) # tạo index trên cột status để tăng tốc độ tìm kiếm theot trang thái
-        conn.execute(text(f"CREATE INDEX IF NOT EXISTS idx_reg_date_{month} ON {table}(registration_date);")) # tạo index cột ngày đăng kí lấy thông tin theo số đăng ký
