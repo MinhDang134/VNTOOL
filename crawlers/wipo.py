@@ -24,6 +24,7 @@ from crawlers.parser import parse_wipo_html # chuyển dữ liệu sang bên kia
 from database.connection import Session, engine  # engine và session để tương tác và kết nối với cơ sở dữ liệu
 from database.models import get_brand_model, Base  # Giả định các hàm này tồn tại
 # from database.save import save_to_db # BỎ IMPORT NÀY, sử dụng hàm _save_wipo_items_to_db
+from bs4 import BeautifulSoup
 from database.partition import create_partition_table  # Giả định hàm này tồn tại
 import urllib.parse # For URL encoding
 
@@ -473,10 +474,12 @@ def crawl_wipo_by_name(brand_name_to_search: str, force_refresh: bool = False):
                         name_el = block_element.find_element(By.CSS_SELECTOR, ".brandName")
                         single_item_data['name'] = name_el.text.strip()
                         try:
-                            id_el = block_element.find_element(By.CSS_SELECTOR, ".number span.value")
-                            single_item_data['id'] = id_el.text.strip().replace(',', '')
+
+                            item_st13_id =block_element.get_attribute("data-st13")
+                            if item_st13_id is not None:
+                                single_item_data["id"] = item_st13_id
                         except NoSuchElementException:
-                            single_item_data['id'] = item_st13_id
+                            logging.info("Lay id loi roi ")
 
                         owner_el = block_element.find_elements(By.CSS_SELECTOR, ".owner span.value")
                         if owner_el:
@@ -765,13 +768,13 @@ def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refre
                 # Parse the individual block
                 single_item_data = {}
                 try:
+                    item_st13_id = block_element.get_attribute("data-st13")
+                    if item_st13_id is not None:
+                        single_item_data["id"] = item_st13_id
+                    else:
+                        logging.info("Error roi")
 
-                    id_el = block_element.find_elements(By.CSS_SELECTOR, ".number span.value") # International Registration Number
-                    if id_el:
-                        single_item_data['id'] = id_el[0].text.strip().replace(',', '')
-                    elif item_st13_id: # Use st13 if number isn't found, though number is preferred
-                         single_item_data['id'] = item_st13_id
-                    # else: logging.warning(f"Could not find a primary ID for block (st13:{item_st13_id})")
+
 
                     name_el = block_element.find_elements(By.CSS_SELECTOR, ".brandName")
                     if name_el: single_item_data['name'] = name_el[0].text.strip()
