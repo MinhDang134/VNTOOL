@@ -578,28 +578,7 @@ def crawl_wipo_by_name(brand_name_to_search: str, force_refresh: bool = False):
 
 @retry_on_failure(max_retries=3)
 def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refresh: bool = False):
-
     logging.info(f"WIPO Crawler: bắt đầu search từ : {start_date_str} to {end_date_str}")
-
-    # Validate date format (YYYY-MM-DD)
-    try:
-        datetime.strptime(start_date_str, "%Y-%m-%d")
-        datetime.strptime(end_date_str, "%Y-%m-%d")
-    except ValueError:
-        logging.error(f"format : {start_date_str}, {end_date_str}")
-        return None
-
-    # Cache key based on date range
-    cache_key = f"daterange_{start_date_str}_{end_date_str}"
-    if not force_refresh:
-        cached_data = load_from_cache(cache_key)
-        if cached_data:
-            logging.info(f"WIPO Crawler: dùng cache data trong khoảng '{start_date_str} - {end_date_str}'")
-            return cached_data
-
-    db_session = None
-    driver = None
-    all_results = []
 
     try:
         # Construct the URL
@@ -626,9 +605,8 @@ def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refre
 
         query_string = urllib.parse.urlencode(params)
 
-
         db_session = Session()
-        table_name_for_brand = "trademark" # Assuming the same table
+        table_name_for_brand = "trademark"
         create_partition_table(table_name_for_brand, engine)
         ConcreteBrandModel = get_brand_model(table_name_for_brand)
 
@@ -654,7 +632,7 @@ def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refre
         # B2: Chuyển hướng bằng JS sang trang advancedsearch để đảm bảo Angular xử lý đầy đủ
         driver.execute_script("window.location.href = '/en/advancedsearch';")
 
-        # B3: Đợi advancedsearch thực sự được load (xác định bằng selector đặc trưng)
+        # B3: Đợi advancedsearch thực sự được load
         WebDriverWait(driver, 30).until(EC.presence_of_element_located(
             (By.CSS_SELECTOR, "page-advancedsearch")
         ))
@@ -666,251 +644,253 @@ def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refre
         driver.execute_script(f"window.location.href = '{target_url}';")
 
         try:
-            WebDriverWait(driver, 30).until( # Increased wait time
+            WebDriverWait(driver, 30).until(
                 lambda d: d.execute_script('return document.readyState') == 'complete'
             )
-            logging.info("WIPO Crawler: Page 'thành công ")
+            logging.info("WIPO Crawler: Page load thành công")
         except TimeoutException:
-            logging.warning("WIPO Crawler: page load bị time out  ")
+            logging.warning("WIPO Crawler: page load bị time out")
 
-        # Check for no results (important to do this early)
+        # Check for no results
         if check_no_results(driver):
-            logging.info(f"WIPO Crawler: Không có trong khoảng này  {start_date_str} - {end_date_str} at {driver.current_url}")
+            logging.info(f"WIPO Crawler: Không có trong khoảng này {start_date_str} - {end_date_str} at {driver.current_url}")
             return None
 
+        # Thu nhỏ màn hình để hiển thị toàn bộ nội dung
+        if not zoom_out_to_fit_all_content(driver):
+            logging.warning("Không thể thu nhỏ màn hình, sẽ sử dụng phương pháp cuộn trang thông thường")
 
-        results_selector = "ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted"
-
-        fallback_results_selectors = [
-            "ul.results > li.result", # Simpler selector
-            "div.search-results-list > ul > li"
+        # Sau khi thu nhỏ màn hình, thêm đoạn code kiểm tra và xử lý
+        if not zoom_out_to_fit_all_content(driver):
+            logging.warning("Không thể thu nhỏ màn hình, sẽ sử dụng phương pháp cuộn trang thông thường")
+        
+        # Đợi thêm một chút để đảm bảo tất cả phần tử đã được render
+        time.sleep(5)
+        
+        # Kiểm tra số lượng phần tử hiển thị
+        result_elements = driver.find_elements(By.CSS_SELECTOR, "ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted")
+        visible_elements = [el for el in result_elements if el.is_displayed()]
+        logging.info(f"Tổng số phần tử tìm thấy: {len(result_elements)}, Số phần tử hiển thị: {len(visible_elements)}")
+        
+        # Nếu số lượng phần tử hiển thị ít hơn mong đợi, thử cuộn trang một chút
+        if len(visible_elements) < 30:
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight * 0.5);")
+            time.sleep(2)
+            result_elements = driver.find_elements(By.CSS_SELECTOR, "ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted")
+            visible_elements = [el for el in result_elements if el.is_displayed()]
+        # Danh sách các selector có thể có cho kết quả
+        possible_selectors = [
+            "ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted",
+            "ul.results > li.result",
+            "div.search-results-list > ul > li",
+            "li.result-viewed",
+            "div.result-item"
         ]
 
         parsed_items_collector = []
         processed_item_ids = set()
-        scroll_attempts_without_new_items = 0
-        max_fruitless_scrolls = 5 # Increased fruitless scrolls
+        result_elements = []
 
-        current_results_selector = None
-
-        logging.info("WIPO Crawler: Starting incremental scroll and parse for date range.")
-
-        # Try to find which selector works
-        for sel_idx, r_selector in enumerate([results_selector] + fallback_results_selectors):
+        # Thử từng selector cho đến khi tìm thấy kết quả
+        for selector in possible_selectors:
             try:
-                WebDriverWait(driver, 15).until( # Wait a bit for elements with this selector
-                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, r_selector))
+                logging.info(f"Đang thử tìm kết quả với selector: {selector}")
+                WebDriverWait(driver, 10).until(
+                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, selector))
                 )
-                # Check if elements are actually found and visible
-                test_elements = driver.find_elements(By.CSS_SELECTOR, r_selector)
-                if test_elements and any(el.is_displayed() for el in test_elements):
-                    current_results_selector = r_selector
-                    logging.info(f"WIPO Crawler: dùng  selector: '{current_results_selector}'")
+                result_elements = driver.find_elements(By.CSS_SELECTOR, selector)
+                if result_elements:
+                    logging.info(f"Tìm thấy {len(result_elements)} kết quả với selector: {selector}")
                     break
-                else:
-                    logging.debug(f"WIPO Crawler: Selector '{r_selector}'")
             except TimeoutException:
-                logging.debug(f"WIPO Crawler: Selector '{r_selector}'  {sel_idx+1}).")
+                logging.warning(f"Không tìm thấy kết quả với selector: {selector}")
+                continue
+            except Exception as e:
+                logging.error(f"Lỗi khi tìm kiếm với selector {selector}: {e}")
+                continue
 
-        if not current_results_selector:
-            logging.error(f"WIPO Crawler: Ckhông thể tìm thấy bất kì dữ liệu nào  {driver.current_url}. ")
+        if not result_elements:
+            logging.error("Không tìm thấy kết quả với bất kỳ selector nào")
             return None
 
+        # Lưu HTML để debug nếu cần
+        debug_filename = f"debug_wipo_results_{start_date_str}_{end_date_str}.html"
+        with open(debug_filename, "w", encoding="utf-8") as f:
+            f.write(driver.page_source)
+        logging.info(f"Đã lưu HTML debug vào file: {debug_filename}")
 
-        while scroll_attempts_without_new_items < max_fruitless_scrolls:
-            initial_item_count_this_loop = len(parsed_items_collector)
-            new_items_found_this_scroll = False
-
+        for element in result_elements:
             try:
-                # Ensure elements are present before trying to find them
-                WebDriverWait(driver, 20).until( # Increased wait for items to appear
-                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, current_results_selector))
-                )
-                current_blocks_on_page = driver.find_elements(By.CSS_SELECTOR, current_results_selector)
-                logging.info(f"WIPO Crawler: Found {len(current_blocks_on_page)} blocks on page using '{current_results_selector}'. Parsed so far: {len(parsed_items_collector)}")
-            except TimeoutException:
-                logging.info(f"WIPO Crawler: No result blocks found with selector '{current_results_selector}' after waiting. Current URL: {driver.current_url}")
-                current_blocks_on_page = [] # No blocks found this iteration
+                item_st13_id = element.get_attribute('data-st13')
+                if not item_st13_id or item_st13_id in processed_item_ids:
+                    continue
 
-            if not current_blocks_on_page and not parsed_items_collector: # No blocks ever found
-                 if check_no_results(driver): # Double check if "no results" appeared after some dynamic load
-                    logging.info(f"WIPO Crawler: Re-checked and confirmed no results found for date range {start_date_str} - {end_date_str}.")
-                    # No need to save empty cache or DB entries if truly no results
-                    return None
-                 else: # No blocks, but no "no results" message either, could be an error page or unexpected structure
-                    logging.warning(f"WIPO Crawler: No result blocks found and no 'no results' message. Page might be incorrect. URL: {driver.current_url}")
-                    break # Exit scroll loop
-
-
-            for block_idx, block_element in enumerate(current_blocks_on_page):
-                # Using data-st13 as a unique ID from the page if available
-                item_st13_id = block_element.get_attribute('data-st13')
-                if not item_st13_id: # Fallback if data-st13 is not present
-                    logging.debug(f"Block at index {block_idx} on page has no data-st13. Parsing to find primary ID.")
-
-                # If we have st13, check if already processed
-                if item_st13_id and item_st13_id in processed_item_ids:
-                    continue # Already processed this item, skip
-
-                # Scroll the element into view
-                try:
-                    driver.execute_script("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", block_element)
-                    time.sleep(0.3) # Small delay for content to potentially load after scroll
-                    # Wait for a key element within the block to be present (e.g., brand name)
-                    WebDriverWait(block_element, 10).until(
-                        EC.presence_of_element_located((By.CSS_SELECTOR, ".brandName")) # Common selector
-                    )
-                except TimeoutException:
-                    logging.warning(f"Timeout waiting for .brandName in block (st13: {item_st13_id}, index: {block_idx}). Attempting parse anyway.")
-                except Exception as e_scroll:
-                    logging.warning(f"Error scrolling/waiting for block detail (st13: {item_st13_id}, index: {block_idx}): {e_scroll}")
-
-                # Parse the individual block
+                # Parse dữ liệu từ phần tử
                 single_item_data = {}
-                try:
-                    item_st13_id = block_element.get_attribute("data-st13")
-                    if item_st13_id is not None:
-                        single_item_data["id"] = item_st13_id
-                    else:
-                        logging.info("Error roi")
+                single_item_data['id'] = item_st13_id
 
+                # Thử các selector khác nhau cho tên thương hiệu
+                name_selectors = [".brandName", ".name", "h2", ".title"]
+                for name_selector in name_selectors:
+                    name_el = element.find_elements(By.CSS_SELECTOR, name_selector)
+                    if name_el:
+                        single_item_data['name'] = name_el[0].text.strip()
+                        break
 
+                # Thử các selector khác nhau cho các trường khác
+                field_selectors = {
+                    'country': [".designation span.value", ".country", ".origin"],
+                    'ipr': [".ipr span.value", ".type", ".ipr-type"],
+                    'number': [".number span.value", ".id", ".number"],
+                    'owner': [".holderName span.value", ".owner span.value", ".owner"],
+                    'status': [".status span.value", ".status"],
+                    'product_group': [".niceClassification span.value", ".class span.value", ".nice-class"]
+                }
 
-                    name_el = block_element.find_elements(By.CSS_SELECTOR, ".brandName")
-                    if name_el: single_item_data['name'] = name_el[0].text.strip()
+                for field, selectors in field_selectors.items():
+                    for selector in selectors:
+                        elements = element.find_elements(By.CSS_SELECTOR, selector)
+                        if elements:
+                            single_item_data[field] = elements[0].text.strip()
+                            break
 
-                    country_el = block_element.find_elements(By.CSS_SELECTOR, ".designation span.value")
-                    if country_el : single_item_data['country'] = country_el[0].text.strip()
+                # Tìm logo
+                img_selectors = ["img.logo[src]", "img[src]", ".logo img"]
+                for img_selector in img_selectors:
+                    img_elements = element.find_elements(By.CSS_SELECTOR, img_selector)
+                    if img_elements:
+                        single_item_data['image_url'] = img_elements[0].get_attribute('src')
+                        break
 
-                    ipr_el = block_element.find_elements(By.CSS_SELECTOR,".ipr span.value")
-                    if ipr_el : single_item_data['ipr'] = ipr_el[0].text.strip()
+                if single_item_data.get('id') and single_item_data.get('name'):
+                    processed_item_ids.add(item_st13_id)
+                    parsed_items_collector.append(single_item_data)
+                    logging.info(f"Đã phân tích thành công mục: ID {single_item_data.get('id')}, Tên '{single_item_data.get('name')}'")
 
-                    number_el = block_element.find_elements(By.CSS_SELECTOR, ".number span.value")
-                    if number_el : single_item_data['number'] = number_el[0].text.strip()
-
-                    owner_elements = block_element.find_elements(By.CSS_SELECTOR, ".holderName span.value") # Adjusted selector based on common patterns
-                    if not owner_elements: # Fallback or alternative selector
-                        owner_elements = block_element.find_elements(By.CSS_SELECTOR, ".owner span.value")
-                    if owner_elements: single_item_data['owner'] = owner_elements[0].text.strip()
-
-                    status_elements = block_element.find_elements(By.CSS_SELECTOR, ".status span.value")
-                    if status_elements: single_item_data['status'] = status_elements[0].text.strip()
-
-                    # Add more fields as identified in `parse_wipo_html` or `crawl_wipo_by_name`
-                    # Example: product_group (Nice Classification) often in ".niceClassification span.value" or similar
-                    nice_class_elements = block_element.find_elements(By.CSS_SELECTOR, ".niceClassification span.value")
-                    if not nice_class_elements: # Fallback for class/product group
-                         nice_class_elements = block_element.find_elements(By.CSS_SELECTOR, ".class span.value") # from by_name
-                    if nice_class_elements: single_item_data['product_group'] = nice_class_elements[0].text.strip()
-
-
-                    img_elements = block_element.find_elements(By.CSS_SELECTOR, "img.logo[src]") # More general image selector
-                    if img_elements: single_item_data['image_url'] = img_elements[0].get_attribute('src')
-
-                    # Crucial: Validate if we got essential data (ID and Name)
-                    if single_item_data.get('id') and single_item_data.get('name'):
-                        if item_st13_id: # Add st13 if we have it, useful for tracking processed items
-                            processed_item_ids.add(item_st13_id)
-                        # If item_st13_id was not found, we use the extracted 'id' for processed_item_ids,
-                        # assuming it's unique enough for the current page load.
-                        elif single_item_data.get('id'):
-                             processed_item_ids.add(single_item_data.get('id'))
-
-
-                        parsed_items_collector.append(single_item_data)
-                        new_items_found_this_scroll = True
-                        logging.info(f"Successfully parsed item: ID {single_item_data.get('id')}, Name '{single_item_data.get('name')}'. Total collected: {len(parsed_items_collector)}")
-                    else:
-                        logging.warning(f"Item (st13: {item_st13_id}, index: {block_idx}) - Missing critical data (ID or Name) after parsing. Data: {single_item_data}")
-
-                except NoSuchElementException:
-                    logging.warning(f"Could not find expected element within block (st13: {item_st13_id}, index: {block_idx}). Skipping this block.")
-                except Exception as e_parse_block:
-                    logging.error(f"Error parsing block (st13: {item_st13_id}, index: {block_idx}): {e_parse_block}", exc_info=True)
-
-            # After processing all current blocks on page
-            if new_items_found_this_scroll:
-                scroll_attempts_without_new_items = 0 # Reset counter
-            else:
-                at_bottom = driver.execute_script("return (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 100;") # 100px buffer
-
-                if at_bottom:
-                    logging.info("WIPO Crawler: Scrolled to the bottom of the page and no new items found.")
-                    break # Exit loop if at bottom and no new items
-
-                scroll_attempts_without_new_items += 1
-                logging.info(f"WIPO Crawler: No new items found on this scroll. Fruitless scroll attempts: {scroll_attempts_without_new_items}/{max_fruitless_scrolls}")
-
-            if scroll_attempts_without_new_items >= max_fruitless_scrolls:
-                logging.info("WIPO Crawler: Max fruitless scroll attempts reached. Stopping scroll.")
-                break
-
-            # Scroll down to load more items
-            logging.info("WIPO Crawler: Scrolling down to load more items...")
-            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(random.uniform(3,5)) # Increased sleep after scroll for content to load
+            except Exception as e:
+                logging.error(f"Lỗi khi phân tích phần tử: {e}")
 
         all_results = parsed_items_collector
-        logging.info(f"WIPO Crawler: Finished scrolling. Total items parsed: {len(all_results)}")
+        logging.info(f"WIPO Crawler: Đã phân tích xong. Tổng số mục: {len(all_results)}")
 
-    except TimeoutException as e:
-        logging.error(f"WIPO Crawler: Timeout during operation for date range {start_date_str}-{end_date_str}. URL: {driver.current_url if driver else 'N/A'}", exc_info=True)
-        # Optionally save page source on timeout
-        if driver:
-            try:
-                debug_filename = f"debug_wipo_daterange_timeout_{start_date_str}_{end_date_str}.html"
-                with open(debug_filename, "w", encoding="utf-8") as f:
-                    f.write(driver.page_source)
-                logging.info(f"Saved page source to {debug_filename} on timeout.")
-            except Exception as ex_save:
-                logging.error(f"Failed to save page source on timeout: {ex_save}")
-        # Do not return partial results on timeout, as they might be incomplete. Indicate failure.
-        return None
-    except WebDriverException as e:
-        logging.error(f"WIPO Crawler: WebDriverException occurred for date range {start_date_str}-{end_date_str}: {e}", exc_info=True)
-        return None # Indicate failure
     except Exception as e:
-        logging.error(f"WIPO Crawler: Unexpected error for date range {start_date_str}-{end_date_str}: {e}", exc_info=True)
-        return None # Indicate failure
+        logging.error(f"WIPO Crawler: Lỗi không mong muốn: {e}", exc_info=True)
+        return None
     finally:
         if driver:
             try:
                 driver.quit()
-                logging.info("WIPO Crawler: Chrome driver quit successfully for date range crawl.")
-            except Exception as e_quit:
-                logging.error(f"WIPO Crawler: Error quitting Chrome driver: {e_quit}", exc_info=True)
-        # db_session is closed outside if data is to be saved.
+                logging.info("WIPO Crawler: Đã đóng trình duyệt Chrome thành công.")
+            except Exception as e:
+                logging.error(f"WIPO Crawler: Lỗi khi đóng trình duyệt Chrome: {e}")
 
     if not all_results:
-        logging.warning(f"WIPO Crawler: No items collected for date range '{start_date_str} - {end_date_str}'.")
-        if db_session: db_session.close()
-        return [] # Return empty list if no results parsed, after checks for "no results found" page
+        logging.warning(f"WIPO Crawler: Không có kết quả nào cho khoảng thời gian '{start_date_str} - {end_date_str}'.")
+        if db_session: 
+            db_session.close()
+        return []
 
     # Validate items before saving
     valid_items = [item for item in all_results if validate_brand_data(item)]
     if len(valid_items) != len(all_results):
-        logging.warning(f"WIPO Crawler: Filtered out {len(all_results) - len(valid_items)} invalid items (missing ID or Name).")
+        logging.warning(f"WIPO Crawler: Đã lọc ra {len(all_results) - len(valid_items)} mục không hợp lệ")
 
-    # Save to cache
+    # Save to cache and database
+    cache_key = f"daterange_{start_date_str}_{end_date_str}"
     save_to_cache(cache_key, valid_items)
-    logging.info(f"WIPO Crawler: Saved {len(valid_items)} items to cache for key '{cache_key}'.")
 
-    # Save to DB
     if db_session and ConcreteBrandModel and valid_items:
-        saved_count = _save_wipo_items_to_db(db_session, ConcreteBrandModel, valid_items,
+        _save_wipo_items_to_db(db_session, ConcreteBrandModel, valid_items,
                                source_name=f"WIPO_DateRange_{start_date_str}_{end_date_str}")
-        logging.info(f"WIPO Crawler: Attempted to save {len(valid_items)} items to database. Successfully saved: {saved_count}")
-    elif not valid_items:
-        logging.info(f"WIPO Crawler: No valid items to save to database for date range {start_date_str}-{end_date_str}.")
-    else:
-        logging.error(f"WIPO Crawler: Cannot save items for date range '{start_date_str} - {end_date_str}' due to missing db_session or ConcreteBrandModel.")
+        logging.info(f"WIPO Crawler: Đã lưu thành công {len(valid_items)} mục vào cơ sở dữ liệu")
 
     if db_session:
         db_session.close()
-        logging.info(f"WIPO Crawler: Database session closed for date range crawl.")
 
     return valid_items
 
+
+def zoom_out_to_fit_all_content(driver):
+    """
+    Thu nhỏ màn hình để hiển thị toàn bộ nội dung trong một khung nhìn
+    """
+    try:
+        # Đợi cho trang tải hoàn toàn
+        WebDriverWait(driver, 30).until(
+            lambda d: d.execute_script('return document.readyState') == 'complete'
+        )
+        
+        # Đặt kích thước viewport lớn hơn
+        driver.set_window_size(1920, 3000)  # Tăng chiều cao viewport
+        time.sleep(2)
+        
+        # Lấy kích thước hiện tại của trang và viewport
+        page_height = driver.execute_script("""
+            return Math.max(
+                document.body.scrollHeight,
+                document.documentElement.scrollHeight,
+                document.body.offsetHeight,
+                document.documentElement.offsetHeight
+            );
+        """)
+        viewport_height = driver.execute_script("return window.innerHeight")
+        
+        # Tính toán tỷ lệ zoom cần thiết
+        zoom_ratio = min(0.4, viewport_height / page_height * 0.9)
+        
+        # Áp dụng zoom out và thêm một số CSS để đảm bảo hiển thị
+        driver.execute_script("""
+            document.body.style.zoom = arguments[0];
+            document.body.style.transform = 'scale(' + arguments[0] + ')';
+            document.body.style.transformOrigin = 'top left';
+            document.body.style.width = (100 / arguments[0]) + '%';
+            document.body.style.height = (100 / arguments[0]) + '%';
+        """, zoom_ratio)
+        
+        # Đợi trang web điều chỉnh
+        time.sleep(3)
+        
+        # Kiểm tra và đảm bảo tất cả phần tử được hiển thị
+        result_elements = driver.find_elements(By.CSS_SELECTOR, "ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted")
+        visible_count = len([el for el in result_elements if el.is_displayed()])
+        
+        logging.info(f"Đã thu nhỏ màn hình với tỷ lệ {zoom_ratio}. Số phần tử hiển thị: {visible_count}/{len(result_elements)}")
+        
+        # Nếu vẫn chưa đủ phần tử hiển thị, thử điều chỉnh lại
+        if visible_count < len(result_elements):
+            # Thử zoom out thêm
+            zoom_ratio = zoom_ratio * 0.8
+            driver.execute_script("""
+                document.body.style.zoom = arguments[0];
+                document.body.style.transform = 'scale(' + arguments[0] + ')';
+                document.body.style.transformOrigin = 'top left';
+                document.body.style.width = (100 / arguments[0]) + '%';
+                document.body.style.height = (100 / arguments[0]) + '%';
+            """, zoom_ratio)
+            
+            time.sleep(2)
+            
+            # Kiểm tra lại
+            result_elements = driver.find_elements(By.CSS_SELECTOR, "ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted")
+            visible_count = len([el for el in result_elements if el.is_displayed()])
+            logging.info(f"Đã điều chỉnh lại zoom với tỷ lệ {zoom_ratio}. Số phần tử hiển thị: {visible_count}/{len(result_elements)}")
+            
+            # Nếu vẫn chưa đủ, thử cuộn trang một chút
+            if visible_count < len(result_elements):
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight * 0.3);")
+                time.sleep(1)
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight * 0.6);")
+                time.sleep(1)
+                
+                # Kiểm tra lần cuối
+                result_elements = driver.find_elements(By.CSS_SELECTOR, "ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted")
+                visible_count = len([el for el in result_elements if el.is_displayed()])
+                logging.info(f"Sau khi cuộn: Số phần tử hiển thị: {visible_count}/{len(result_elements)}")
+        
+        return True
+    except Exception as e:
+        logging.error(f"Lỗi khi thu nhỏ màn hình: {e}")
+        return False
 
 def fetch_status_from_site(brand_id: str) -> str | None:
     logger_wipo_fetch.info(f"Đang cố gắng lấy trạng thái cho ID thương hiệu WIPO: {brand_id}")

@@ -8424,3 +8424,211 @@ AttributeError: 'NoneType' object has no attribute 'get'
 2025-05-16 14:15:50,295 - root - INFO - wipo.crawl_wipo_by_date_range:910 - WIPO Crawler: Database session closed for date range crawl.
 2025-05-16 14:15:50,295 - __main__ - INFO - test_manual.<module>:54 - Successfully crawled 30 items for the date range 2024-03-01 - 2024-03-05.
 2025-05-16 14:15:50,295 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-16 14:27:02,126 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-16 14:27:02,126 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-16 14:27:02,126 - root - INFO - wipo.crawl_wipo_by_date_range:581 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-16 14:27:11,031 - root - INFO - wipo.crawl_wipo_by_date_range:650 - WIPO Crawler: Page 'thành công 
+2025-05-16 14:27:13,070 - root - INFO - wipo.zoom_out_to_fit_all_content:793 - Đã thu nhỏ màn hình với tỷ lệ 1.0
+2025-05-16 14:27:33,526 - root - ERROR - wipo.crawl_wipo_by_date_range:732 - Không tìm thấy phần tử kết quả sau khi chờ
+2025-05-16 14:27:33,597 - root - INFO - wipo.crawl_wipo_by_date_range:745 - WIPO Crawler: Đã đóng trình duyệt Chrome thành công.
+2025-05-16 14:27:33,597 - __main__ - WARNING - test_manual.<module>:59 - Crawling failed or no results found for the date range 2024-03-01 - 2024-03-05.
+2025-05-16 14:27:33,597 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-16 14:28:24,542 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-16 14:28:24,542 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-16 14:28:24,542 - root - INFO - wipo.crawl_wipo_by_date_range:581 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-16 14:28:33,723 - root - INFO - wipo.crawl_wipo_by_date_range:650 - WIPO Crawler: Page 'thành công 
+2025-05-16 14:28:35,941 - root - INFO - wipo.zoom_out_to_fit_all_content:793 - Đã thu nhỏ màn hình với tỷ lệ 1.0
+2025-05-16 14:28:56,346 - root - ERROR - wipo.crawl_wipo_by_date_range:732 - Không tìm thấy phần tử kết quả sau khi chờ
+2025-05-16 14:28:56,418 - root - INFO - wipo.crawl_wipo_by_date_range:745 - WIPO Crawler: Đã đóng trình duyệt Chrome thành công.
+2025-05-16 14:28:56,418 - __main__ - WARNING - test_manual.<module>:59 - Crawling failed or no results found for the date range 2024-03-01 - 2024-03-05.
+2025-05-16 14:28:56,418 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-16 14:31:04,222 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-16 14:31:04,222 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-16 14:31:04,222 - root - INFO - wipo.crawl_wipo_by_date_range:581 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-16 14:31:13,157 - root - INFO - wipo.crawl_wipo_by_date_range:650 - WIPO Crawler: Page load thành công
+2025-05-16 14:31:15,201 - root - INFO - wipo.zoom_out_to_fit_all_content:813 - Đã thu nhỏ màn hình với tỷ lệ 1.0
+2025-05-16 14:31:15,201 - root - INFO - wipo.crawl_wipo_by_date_range:679 - Đang thử tìm kết quả với selector: ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted
+2025-05-16 14:31:25,473 - root - WARNING - wipo.crawl_wipo_by_date_range:688 - Không tìm thấy kết quả với selector: ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted
+2025-05-16 14:31:25,474 - root - INFO - wipo.crawl_wipo_by_date_range:679 - Đang thử tìm kết quả với selector: ul.results > li.result
+2025-05-16 14:31:25,492 - root - INFO - wipo.crawl_wipo_by_date_range:685 - Tìm thấy 30 kết quả với selector: ul.results > li.result
+2025-05-16 14:31:25,500 - root - INFO - wipo.crawl_wipo_by_date_range:702 - Đã lưu HTML debug vào file: debug_wipo_results_2024-03-01_2024-03-05.html
+2025-05-16 14:31:25,639 - root - INFO - wipo.crawl_wipo_by_date_range:750 - Đã phân tích thành công mục: ID CH502024000003183, Tên 'TAILWHEEL'
+2025-05-16 14:31:25,726 - root - INFO - wipo.crawl_wipo_by_date_range:750 - Đã phân tích thành công mục: ID OM502024000173752, Tên 'جود'
+2025-05-16 14:31:25,801 - root - INFO - wipo.crawl_wipo_by_date_range:750 - Đã phân tích thành công mục: ID OM502024000173773, Tên 'Metlux by ASPIRELI'
+2025-05-16 14:31:25,870 - root - INFO - wipo.crawl_wipo_by_date_range:750 - Đã phân tích thành công mục: ID OM502024000173738, Tên 'محاشي النور'
+2025-05-16 14:31:25,941 - root - INFO - wipo.crawl_wipo_by_date_range:750 - Đã phân tích thành công mục: ID OM502024000173759, Tên 'برينتي'
+2025-05-16 14:31:26,010 - root - INFO - wipo.crawl_wipo_by_date_range:750 - Đã phân tích thành công mục: ID OM502024000173745, Tên 'DESIGNX'
+2025-05-16 14:31:28,221 - root - INFO - wipo.crawl_wipo_by_date_range:756 - WIPO Crawler: Đã phân tích xong. Tổng số mục: 6
+2025-05-16 14:31:28,293 - root - INFO - wipo.crawl_wipo_by_date_range:765 - WIPO Crawler: Đã đóng trình duyệt Chrome thành công.
+2025-05-16 14:31:28,300 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: CH502024000003183
+2025-05-16 14:31:28,302 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item CH502024000003183
+2025-05-16 14:31:28,304 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173752
+2025-05-16 14:31:28,306 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173752
+2025-05-16 14:31:28,308 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173773
+2025-05-16 14:31:28,309 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173773
+2025-05-16 14:31:28,310 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173738
+2025-05-16 14:31:28,311 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173738
+2025-05-16 14:31:28,313 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173759
+2025-05-16 14:31:28,315 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173759
+2025-05-16 14:31:28,316 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173745
+2025-05-16 14:31:28,317 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173745
+2025-05-16 14:31:28,317 - root - INFO - wipo._save_wipo_items_to_db:168 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Processing complete. Processed: 6, Saved: 6, Skipped: 0, Errors: 0
+2025-05-16 14:31:28,318 - root - INFO - wipo.crawl_wipo_by_date_range:787 - WIPO Crawler: Đã lưu thành công 6 mục vào cơ sở dữ liệu
+2025-05-16 14:31:28,318 - __main__ - INFO - test_manual.<module>:54 - Successfully crawled 6 items for the date range 2024-03-01 - 2024-03-05.
+2025-05-16 14:31:28,318 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-16 14:33:35,043 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-16 14:33:35,043 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-16 14:33:35,043 - root - INFO - wipo.crawl_wipo_by_date_range:581 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-16 14:33:47,813 - root - INFO - wipo.crawl_wipo_by_date_range:650 - WIPO Crawler: Page load thành công
+2025-05-16 14:33:49,854 - root - INFO - wipo.zoom_out_to_fit_all_content:831 - Đã thu nhỏ màn hình với tỷ lệ 1.0
+2025-05-16 14:33:51,861 - root - INFO - wipo.zoom_out_to_fit_all_content:831 - Đã thu nhỏ màn hình với tỷ lệ 1.0
+2025-05-16 14:33:56,880 - root - INFO - wipo.crawl_wipo_by_date_range:673 - Tổng số phần tử tìm thấy: 0, Số phần tử hiển thị: 0
+2025-05-16 14:33:58,890 - root - INFO - wipo.crawl_wipo_by_date_range:697 - Đang thử tìm kết quả với selector: ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted
+2025-05-16 14:34:09,084 - root - WARNING - wipo.crawl_wipo_by_date_range:706 - Không tìm thấy kết quả với selector: ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted
+2025-05-16 14:34:09,084 - root - INFO - wipo.crawl_wipo_by_date_range:697 - Đang thử tìm kết quả với selector: ul.results > li.result
+2025-05-16 14:34:09,103 - root - INFO - wipo.crawl_wipo_by_date_range:703 - Tìm thấy 30 kết quả với selector: ul.results > li.result
+2025-05-16 14:34:09,120 - root - INFO - wipo.crawl_wipo_by_date_range:720 - Đã lưu HTML debug vào file: debug_wipo_results_2024-03-01_2024-03-05.html
+2025-05-16 14:34:10,992 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID NZ502024001258731, Tên 'OPITO BAY SALT CO.'
+2025-05-16 14:34:11,063 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119037, Tên 'XULUZ'
+2025-05-16 14:34:11,134 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119835, Tên 'SOCIACADEMY'
+2025-05-16 14:34:11,211 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119926, Tên 'CHUCHO PRODUCE LLC'
+2025-05-16 14:34:11,281 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119282, Tên 'PEEK NUTRITION ; NATURAL TREATS'
+2025-05-16 14:34:11,352 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119086, Tên 'REAL CAPITAL'
+2025-05-16 14:34:11,427 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119240, Tên '18.5'
+2025-05-16 14:34:11,498 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119002, Tên 'CHARTER FOODS'
+2025-05-16 14:34:11,598 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119842, Tên 'MAGIA'
+2025-05-16 14:34:11,672 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119968, Tên 'SMART CLEAN INTELLIGENCE'
+2025-05-16 14:34:12,221 - root - INFO - wipo.crawl_wipo_by_date_range:774 - WIPO Crawler: Đã phân tích xong. Tổng số mục: 10
+2025-05-16 14:34:12,292 - root - INFO - wipo.crawl_wipo_by_date_range:783 - WIPO Crawler: Đã đóng trình duyệt Chrome thành công.
+2025-05-16 14:34:12,298 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: NZ502024001258731
+2025-05-16 14:34:12,300 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item NZ502024001258731
+2025-05-16 14:34:12,301 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119037
+2025-05-16 14:34:12,303 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119037
+2025-05-16 14:34:12,304 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119835
+2025-05-16 14:34:12,306 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119835
+2025-05-16 14:34:12,307 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119926
+2025-05-16 14:34:12,309 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119926
+2025-05-16 14:34:12,310 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119282
+2025-05-16 14:34:12,312 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119282
+2025-05-16 14:34:12,313 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119086
+2025-05-16 14:34:12,314 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119086
+2025-05-16 14:34:12,315 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119240
+2025-05-16 14:34:12,317 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119240
+2025-05-16 14:34:12,318 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119002
+2025-05-16 14:34:12,319 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119002
+2025-05-16 14:34:12,319 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119842
+2025-05-16 14:34:12,321 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119842
+2025-05-16 14:34:12,322 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119968
+2025-05-16 14:34:12,324 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119968
+2025-05-16 14:34:12,324 - root - INFO - wipo._save_wipo_items_to_db:168 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Processing complete. Processed: 10, Saved: 10, Skipped: 0, Errors: 0
+2025-05-16 14:34:12,325 - root - INFO - wipo.crawl_wipo_by_date_range:805 - WIPO Crawler: Đã lưu thành công 10 mục vào cơ sở dữ liệu
+2025-05-16 14:34:12,325 - __main__ - INFO - test_manual.<module>:54 - Successfully crawled 10 items for the date range 2024-03-01 - 2024-03-05.
+2025-05-16 14:34:12,325 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.
+2025-05-16 14:35:36,264 - __main__ - INFO - test_manual.<module>:41 - Starting WIPO crawl application for brand: 'RONALDO'
+2025-05-16 14:35:36,264 - __main__ - INFO - test_manual.<module>:49 - Attempting to crawl WIPO data from 2024-03-01 to 2024-03-05...
+2025-05-16 14:35:36,264 - root - INFO - wipo.crawl_wipo_by_date_range:581 - WIPO Crawler: bắt đầu search từ : 2024-03-01 to 2024-03-05
+2025-05-16 14:35:46,174 - root - INFO - wipo.crawl_wipo_by_date_range:650 - WIPO Crawler: Page load thành công
+2025-05-16 14:35:51,260 - root - INFO - wipo.zoom_out_to_fit_all_content:857 - Đã thu nhỏ màn hình với tỷ lệ 0.4. Số phần tử hiển thị: 0/0
+2025-05-16 14:35:56,316 - root - INFO - wipo.zoom_out_to_fit_all_content:857 - Đã thu nhỏ màn hình với tỷ lệ 0.14400201331021756. Số phần tử hiển thị: 0/0
+2025-05-16 14:36:01,322 - root - INFO - wipo.crawl_wipo_by_date_range:673 - Tổng số phần tử tìm thấy: 0, Số phần tử hiển thị: 0
+2025-05-16 14:36:03,330 - root - INFO - wipo.crawl_wipo_by_date_range:697 - Đang thử tìm kết quả với selector: ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted
+2025-05-16 14:36:13,520 - root - WARNING - wipo.crawl_wipo_by_date_range:706 - Không tìm thấy kết quả với selector: ul.results.listView.ng-star-inserted > li.flex.result.wrap.ng-star-inserted
+2025-05-16 14:36:13,520 - root - INFO - wipo.crawl_wipo_by_date_range:697 - Đang thử tìm kết quả với selector: ul.results > li.result
+2025-05-16 14:36:13,541 - root - INFO - wipo.crawl_wipo_by_date_range:703 - Tìm thấy 30 kết quả với selector: ul.results > li.result
+2025-05-16 14:36:13,575 - root - INFO - wipo.crawl_wipo_by_date_range:720 - Đã lưu HTML debug vào file: debug_wipo_results_2024-03-01_2024-03-05.html
+2025-05-16 14:36:13,735 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID CH502024000003183, Tên 'TAILWHEEL'
+2025-05-16 14:36:13,824 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID OM502024000173752, Tên 'جود'
+2025-05-16 14:36:13,899 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID OM502024000173773, Tên 'Metlux by ASPIRELI'
+2025-05-16 14:36:13,976 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID OM502024000173738, Tên 'محاشي النور'
+2025-05-16 14:36:14,047 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID OM502024000173759, Tên 'برينتي'
+2025-05-16 14:36:14,122 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID OM502024000173745, Tên 'DESIGNX'
+2025-05-16 14:36:14,222 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID OM502024000173766, Tên 'تاكا وي'
+2025-05-16 14:36:14,303 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID NZ502024001258661, Tên 'GREEN GORILLA'
+2025-05-16 14:36:14,376 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID OM502024000173731, Tên 'بنك البرياني'
+2025-05-16 14:36:14,456 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID OM502024000173717, Tên 'ام ار سي'
+2025-05-16 14:36:14,524 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID OM502024000173703, Tên 'GIG'
+2025-05-16 14:36:14,604 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID OM502024000173724, Tên 'HAYATEA'
+2025-05-16 14:36:14,674 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID OM502024000173710, Tên 'AL COACH'
+2025-05-16 14:36:14,771 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID NZ502024001258731, Tên 'OPITO BAY SALT CO.'
+2025-05-16 14:36:14,840 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119037, Tên 'XULUZ'
+2025-05-16 14:36:14,913 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119835, Tên 'SOCIACADEMY'
+2025-05-16 14:36:14,982 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119926, Tên 'CHUCHO PRODUCE LLC'
+2025-05-16 14:36:15,055 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119282, Tên 'PEEK NUTRITION ; NATURAL TREATS'
+2025-05-16 14:36:15,125 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119086, Tên 'REAL CAPITAL'
+2025-05-16 14:36:15,198 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119240, Tên '18.5'
+2025-05-16 14:36:15,298 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119002, Tên 'CHARTER FOODS'
+2025-05-16 14:36:15,379 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119842, Tên 'MAGIA'
+2025-05-16 14:36:15,451 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119968, Tên 'SMART CLEAN INTELLIGENCE'
+2025-05-16 14:36:15,529 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003120003, Tên 'SINALOA RESTAURANT'
+2025-05-16 14:36:15,605 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119891, Tên 'HEMOVITA'
+2025-05-16 14:36:15,683 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119856, Tên 'LUXURY STEPS'
+2025-05-16 14:36:15,757 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119065, Tên 'MOON MUSIC'
+2025-05-16 14:36:15,829 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119268, Tên 'WOOD OFFICE WORKING SPACES'
+2025-05-16 14:36:15,901 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119149, Tên 'DPDIRECTO'
+2025-05-16 14:36:15,974 - root - INFO - wipo.crawl_wipo_by_date_range:768 - Đã phân tích thành công mục: ID MX502024003119198, Tên 'ECOSISTEMA STEM'
+2025-05-16 14:36:15,974 - root - INFO - wipo.crawl_wipo_by_date_range:774 - WIPO Crawler: Đã phân tích xong. Tổng số mục: 30
+2025-05-16 14:36:16,049 - root - INFO - wipo.crawl_wipo_by_date_range:783 - WIPO Crawler: Đã đóng trình duyệt Chrome thành công.
+2025-05-16 14:36:16,057 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: CH502024000003183
+2025-05-16 14:36:16,060 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item CH502024000003183
+2025-05-16 14:36:16,062 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173752
+2025-05-16 14:36:16,064 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173752
+2025-05-16 14:36:16,065 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173773
+2025-05-16 14:36:16,066 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173773
+2025-05-16 14:36:16,067 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173738
+2025-05-16 14:36:16,068 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173738
+2025-05-16 14:36:16,069 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173759
+2025-05-16 14:36:16,070 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173759
+2025-05-16 14:36:16,071 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173745
+2025-05-16 14:36:16,073 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173745
+2025-05-16 14:36:16,073 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173766
+2025-05-16 14:36:16,075 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173766
+2025-05-16 14:36:16,076 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: NZ502024001258661
+2025-05-16 14:36:16,077 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item NZ502024001258661
+2025-05-16 14:36:16,078 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173731
+2025-05-16 14:36:16,079 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173731
+2025-05-16 14:36:16,079 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173717
+2025-05-16 14:36:16,081 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173717
+2025-05-16 14:36:16,082 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173703
+2025-05-16 14:36:16,083 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173703
+2025-05-16 14:36:16,084 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173724
+2025-05-16 14:36:16,085 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173724
+2025-05-16 14:36:16,086 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: OM502024000173710
+2025-05-16 14:36:16,088 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item OM502024000173710
+2025-05-16 14:36:16,089 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: NZ502024001258731
+2025-05-16 14:36:16,090 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item NZ502024001258731
+2025-05-16 14:36:16,091 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119037
+2025-05-16 14:36:16,092 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119037
+2025-05-16 14:36:16,093 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119835
+2025-05-16 14:36:16,094 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119835
+2025-05-16 14:36:16,095 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119926
+2025-05-16 14:36:16,097 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119926
+2025-05-16 14:36:16,097 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119282
+2025-05-16 14:36:16,099 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119282
+2025-05-16 14:36:16,100 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119086
+2025-05-16 14:36:16,101 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119086
+2025-05-16 14:36:16,102 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119240
+2025-05-16 14:36:16,105 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119240
+2025-05-16 14:36:16,106 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119002
+2025-05-16 14:36:16,108 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119002
+2025-05-16 14:36:16,110 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119842
+2025-05-16 14:36:16,111 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119842
+2025-05-16 14:36:16,113 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119968
+2025-05-16 14:36:16,116 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119968
+2025-05-16 14:36:16,117 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003120003
+2025-05-16 14:36:16,119 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003120003
+2025-05-16 14:36:16,120 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119891
+2025-05-16 14:36:16,122 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119891
+2025-05-16 14:36:16,123 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119856
+2025-05-16 14:36:16,125 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119856
+2025-05-16 14:36:16,126 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119065
+2025-05-16 14:36:16,127 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119065
+2025-05-16 14:36:16,128 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119268
+2025-05-16 14:36:16,130 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119268
+2025-05-16 14:36:16,131 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119149
+2025-05-16 14:36:16,132 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119149
+2025-05-16 14:36:16,133 - root - INFO - wipo._save_wipo_items_to_db:137 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Adding new record for ID: MX502024003119198
+2025-05-16 14:36:16,135 - root - INFO - wipo._save_wipo_items_to_db:159 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Successfully saved item MX502024003119198
+2025-05-16 14:36:16,135 - root - INFO - wipo._save_wipo_items_to_db:168 - DB Save (WIPO_DateRange_2024-03-01_2024-03-05): Processing complete. Processed: 30, Saved: 30, Skipped: 0, Errors: 0
+2025-05-16 14:36:16,135 - root - INFO - wipo.crawl_wipo_by_date_range:805 - WIPO Crawler: Đã lưu thành công 30 mục vào cơ sở dữ liệu
+2025-05-16 14:36:16,135 - __main__ - INFO - test_manual.<module>:54 - Successfully crawled 30 items for the date range 2024-03-01 - 2024-03-05.
+2025-05-16 14:36:16,135 - __main__ - INFO - test_manual.<module>:66 - WIPO crawl application is shutting down.

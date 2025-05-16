@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-05-16T14:15:50.235084",
+  "timestamp": "2025-05-16T14:36:16.049877",
   "data": [
     {
       "id": "CH502024000003183",
@@ -9,7 +9,8 @@
       "number": "811128",
       "owner": "Commander Holding B.V. (Netherlands)",
       "status": "Registered (March 6, 2024)",
-      "product_group": "25"
+      "product_group": "25",
+      "image_url": "https://branddb.wipo.int/assets/images/status/Registered.svg"
     },
     {
       "id": "OM502024000173752",
@@ -85,7 +86,8 @@
       "number": "1258661",
       "owner": "Graeme Douglas Bowkett and Robin Bowkett (New Zealand)",
       "status": "Pending (March 4, 2024)",
-      "product_group": "1, 4, 6, 16, 20, 21, 22, 31, 35, 37, 39, 40, 44"
+      "product_group": "1, 4, 6, 16, 20, 21, 22, 31, 35, 37, 39, 40, 44",
+      "image_url": "https://branddb.wipo.int/assets/images/status/Pending.svg"
     },
     {
       "id": "OM502024000173731",
@@ -150,7 +152,8 @@
       "number": "1258731",
       "owner": "OPITO BAY SALT COMPANY LIMITED (New Zealand)",
       "status": "Pending (March 5, 2024)",
-      "product_group": "30, 35"
+      "product_group": "30, 35",
+      "image_url": "https://branddb.wipo.int/assets/images/status/Pending.svg"
     },
     {
       "id": "MX502024003119037",
@@ -226,7 +229,8 @@
       "number": "0119853119002",
       "owner": "REYNALDO CORNEJO RODRIGUEZ (Mexico)",
       "status": "Pending (March 1, 2024)",
-      "product_group": "29"
+      "product_group": "29",
+      "image_url": "https://branddb.wipo.int/assets/images/status/Pending.svg"
     },
     {
       "id": "MX502024003119842",
@@ -236,7 +240,8 @@
       "number": "0119853119842",
       "owner": "LUIS CONRADO TORRES SERRANO (Mexico)",
       "status": "Pending (March 1, 2024)",
-      "product_group": "35"
+      "product_group": "35",
+      "image_url": "https://branddb.wipo.int/assets/images/status/Pending.svg"
     },
     {
       "id": "MX502024003119968",
@@ -257,7 +262,8 @@
       "number": "0119853120003",
       "owner": "JAVIER PERAZA ACOSTA (Mexico)",
       "status": "Pending (March 1, 2024)",
-      "product_group": "29"
+      "product_group": "29",
+      "image_url": "https://branddb.wipo.int/assets/images/status/Pending.svg"
     },
     {
       "id": "MX502024003119891",
@@ -267,7 +273,8 @@
       "number": "0119853119891",
       "owner": "JUDITH ANGELES RODRIGUEZ PACHECO (Mexico)",
       "status": "Pending (March 1, 2024)",
-      "product_group": "44"
+      "product_group": "44",
+      "image_url": "https://branddb.wipo.int/assets/images/status/Pending.svg"
     },
     {
       "id": "MX502024003119856",
@@ -321,7 +328,8 @@
       "number": "0119853119198",
       "owner": "MOVIMIENTO STEM AC (Mexico)",
       "status": "Pending (March 1, 2024)",
-      "product_group": "41"
+      "product_group": "41",
+      "image_url": "https://branddb.wipo.int/assets/images/status/Pending.svg"
     }
   ]
 }
