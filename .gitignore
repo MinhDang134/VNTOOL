@@ -1,0 +1,168 @@
+# File .gitignore mẫu
+
+# Chú thích được bắt đầu bằng dấu #
+
+# Bỏ qua các thư mục chứa dependencies (thư viện cài đặt)
+# Thường được quản lý bởi các package manager như npm, pip, composer, Maven, Gradle,...
+/node_modules/
+/vendor/
+/bower_components/
+/.bundle/
+/target/  # Cho các dự án Java (Maven/Gradle)
+/build/   # Cho các dự án C/C++, Gradle, và nhiều loại khác
+/dist/    # Thường là thư mục output của các bundler (Webpack, Parcel, Rollup)
+/bin/
+/obj/
+
+# Bỏ qua các file cấu hình của IDE và editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+nbproject/ # NetBeans
+*.tmproj # TextMate
+*.project # Eclipse
+.project
+.settings/
+*.DS_Store # macOS
+Thumbs.db # Windows
+
+# Bỏ qua các file log
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# Bỏ qua các file tạm thời
+*.tmp
+*.temp
+*.swp # Vim swap file
+*~ # Backup files
+
+# Bỏ qua các file môi trường (chứa thông tin nhạy cảm)
+# QUAN TRỌNG: Luôn luôn thêm file .env.example hoặc tương tự vào Git để người khác biết cần cấu hình gì.
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Bỏ qua các file build cụ thể của các ngôn ngữ/framework
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+/env/
+/venv/
+/ENV/
+pip-wheel-metadata/
+.installed.cfg
+*.cfg
+*.egg
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.hypothesis/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+# Ruby
+*.gem
+/.config
+/coverage/
+/spec/reports/
+Gemfile.lock.erb
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
+
+# PHP (Composer)
+composer.phar
+
+# C/C++
+*.o
+*.exe
+*.dll
+*.so
+*.a
+
+# Mobile Development (iOS/Android)
+# Xcode
+build/
+DerivedData/
+*.xcuserdatad/
+# Android Studio
+*.apk
+*.aab
+*.ap_
+*.dex
+*.iml
+.gradle/
+local.properties
+captures/
+# Flutter
+.flutter-plugins
+.flutter-plugins-dependencies
+.dart_tool/
+.pub-cache/
+build/
+# React Native
+android/app/build/
+ios/build/
+# NativeScript
+hooks/
+platforms/
+lib/ # If you are not developing a library
+node-gyp.log
+
+# Bỏ qua các file nén
+*.zip
+*.tar.gz
+*.rar
+
+# Bỏ qua các báo cáo coverage
+coverage/
+*.lcov
+
+# Bỏ qua các file hệ điều hành cụ thể khác
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Bỏ qua các file upload/media (nếu không muốn đưa lên repo)
+# uploads/
+# media/
+
+# Các file cấu hình local khác
+# Ví dụ:
+# local_settings.py
+
+# Các file database local
+# *.sqlite
+# *.db
+
+# Nếu dùng Terraform
+# .terraform/
+# *.tfstate
+# *.tfstate.backup
+# .terraform.lock.hcl
+
+# Nếu dùng Docker
+# Dockerfile.local (nếu có)
+# .dockerignore (đã có file riêng cho Docker rồi, nhưng có thể thêm nếu cần)
+
+# Thêm các file hoặc thư mục cụ thể khác của dự án bạn vào đây
+# my_custom_file.txt
+# my_custom_folder/
