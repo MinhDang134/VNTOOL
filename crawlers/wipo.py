@@ -822,21 +822,33 @@ def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refre
                         time.sleep(5)
                         continue
 
-                    if actual_results < 30:
-                        logging.info(f"Đã đến trang cuối (chỉ có {actual_results} kết quả)")
-                        has_more_pages = False
+                    # ⚠️ Bỏ đoạn dừng khi < 30 kết quả — tiếp tục crawl
+                    # if actual_results < 30:
+                    #     logging.info(f"Đã đến trang cuối (chỉ có {actual_results} kết quả)")
+                    #     has_more_pages = False
+                    # else:
+
+                    # Tạo URL cho trang tiếp theo
+                    next_start = (current_page + 1) * 30
+                    next_url = get_next_page_url(current_url, next_start)
+                    if next_url:
+                        # Đặt lại sessionStorage trước khi chuyển trang tiếp theo
+                        driver.execute_script("sessionStorage.setItem('gbd.prev_enpoint', 'advancedsearch');")
+                        driver.execute_script(f"window.location.href = '{next_url}';")
+
+                        WebDriverWait(driver, 10).until(
+                            lambda d: d.execute_script(
+                                "return sessionStorage.getItem('gbd.prev_enpoint')"
+                            ) == 'advancedsearch'
+                        )
+
+                        current_url = next_url
+                        current_page += 1
+                        logging.info(f"Chuyển sang trang {current_page + 1}")
+                        time.sleep(3)  # Tăng thời gian chờ giữa các trang
                     else:
-                        # Tạo URL cho trang tiếp theo
-                        next_start = (current_page + 1) * 30
-                        next_url = get_next_page_url(current_url, next_start)
-                        if next_url:
-                            current_url = next_url
-                            current_page += 1
-                            logging.info(f"Chuyển sang trang {current_page + 1}")
-                            time.sleep(3)  # Tăng thời gian chờ giữa các trang
-                        else:
-                            logging.error("Không thể tạo URL cho trang tiếp theo")
-                            has_more_pages = False
+                        logging.error("Không thể tạo URL cho trang tiếp theo")
+                        has_more_pages = False
 
                 except Exception as e:
                     logging.error(f"Lỗi khi xử lý phân trang: {e}")
