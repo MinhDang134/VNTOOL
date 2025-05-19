@@ -625,7 +625,7 @@ def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refre
         ConcreteBrandModel = get_brand_model(table_name_for_brand)
 
         chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument('--headless')
+        # chrome_options.add_argument('--headless')
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--disable-dev-shm-usage')
         chrome_options.add_argument('--start-maximized')
@@ -822,12 +822,6 @@ def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refre
                         time.sleep(5)
                         continue
 
-                    # ⚠️ Bỏ đoạn dừng khi < 30 kết quả — tiếp tục crawl
-                    # if actual_results < 30:
-                    #     logging.info(f"Đã đến trang cuối (chỉ có {actual_results} kết quả)")
-                    #     has_more_pages = False
-                    # else:
-
                     # Tạo URL cho trang tiếp theo
                     next_start = (current_page + 1) * 30
                     next_url = get_next_page_url(current_url, next_start)
@@ -845,11 +839,20 @@ def crawl_wipo_by_date_range(start_date_str: str, end_date_str: str, force_refre
                         current_url = next_url
                         current_page += 1
                         logging.info(f"Chuyển sang trang {current_page + 1}")
-                        time.sleep(3)  # Tăng thời gian chờ giữa các trang
+
+                        # Random thời gian chờ giữa các trang (10-60 giây)
+                        wait_time = random.randint(10, 60)
+                        logging.info(
+                            f"Đợi {wait_time} giây trước khi chuyển sang trang tiếp theo để tránh bị coi là bot...")
+                        time.sleep(wait_time)
                     else:
                         logging.error("Không thể tạo URL cho trang tiếp theo")
                         has_more_pages = False
 
+                except Exception as e:
+                    logging.error(f"Lỗi khi chuyển trang: {e}")
+                    # Tùy chọn: có thể dừng hoặc thử lại
+                    break
                 except Exception as e:
                     logging.error(f"Lỗi khi xử lý phân trang: {e}")
                     # Thử tải lại trang hiện tại
